@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 // import axios from 'axios';
 
 function App() {
@@ -17,6 +16,7 @@ function App() {
       <header>
         <h1>{httpGet("/hi")}</h1>
         <h1>{httpGet("/hey")}</h1>
+        <h2>Hello</h2>
       </header>
     </div>
   );
