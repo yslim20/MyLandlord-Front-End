@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import router, {useRouter} from 'next/router';
+import { useState, useEffect } from 'react';
 import React, { Component } from 'react';
 
 
@@ -23,21 +24,20 @@ const CardBody = styled.div`
 
 
 
-constructor = () => {
-  super();
-  this.state = {
-    name: 'Forest Gump'
-  };
+// constructor = () => {
+//   super();
+//   this.state = {
+//     name: 'Tenant'
+//   };
 
-  this.onValChange = this.onValChange.bind(this);
-}
+//   this.onValChange = this.onValChange.bind(this);
+// }
 
-onValChange = (event) => {
-  this.setState({
-    name: event.target.value
-  });
-}
-
+// onValChange = (event) => {
+//   this.setState({
+//     name: event.target.value
+//   });
+// }
 
 const RadioButton = () => {  
 
@@ -48,8 +48,9 @@ const RadioButton = () => {
             <input
               type="radio"
               value="Tenant"
-              checked={this.state.name === "Tenant"}
-              onChange={this.onValChange}
+              checked
+              // checked={this.state.name === "Tenant"}
+              // onChange={this.onValChange}
               />
               <span>Tenant</span>
           </label>
@@ -58,10 +59,10 @@ const RadioButton = () => {
             <input
               type="radio"
               value="Landlord"
-              checked={this.state.name === "Landlord"}
-              onChange={this.onValChange}
+              // checked={this.state.name === "Landlord"}
+              // onChange={this.onValChange}
               />
-              <span>Die Hard</span>
+              <span>Landlord</span>
           </label>
       </form>
     </div>

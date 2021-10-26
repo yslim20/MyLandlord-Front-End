@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // import axios from 'axios'
 
 import RadioButton from '../comps/RadioButton'
+import NameInput from '../comps/NameInput'
 
 const Cont = styled.div`
   display: flex;
@@ -17,7 +18,8 @@ const Cardwrapper = styled.div`
 export default function SignUp() {
   return (
     <Cont>
-      <RadioButton />    
+      <RadioButton />  
+      <NameInput />  
     </Cont>
   )
 }
