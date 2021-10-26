@@ -7,10 +7,6 @@ import React, { Component } from 'react';
 const Cont = styled.div`
   max-width: 715px;
   height: 103px; 
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 25px;
 `
 
@@ -19,26 +15,31 @@ const FormBox = styled.form`
   height: 100%; 
   display:flex;
   flex-direction: column;
-  align-items: felx-start;
+  align-items: center;
   justify-content: center;
 `
 
 const LabelFor = styled.label`
-  max-width: 715px;
-  font-size: 32px;
+  width: 100%;
   margin-bottom: 10px;
   margin-left: 20px;
 `;
 
 const InputBox = styled.input`
-  width: 100%;
-  height: 57px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
 ` 
 
 const Title = styled.span`
+  height: 30px;
   font-size: 24px;
-  padding: 16px;
+  margin: 0;  
+  line-height: 30px;
 ` 
+
 // constructor = () => {
 //   super();
 //   this.state = {
@@ -54,11 +55,9 @@ const Title = styled.span`
 //   });
 // }
 
-const RadioButton = ({
-  valueL ="Tenant",
-  valueR = "Landlord",
-  checked = "",
-
+const Checkbox = ({
+  valueT = "Recieve news letter and update",
+  valueB = "I agree to the terms and agreement"
 }) => {  
   
   return (
@@ -67,27 +66,27 @@ const RadioButton = ({
           <LabelFor>
             <InputBox
               type="radio"
-              valueL={valueL}
-              checked = {checked}
-              // checked={this.state.name === {valueL}}
+              valueT = {valueT}
+              // checked={this.state.name === {valueT}}
               // onChange={this.onValChange}
-            />
-              <Title>={valueL}</Title>
+            >
+            </InputBox>
+              <Title>{valueT}</Title>
           </LabelFor>
 
           <LabelFor>
             <InputBox
               type="radio"              
-              valueR={valueR}
-              checked = {checked}
-              // checked={this.state.name === {valueR}}
+              valueB={valueB}
+              // checked={this.state.name === {valueB}}
               // onChange={this.onValChange}
+              required
             />
-              <Title>{valueR}</Title>
+              <Title>{valueB}</Title>
           </LabelFor>
       </FormBox>
     </Cont>
   );
 }
 
-export default RadioButton;
+export default Checkbox;
