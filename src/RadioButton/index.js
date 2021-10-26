@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import React from 'react';
+import router, {useRouter} from 'next/router';
+import { useState, useEffect } from 'react';
+import React, { Component } from 'react';
 
 
 const RadioCont = styled.div`
@@ -34,19 +36,48 @@ const TextCont = styled.span`
   margin-left: 5px;
   line-height: 48px;
 `
-const NameInput = () => {  
+
+// constructor = () => {
+//   super();
+//   this.state = {
+//     name: 'Tenant'
+//   };
+
+//   this.onValChange = this.onValChange.bind(this);
+// }
+
+// onValChange = (event) => {
+//   this.setState({
+//     name: event.target.value
+//   });
+// }
+
+const RadioButton = ({
+  onChange = () => {},
+  checked = "this.state.name === 'Tenant'"
+}) => {  
 
   return (
     <RadioCont>
       <FormCont>
           <LabelBox>
             <InputBox
+              type="radio"
+              value="Tenant"
+              checked={checked}
+              onChange = {onChange}
             />
               <TextCont>Tenant</TextCont>
           </LabelBox>
 
           <LabelBox>
             <InputBox
+              type="radio"
+              value="Landlord"
+              // checked={checked}
+              onChange = {onChange}
+              // checked={this.state.name === "Landlord"}
+              // onChange={this.onValChange}
             />
               <TextCont>Landlord</TextCont>
           </LabelBox>
@@ -55,4 +86,4 @@ const NameInput = () => {
   );
 }
 
-export default NameInput;
+export default RadioButton;

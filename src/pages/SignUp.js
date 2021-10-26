@@ -1,23 +1,22 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import React from 'react';
 // import axios from 'axios'
 
-import RadioButton from '../comps/RadioButton'
+import RadioButton from '../RadioButton';
+import FullName from '../comps/FullName';
 
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 `
-
-const Cardwrapper = styled.div`
-  margin: 10px;
-`
-
 
 export default function SignUp() {
   return (
     <Cont>
-      <RadioButton />    
+      <RadioButton />  
+      <FullName />  
     </Cont>
   )
 }
