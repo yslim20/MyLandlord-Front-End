@@ -12,15 +12,16 @@ const FormCont = styled.div`
 `
 
 const FormBox = styled.form`
-  max-width:46%;
+  width:100%;
   height: 100%; 
   display:flex;
   flex-direction: column;
   align-items: felx-start;
-  justify-content: space-between;
+  justify-content: center;
 `
 
 const LabelFor = styled.label`
+  max-width: 715px;
   font-size: 32px;
   margin-bottom: 10px;
   margin-left: 20px;
@@ -35,22 +36,18 @@ const InputBox = styled.input`
   padding: 16px;
 `
 
-const FullName = () => {  
+const Input = ({
+  title = "Email"
+}) => {  
 
   return (
     <FormCont>
       <FormBox>
-        <LabelFor for="fname">First Name</LabelFor>
-        <InputBox type="text" name="fname" autoComplete="name" required />
-      </FormBox>
-
-      <FormBox>
-        <LabelFor for="lname">Last Name</LabelFor>
-        <InputBox type="text" name="lname" autoComplete="name" required />
+        <LabelFor for={title}>{title}</LabelFor>
+        <InputBox type="text" name={title} required />
       </FormBox>
     </FormCont>    
   );
-
 }
 
-export default FullName;
+export default Input;

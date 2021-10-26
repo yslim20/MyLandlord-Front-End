@@ -5,6 +5,7 @@ import React from 'react';
 
 import RadioButton from '../RadioButton';
 import FullName from '../comps/FullName';
+import Input from '../comps/Input';
 
 const Cont = styled.div`
   display: flex;
@@ -17,6 +18,11 @@ export default function SignUp() {
     <Cont>
       <RadioButton />  
       <FullName />  
+      <Input />
+      <Input title="User Name" />
+      <Input title="Password" />
+      <Input title="Confirm the Password" />
+
     </Cont>
   )
 }
