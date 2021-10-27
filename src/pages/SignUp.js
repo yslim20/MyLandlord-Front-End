@@ -9,7 +9,7 @@ import Input from '../comps/Input';
 import Checkbox from '../comps/Checkbox';
 import VeriButton from '../comps/VeriButton';
 import ImgBox from '../comps/ImgBox';
-import SubButton from '../comps/SubButton';
+import Button from '../comps/Button'
 
 const Cont = styled.div`
   display: flex;
@@ -39,6 +39,12 @@ const ContRight = styled.div`
   justify-content: center;
 `
 
+const BttnCont = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
 export default function SignUp() {
   return (
     <Cont>
@@ -54,9 +60,19 @@ export default function SignUp() {
           <Checkbox />
           <VeriButton />  
 
-          <SubButton 
-        
-          />
+          <BttnCont>
+            <Button 
+              text = "Cancel"
+              margintop = "0px"
+              border = "1px solid #000"
+              bgcolor = "#fff"
+              hover = "box-shadow: none"
+            />
+            <Button 
+              text = "Submit"
+              margintop = "0px"
+            />
+          </BttnCont>
 
         </ContLeft>
 

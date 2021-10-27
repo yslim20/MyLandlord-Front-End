@@ -3,25 +3,26 @@ import React from 'react';
 import {useRouter} from 'next/router';
 
 const ButtonCont = styled.div`
-    margin-top:${props=>props.mtop};
+    margin-top: ${props=>props.mtop}px;
     display:flex;
     justify-content:center;
-
 `;
 
 const ButtonInput = styled.button`
     display:flex;
     background-color:${props=>props.bg};
-    border:none;
-    border-radius:${props=>props.radius};
-    width: ${props=>props.width};
-    height: ${props=>props.height};
-    font-size: ${props=>props.size};
+    border: ${props=>props.border};
+    border-radius:${props=>props.radius}px;
+    width: ${props=>props.width}px;
+    height: ${props=>props.height}px;
+    font-size: ${props=>props.size}px;
     align-items:center;
     justify-content:center;
+    box-shadow: ${props=>props.bshadow};  
+
 
     :hover{
-        opacity:0.8;
+        ${props=>props.hover}        
     }
 `;
 
@@ -35,23 +36,36 @@ const ButtonText = styled.p`
 
 const Button = ({
     text="Log In",
-    margintop="100px",
-    bgcolor="C4C4C4",
-    radius="20px",
-    width="360px",
-    height="72px",
-    routeTo="/Home"
+    margintop = 100,
+    bgcolor = "#C4C4C4",
+    radius = 20,
+    width = 360,
+    height = 72,
+    border = "none",
+    routeTo = "/Home",
+    hover = "opacity: 0.8",
+    bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"
 
 }) => {
     const router = useRouter();
 
     return (
-        <ButtonCont mtop={margintop} onClick={()=>router.push(routeTo)}>
-            <ButtonInput bg={bgcolor} radius={radius} width={width} height={height}>
+        <ButtonCont 
+            mtop={margintop} 
+            onClick={()=>router.push(routeTo)}
+        >
+            <ButtonInput 
+                bg={bgcolor} 
+                radius={radius} 
+                width={width} 
+                height={height}
+                border={border}
+                hover={hover}
+                bshadow={bshadow}
+            >
                 <ButtonText>{text}</ButtonText>
             </ButtonInput>
         </ButtonCont>
-
     );
 }
 
