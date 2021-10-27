@@ -32,6 +32,7 @@ const BttmCont = styled.div`
 const ContLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
   flex-direction: column; 
   justify-content: center;
 `
