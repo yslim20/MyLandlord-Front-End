@@ -42,7 +42,7 @@ const Button = ({
     width = 360,
     height = 72,
     border = "none",
-    routeTo = "/LogIn",
+    routeTo = "/",
     hover = "opacity: 0.8",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"
 

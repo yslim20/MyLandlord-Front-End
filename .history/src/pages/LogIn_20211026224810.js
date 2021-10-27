@@ -37,7 +37,7 @@ export default function LogIn() {
                     <LongInForm title="Password" />
                     <Button text="Log In" />
                     <Divider />
-                    <Button text="Sign Up" margintop="45" />
+                    <Button text="Sign Up" margintop="55" />
                 </InputSide>
                 <ImgSide>
                     <ImgBox  height="735px"/>
