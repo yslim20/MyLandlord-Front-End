@@ -6,8 +6,8 @@ const Cont = styled.div`
   height: ${props => props.cheight}px;
   position: relative;  
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 `
 const Img = styled.img`
   width:${props => props.width};
@@ -22,7 +22,7 @@ export default function TopNav(){
         <Img
         src= "https://placekitten.com/100/100"
         onClick={()=>router.push(routeTo)} 
-        routeTo = "/LogIn" 
+        routeTo = "/Home" 
         />
     </Cont>
       );

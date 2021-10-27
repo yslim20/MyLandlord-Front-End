@@ -5,6 +5,7 @@ import TopNav from '../comps/TopNav';
 import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
 import NavText from '../comps/NavText';
+import Header from '../comps/Header';
 
 const Cont = styled.div`
     display:flex;
@@ -13,23 +14,38 @@ const Cont = styled.div`
 
 const Nav = styled.div`
     display:flex;
-    flex-direction: space-between;
-    height:20%;
+    flex-direction:row;
+    justify-content:space-between;
+    height:10%;
 `;
 const LandBox = styled.div`
     display:flex;
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
 `;
 
-const LeftBar = styled.div`
+const MidCont = styled.div`
     display:flex;
     flex: 1;
     flex-direction: row;
+`
+const LeftBar =styled.div`
+    display:flex;
+    flex: 3;
+    flex-direction: row;
 
+`
+const RightBar = styled.div`
+    display:flex;
+    flex: 1;
+    margin-right:10%;
+    flex-direction: row;
 `
 
 const ImgSide = styled.div`
+    display:flex;
+    flex: 1;
+    flex-direction: column;
     margin-left:7%;
 `;
 
@@ -42,21 +58,27 @@ export default function Home() {
     return(
         <Cont>
             <Nav>
-                <TopNav>
+                <LeftBar>
+                    <TopNav/>
                     <NavText text="Map" />
                     <NavText text="List"/>
-                </TopNav>
-                <LeftBar>
-                    <Button bg="#FFFFFF" border="solid black"  text="Log In"/>
-                    <Button bg="000000" border="solid" text="Sign Up"/>
                 </LeftBar>
+                <RightBar>
+                    <Button width="50%"  bg="#FFFFFF" border="solid black"  text="Log In"/>
+                    <Button width="50%"  bg="000000" border="solid" text="Sign Up"/>
+                </RightBar>
             </Nav>
-            <LandBox>
-                    <Button text="Write Review" margintop="45" />
-            </LandBox>
-                <ImgSide>
-                    <ImgBox src="https://placekitten.com/500/500" width="400px" height="735px"/>
-                </ImgSide> 
+            <MidCont>
+                    <LandBox>
+                            <ImgBox src="https://placekitten.com/500/500" width="60%" height="40%"/>
+                            <Header text="Welcome to MyLandlord, can i sleep?"/>
+                            <Button text="Write Review"/>
+                    </LandBox>
+                    <ImgSide>
+                            <ImgBox src="https://placekitten.com/400/400" width="90%" height="90%"/>
+                    </ImgSide> 
+            </MidCont>
+           
         </Cont>
     )
 }

@@ -18,6 +18,8 @@ color: 000000;
 const NavText = ({
     color="000000",
     text="Map",
+    width=50,
+    height=20,
     margintop = 100,
     hover = "color: blue",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"
@@ -26,13 +28,13 @@ const NavText = ({
     return (
         <NavText mtop={margintop} onClick={()=>router.push(routeTo)}
                 color={color} 
+                text={text}
                 width={width} 
                 height={height}
                 hover={hover}
                 bshadow={bshadow}
             >
-                <Text>{text}</Text>
-            </NavText>
+        </NavText>
     );
 }
 export default NavText;
