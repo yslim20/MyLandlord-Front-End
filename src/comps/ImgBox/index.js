@@ -11,8 +11,8 @@ const Cont = styled.div`
 `
 
 const Img = styled.img`
-  width:100%;
-  height: 100%; 
+  width:${props => props.width};
+  height: ${props => props.height};
   display: block;
   object-fit: ${props => props.objectFit};  
 `
@@ -32,6 +32,8 @@ const ImgBox = ({
 
   src = "https://placekitten.com/500/500",
   alt = "image box",
+  width = "100%",
+  height = "100%",
   objectFit = "cover",  
   zindex = 1,
   position = "absolute",
@@ -47,6 +49,8 @@ const ImgBox = ({
       <Img 
         src = {src} 
         alt = {alt} 
+        width ={width}
+        height = {height}
         objectFit = {objectFit}        
       />
       <Text
