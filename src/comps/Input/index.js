@@ -12,8 +12,8 @@ const FormCont = styled.div`
 `
 
 const FormBox = styled.form`
-  width:100%;
-  height: 100%; 
+  width:${props => props.fwidth};
+  height: ${props => props.fheight}; 
   display:flex;
   flex-direction: column;
   align-items: felx-start;
@@ -21,14 +21,14 @@ const FormBox = styled.form`
 `
 
 const LabelFor = styled.label`
-  font-size: 32px;
+  font-size: ${props => props.fsize}px; 
   margin-bottom: 10px;
   margin-left: 20px;
 `;
 
 const InputBox = styled.input`
-  width: 100%;
-  height: 57px;
+  width:${props => props.iwidth};
+  height: ${props => props.iheight}px; 
   border-radius: 20px;
   border: solid 1px #c4c4c4;
   font-size: 24px;
@@ -37,14 +37,30 @@ const InputBox = styled.input`
 `
 
 const Input = ({
-  title = "Email"
+  title = "Email",
+  fwidth = "100%",
+  fheight = "100%",
+  fsize = 32,
+  iwidth = "100%",
+  iheight = 57,
 }) => {  
 
   return (
     <FormCont>
-      <FormBox>
-        <LabelFor for={title}>{title}</LabelFor>
-        <InputBox type="text" name={title} required />
+      <FormBox 
+        fwidth={fwidth} 
+        fheight={fheight}
+      >
+        <LabelFor 
+          for={title} 
+          fsize = {fsize}
+        > {title}</LabelFor>
+        <InputBox 
+          type="text" 
+          name={title} required 
+          iwidth={iwidth} 
+          iheight={iheight}
+        />
       </FormBox>
     </FormCont>    
   );
