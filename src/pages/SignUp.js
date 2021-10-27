@@ -13,6 +13,12 @@ import ImgBox from '../comps/ImgBox';
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+`
+
+const BttmCont = styled.div`
+  display: flex;
+  flex-wrap: row;
   flex-direction: row;
 `
 
@@ -20,32 +26,38 @@ const ContLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  flex: 1;
+  flex: 1;  
 `
 
 const ContRight = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
 `
 
 export default function SignUp() {
   return (
     <Cont>
-      <ContLeft>
-        <RadioButton />  
-        <FullName />  
-        <Input />
-        <Input title="User Name" />
-        <Input title="Password" />
-        <Input title="Confirm the Password" />
-        <Checkbox />
-        <VeriButton />        
-      </ContLeft>
+      <RadioButton />  
 
-      <ContRight>
-        <ImgBox />
-      </ContRight>     
+      <BttmCont>
+        <ContLeft>        
+          <FullName />  
+          <Input />
+          <Input title="User Name" />
+          <Input title="Password" />
+          <Input title="Confirm the Password" />
+          <Checkbox />
+          <VeriButton />        
+        </ContLeft>
+
+        <ContRight>
+          <ImgBox />
+        </ContRight> 
+      </BttmCont>          
     </Cont>
   )
 }

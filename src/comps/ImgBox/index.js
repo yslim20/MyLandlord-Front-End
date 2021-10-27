@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import React from 'react';
 
 const Cont = styled.div`
-  max-width: 525px;
-  max-height: 905px; 
-  position: relative;
+  width: 80%;
+  min-height: 800px; 
+  position: relative;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 const Img = styled.img`
@@ -27,7 +30,7 @@ const Text = styled.p`
 
 const ImgBox = ({
 
-  src = "/images/img_imgbox.png",
+  src = "https://placekitten.com/500/500",
   alt = "image box",
   objectFit = "cover",  
   zindex = 1,

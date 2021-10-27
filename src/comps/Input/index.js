@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 const FormCont = styled.div`
-  max-width: 715px;
+  width: 100%;
   height: 103px; 
   display:flex;
   flex-direction: row;
@@ -33,6 +33,7 @@ const InputBox = styled.input`
   border: solid 1px #c4c4c4;
   font-size: 24px;
   padding: 16px;
+  box-sizing: border-box;
 `
 
 const Input = ({

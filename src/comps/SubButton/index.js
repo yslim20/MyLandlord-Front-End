@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 
 const Cont = styled.div`
-  width:100%;
+  max-width: 715px;
   height: 96px; 
   border-radius: 8px;
   border: solid 1px #666;
@@ -71,26 +71,27 @@ const Img = styled.img`
 //   });
 // }
 
-function VeriButton({
-  value = "I am not a robot "
+function SubButton({
+  action = "processor.php",
+  method = "post",
+  type = "submit",
+  name = "submit_button",
+  value = "Submit",
+  onClick =()=>{},
 }) {
 
   return (
     <Cont>
-      <FormBox>
-        <LabelFor>
-          <InputBox
-            type="checkbox"
-            valueB={value}
-            // checked={this.state.name === {valueB}}
-            // onChange={this.onValChange}
-            required />
-          <Title>{value}</Title>
-          <Img src="/images/img_verification.png" alt="verification" />
-        </LabelFor>
-      </FormBox>
+      <FormBox action={action} method = {method}>
+        <InputBox 
+          type={type} 
+          name={name} 
+          value={value} 
+          onClick={onClick}
+        />
+      </FormBox>s
     </Cont>
   );
 }
 
-export default VeriButton;
+export default SubButton;

@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 
 const RadioCont = styled.div`
-  max-width: 412px;
+  width: 26%;
   height: 53px; 
   margin-bottom: 80px;
 `;
