@@ -17,6 +17,12 @@ const Cont = styled.div`
   flex-direction: column;
 `
 
+const RadioCont = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+`
+
 const BttmCont = styled.div`
   display: flex;
   flex-wrap: row;
@@ -48,7 +54,15 @@ const BttnCont = styled.div`
 export default function SignUp() {
   return (
     <Cont>
-      <RadioButton />  
+      <RadioCont> 
+        <RadioButton 
+          cwidth = "12%"
+        />  
+        <RadioButton 
+          text = "Landlord"
+        /> 
+      </RadioCont>
+       
 
       <BttmCont>
         <ContLeft>        

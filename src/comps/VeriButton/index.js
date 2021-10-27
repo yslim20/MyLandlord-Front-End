@@ -5,11 +5,11 @@ import React, { Component } from 'react';
 
 
 const Cont = styled.div`
-  width: ${props=>props.width};
-  height: ${props=>props.height}px;   
-  border-radius: 8px;
-  border: solid 1px #666;
-  margin-bottom: 25px;
+  width: ${props=>props.cwidth};
+  height: ${props=>props.cheight}px;   
+  border-radius: ${props=>props.cBRadius}px;   
+  border: ${props=>props.border};
+  margin-bottom: ${props=>props.cMBttm}px;   
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -17,8 +17,8 @@ const Cont = styled.div`
 `
 
 const FormBox = styled.form`
-  width:100%;
-  height: 100%; 
+  width:${props=>props.width};  
+  height: ${props=>props.height};  
   display:flex;  
   flex-direction: row;
   align-items: center;
@@ -72,9 +72,19 @@ const Img = styled.img`
 // }
 
 function VeriButton({
-  width = "100%",
-  height = 96,
+// container
+  cwidth = "100%",
+  cheight = 96,
+  border = "solid 1px #666",
+  cBRadius = 8, 
   cBshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+  cMBttm = 25,
+
+// formbox
+  width = "100%",
+  height = "100%",
+
+// inputbox
   value = "I am not a robot",
   iBshadow = "rgba(0, 0, 0, 0.3) 3px 3px 3px 0px inset, rgba(0, 0, 0, 0.05) -3px -3px 3px 1px inset",
   iWidth = 36,
@@ -87,10 +97,17 @@ function VeriButton({
   return (
     <Cont
       cBshadow={cBshadow}
-      width={width}
-      height = {height}
+      cwidth={cwidth}
+      cheight = {cheight}
+      cBRadius={cBRadius}
+      border={border}
+      cBRadius={cBRadius}
+      cMBttm={cMBttm}
     >
-      <FormBox>
+      <FormBox
+        width={width}
+        height={height}
+      >
         <LabelFor>
           <InputBox
             type="checkbox"
