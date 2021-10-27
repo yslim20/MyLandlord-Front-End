@@ -5,7 +5,7 @@ import TopNav from '../comps/TopNav';
 import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
 import NavText from '../comps/NavText';
-import Header from '../comps/Header';
+import SubHead from '../comps/SubHead';
 
 const Cont = styled.div`
     display:flex;
@@ -50,7 +50,10 @@ const ImgSide = styled.div`
 `;
 
 const List = styled.div`
-    margin-left:7%;
+    display:flex;
+    flex: 1;
+    margin-right:10%;
+    flex-direction: row;
 `;
 
 
@@ -71,7 +74,7 @@ export default function Home() {
             <MidCont>
                     <LandBox>
                             <ImgBox src="https://placekitten.com/500/500" width="60%" height="40%"/>
-                            <Header text="Welcome to MyLandlord, can i sleep?"/>
+                            <SubHead text="Welcome to MyLandlord, can i sleep?"/>
                             <Button text="Write Review"/>
                     </LandBox>
                     <ImgSide>
