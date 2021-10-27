@@ -24,7 +24,6 @@ const InputSide = styled.div`
 
 const ImgSide = styled.div`
     margin-left:7%;
-    margin-right:7%;
 `;
 
 export default function LogIn() {

@@ -19,7 +19,7 @@ const DivideCont = styled.div`
 `;
 
 const InputSide = styled.div`
-    margin-left:7%;
+    margin-left:%;
 `;
 
 const ImgSide = styled.div`

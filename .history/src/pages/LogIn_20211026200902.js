@@ -12,21 +12,6 @@ const Cont = styled.div`
 
 `;
 
-const DivideCont = styled.div`
-    display:flex;
-    flex: 1;
-    flex-direction: row;
-`;
-
-const InputSide = styled.div`
-    margin-left:7%;
-`;
-
-const ImgSide = styled.div`
-    margin-left:7%;
-    margin-right:7%;
-`;
-
 export default function LogIn() {
     return(
         <Cont>
@@ -39,7 +24,6 @@ export default function LogIn() {
                     <Button text="Sign Up" />
                 </InputSide>
                 <ImgSide>
-                    <ImgBox width="590px" height="735px"/>
                 </ImgSide>
                 
             </DivideCont>

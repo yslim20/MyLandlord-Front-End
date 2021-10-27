@@ -3,6 +3,7 @@ import React from 'react';
 
 const FormCont = styled.div`
     max-width: 650px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
