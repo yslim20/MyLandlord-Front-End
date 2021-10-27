@@ -35,27 +35,10 @@ const LabelFor = styled.label`
 `;
 
 const InputBox = styled.input`
-  width: 36px;
-  height: 36px;
   margin: 0;
   padding: 0;
   margin-right: 10px;
-  box-shadow: rgb(204, 219, 232) 3px 3px 3px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 3px 1px inset;
 ` 
-
-const Title = styled.span`
-  height: 30px;
-  font-size: 32px;
-  margin: 0;  
-  line-height: 30px;
-  margin-right: 20px;
-` 
-
-const Img = styled.img`
-  width: 68px;
-  height: 68px;
-`
-
 // constructor = () => {
 //   super();
 //   this.state = {
@@ -89,7 +72,7 @@ function SubButton({
           value={value} 
           onClick={onClick}
         />
-      </FormBox>s
+      </FormBox>
     </Cont>
   );
 }

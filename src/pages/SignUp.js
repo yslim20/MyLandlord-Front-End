@@ -9,6 +9,7 @@ import Input from '../comps/Input';
 import Checkbox from '../comps/Checkbox';
 import VeriButton from '../comps/VeriButton';
 import ImgBox from '../comps/ImgBox';
+import SubButton from '../comps/SubButton';
 
 const Cont = styled.div`
   display: flex;
@@ -51,13 +52,18 @@ export default function SignUp() {
           <Input title="Password" />
           <Input title="Confirm the Password" />
           <Checkbox />
-          <VeriButton />        
+          <VeriButton />  
+
+          <SubButton 
+        
+          />
+
         </ContLeft>
 
         <ContRight>
           <ImgBox />
         </ContRight> 
-      </BttmCont>          
+      </BttmCont>  
     </Cont>
   )
 }
