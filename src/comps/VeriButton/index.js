@@ -5,15 +5,15 @@ import React, { Component } from 'react';
 
 
 const Cont = styled.div`
-  width:100%;
-  height: 96px; 
+  width: ${props=>props.width};
+  height: ${props=>props.height}px;   
   border-radius: 8px;
   border: solid 1px #666;
   margin-bottom: 25px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
+  box-shadow: ${props=>props.cBshadow} 
 `
 
 const FormBox = styled.form`
@@ -35,17 +35,17 @@ const LabelFor = styled.label`
 `;
 
 const InputBox = styled.input`
-  width: 36px;
-  height: 36px;
+  width: ${props=>props.iWidth}px;
+  height: ${props=>props.iWidth}px;   
+  border-radius: ${props=>props.bradius}px;   
   margin: 0;
   padding: 0;
-  margin-right: 10px;
-  box-shadow: rgb(204, 219, 232) 3px 3px 3px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 3px 1px inset;
+  margin-right: ${props=>props.marginR}px;  
+  box-shadow: ${props=>props.iBshadow};
 ` 
 
 const Title = styled.span`
-  height: 30px;
-  font-size: 32px;
+  font-size: ${props=>props.fsize}px; 
   margin: 0;  
   line-height: 30px;
   margin-right: 20px;
@@ -72,20 +72,43 @@ const Img = styled.img`
 // }
 
 function VeriButton({
-  value = "I am not a robot "
+  width = "100%",
+  height = 96,
+  cBshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+  value = "I am not a robot",
+  iBshadow = "rgba(0, 0, 0, 0.3) 3px 3px 3px 0px inset, rgba(0, 0, 0, 0.05) -3px -3px 3px 1px inset",
+  iWidth = 36,
+  bradius = 5,
+  marginR = 10,
+  fsize = 32,
+
 }) {
 
   return (
-    <Cont>
+    <Cont
+      cBshadow={cBshadow}
+      width={width}
+      height = {height}
+    >
       <FormBox>
         <LabelFor>
           <InputBox
             type="checkbox"
             valueB={value}
+            iBshadow={iBshadow}
+            iWidth={iWidth}
+            marginR={marginR}
+            bradius={bradius}
             // checked={this.state.name === {valueB}}
             // onChange={this.onValChange}
             required />
-          <Title>{value}</Title>
+
+          <Title
+            fsize={fsize}
+          >
+            {value}
+          </Title>
+
           <Img src="/images/img_verification.png" alt="verification" />
         </LabelFor>
       </FormBox>
