@@ -7,11 +7,10 @@ const Icon =styled.img`
     height: ${props => props.height};
     display: block;
     object-fit: ${props => props.objectFit};  
-
+    src:${props => props.src};
+    border-radius: ${props => props.borderRadius};
+    padding: ${props => props.padding}
 `
-
-
-
 const Avatar =({
     //icon
     src= "https://placekitten.com/500/500",

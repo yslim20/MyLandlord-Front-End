@@ -7,6 +7,7 @@ const ButtonCont = styled.div`
     width: 100%;
     display:flex;
     justify-content:center;
+    padding: ${props=>props.padding}px;
 `;
 
 const ButtonInput = styled.button`

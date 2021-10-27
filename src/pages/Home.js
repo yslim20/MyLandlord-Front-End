@@ -6,6 +6,8 @@ import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
 import NavText from '../comps/NavText';
 import SubHead from '../comps/SubHead';
+import List from '../comps/List';
+import Avatar from '../comps/Avatar';
 
 const Cont = styled.div`
     display:flex;
@@ -16,7 +18,7 @@ const Nav = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    height:10%;
+    max-height:20%;
 `;
 const LandBox = styled.div`
     display:flex;
@@ -31,8 +33,8 @@ const MidCont = styled.div`
 `
 const LeftBar =styled.div`
     display:flex;
-    flex: 3;
     flex-direction: row;
+    flex: 1;
 
 `
 const RightBar = styled.div`
@@ -49,7 +51,7 @@ const ImgSide = styled.div`
     margin-left:7%;
 `;
 
-const List = styled.div`
+const ListCont = styled.div`
     display:flex;
     flex: 1;
     margin-right:10%;
@@ -62,13 +64,26 @@ export default function Home() {
         <Cont>
             <Nav>
                 <LeftBar>
-                    <TopNav/>
-                    <NavText text="Map" />
-                    <NavText text="List"/>
+                        <TopNav>
+                        <NavText text="Map" />
+                        <NavText text="List"/>
+                        </TopNav>
                 </LeftBar>
                 <RightBar>
-                    <Button width="50%"  bg="#FFFFFF" border="solid black"  text="Log In"/>
-                    <Button width="50%"  bg="000000" border="solid" text="Sign Up"/>
+                    <Button 
+                        radius="5"
+                        width="70px"
+                        height="30px"
+                        bgcolor="#FFFFFF" 
+                        border="1px solid #000"  
+                        text="Log In"/>
+                    <Button 
+                        radius="5"
+                        width="70px"
+                        height="30px"
+                        bgcolor="000000" 
+                        border="1px solid #000"
+                        text="Sign Up"/>
                 </RightBar>
             </Nav>
             <MidCont>
@@ -81,6 +96,13 @@ export default function Home() {
                             <ImgBox src="https://placekitten.com/400/400" width="90%" height="90%"/>
                     </ImgSide> 
             </MidCont>
+            <ListCont>
+                <List>
+                    <Avatar></Avatar>
+                    <SubHead></SubHead>
+                </List>
+
+            </ListCont>
            
         </Cont>
     )
