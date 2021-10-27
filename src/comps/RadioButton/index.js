@@ -4,25 +4,39 @@ import { useState, useEffect } from 'react';
 import React, { Component } from 'react';
 
 
-const CardCont = styled.div`
-  min-width:200px;
-  max-width: 350px;
-  display:flex;
-  flex-direction:column;
+const RadioCont = styled.div`
+  width: 26%;
+  height: 53px; 
+  margin-bottom: 80px;
 `;
 
-const HeaderCont = styled.div`
-  background-color:#eeeeee;
-  position:relative;
-  min-height:200px;
+const FormCont = styled.form`
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `
 
-const CardBody = styled.div`
-  font-size:18px;
-  padding:10px;
-`;
+const LabelBox = styled.label`
+  min-width: 158px;
+  height: 53px;  
+`
 
+const InputBox = styled.input`
+  width: 36px;
+  height: 36px;
+  line-height: 54px;
+  margin: 0;
+  margin-right: 10px;
+`
 
+const TextCont = styled.span`
+  width: 100%;
+  height: 100%;
+  font-size: 36px;
+  margin-left: 5px;
+  line-height: 48px;
+`
 
 // constructor = () => {
 //   super();
@@ -39,33 +53,37 @@ const CardBody = styled.div`
 //   });
 // }
 
-const RadioButton = () => {  
+const RadioButton = ({
+  onChange = () => {},
+  checked = "this.state.name === 'Tenant'"
+}) => {  
 
   return (
-    <div className="App">
-      <form>
-          <label>
-            <input
+    <RadioCont>
+      <FormCont>
+          <LabelBox>
+            <InputBox
               type="radio"
               value="Tenant"
-              checked
-              // checked={this.state.name === "Tenant"}
-              // onChange={this.onValChange}
-              />
-              <span>Tenant</span>
-          </label>
+              checked={checked}
+              onChange = {onChange}
+            />
+              <TextCont>Tenant</TextCont>
+          </LabelBox>
 
-          <label>
-            <input
+          <LabelBox>
+            <InputBox
               type="radio"
               value="Landlord"
+              // checked={checked}
+              onChange = {onChange}
               // checked={this.state.name === "Landlord"}
               // onChange={this.onValChange}
-              />
-              <span>Landlord</span>
-          </label>
-      </form>
-    </div>
+            />
+              <TextCont>Landlord</TextCont>
+          </LabelBox>
+      </FormCont>
+    </RadioCont>
   );
 }
 
