@@ -4,6 +4,7 @@ import {useRouter} from 'next/router';
 
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
+    width: 100%;
     display:flex;
     justify-content:center;
 `;
@@ -13,7 +14,7 @@ const ButtonInput = styled.button`
     background-color:${props=>props.bg};
     border: ${props=>props.border};
     border-radius:${props=>props.radius}px;
-    width: ${props=>props.width}px;
+    width: ${props=>props.width};
     height: ${props=>props.height}px;
     font-size: ${props=>props.size}px;
     align-items:center;
@@ -39,7 +40,7 @@ const Button = ({
     margintop = 100,
     bgcolor = "#C4C4C4",
     radius = 20,
-    width = 360,
+    width = "360px",
     height = 72,
     border = "none",
     routeTo = "/LogIn",

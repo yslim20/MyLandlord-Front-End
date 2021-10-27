@@ -5,9 +5,9 @@ import React, { Component } from 'react';
 
 
 const Cont = styled.div`
-  max-width: 715px;
-  height: 103px; 
-  margin-bottom: 25px;
+  max-width: ${props=>props.cwidth};
+  height: ${props=>props.cheight}px;
+  margin-bottom: ${props=>props.cmarginB}px;
 `
 
 const FormBox = styled.form`
@@ -20,24 +20,25 @@ const FormBox = styled.form`
 `
 
 const LabelFor = styled.label`
-  width: 100%;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  width: ${props=>props.lwidth};
+  margin-bottom: ${props=>props.lmarginB}px;
+  margin-left: ${props=>props.lmarginL}px;
+  box-sizing: border-box;
 `;
 
 const InputBox = styled.input`
-  width: 30px;
-  height: 30px;
+  width: ${props=>props.iwidth}px;
+  height: ${props=>props.iwidth}px;
   margin: 0;
   padding: 0;
-  margin-right: 10px;
+  margin-right: ${props=>props.imarginR}px;
 ` 
 
 const Title = styled.span`
-  height: 30px;
-  font-size: 24px;
+  height: ${props=>props.theight}px;
+  font-size: ${props=>props.fsize}px;
   margin: 0;  
-  line-height: 30px;
+  line-height: ${props=>props.lineheight}px;
 ` 
 
 // constructor = () => {
@@ -56,33 +57,59 @@ const Title = styled.span`
 // }
 
 const Checkbox = ({
-  valueT = "Recieve news letter and update",
-  valueB = "I agree to the terms and agreement"
+// container
+  cwidth = "",
+  cheight = 55,
+  cmarginB = 0,
+
+// label
+  lwidth = "100%",
+  lmarginB = 10,
+  lmarginL = 20,
+
+// input
+  type = "radio",
+  iwidth = 30,
+  imarginR= 10,
+  required = "",
+
+// text
+  theight = 30,
+  fsize = 24,
+  lineheight = 30,
+  value = "Recieve news letter and update",
+
 }) => {  
   
   return (
-    <Cont>
+    <Cont 
+      cwidth={cwidth}
+      cheight={cheight}
+      cmarginB={cmarginB}
+    >
       <FormBox>
-          <LabelFor>
+          <LabelFor
+            lwidth={lwidth}
+            lmarginB={lmarginB}
+            lmarginL={lmarginL}
+          >
             <InputBox
-              type="radio"
-              valueT = {valueT}
+              type={type}
+              value={value}
+              iwidth={iwidth}
+              imarginR={imarginR}
+              required = {required}
               // checked={this.state.name === {valueT}}
               // onChange={this.onValChange}
             >
             </InputBox>
-              <Title>{valueT}</Title>
-          </LabelFor>
-
-          <LabelFor>
-            <InputBox
-              type="radio"              
-              valueB={valueB}
-              // checked={this.state.name === {valueB}}
-              // onChange={this.onValChange}
-              required
-            />
-              <Title>{valueB}</Title>
+              <Title
+                theight={theight}
+                fsize={fsize}
+                lineheight={lineheight}              
+              >
+                {value}
+              </Title>
           </LabelFor>
       </FormBox>
     </Cont>
