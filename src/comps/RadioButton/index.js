@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react';
 import React, { Component } from 'react';
 
 
-const RadioCont = styled.div`
-  width: ${props=>props.cwidth};  
-  height: ${props=>props.cheight}px;  
+const RadioCont = styled.div`;  
   margin-bottom: ${props=>props.mbttm}px;  
+  margin-right: ${props=>props.mRight}px;  
   padding: ${props=>props.padding}px; 
   box-size: border-box;
 `;
@@ -57,10 +56,9 @@ const TextCont = styled.span`
 const RadioButton = ({
 
 // RadioCont
-  cwidth = "20%",
-  cheight = 53,
   mbttm = 80,
   padding = 5,
+  mRight = 20,
 
 // LabelBox
   lwidth = 158,
@@ -80,10 +78,9 @@ const RadioButton = ({
   text = "Tenant"
 }) => (
   <RadioCont
-    cwidth={cwidth}
-    cheight={cheight}
     mbttm={mbttm}
-    padding={padding}
+    mRight={mRight}
+    padding={padding}    
   >
     <FormCont>
       <LabelBox
@@ -98,6 +95,7 @@ const RadioButton = ({
           marginR={marginR}
           checked={checked}
           onChange={onChange} />
+
         <TextCont
           fsize={fsize}
           marginL={marginL}
@@ -106,20 +104,6 @@ const RadioButton = ({
           {text}
         </TextCont>
       </LabelBox>
-      {/*
-                  <LabelBox>
-                    <InputBox
-                      type="radio"
-                      value="Landlord"
-                      iwidth={iwidth}
-                      ilheight={ilheight}
-                      // checked={checked}
-                      onChange = {onChange}
-                      // checked={this.state.name === "Landlord"}
-                      // onChange={this.onValChange}
-                    />
-                      <TextCont>Landlord</TextCont>
-                  </LabelBox> */}
     </FormCont>
   </RadioCont>
 )

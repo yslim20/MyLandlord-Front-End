@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import React from 'react';
 
 const FormCont = styled.div`
-  width: 100%;
   height: 103px; 
   display:flex;
   flex-direction: row;
