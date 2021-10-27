@@ -6,39 +6,55 @@ import React, { Component } from 'react';
 
 const Cont = styled.div`
   max-width: 715px;
-  height: 103px; 
+  height: 96px; 
+  border-radius: 8px;
+  border: solid 1px #666;
   margin-bottom: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
 `
 
 const FormBox = styled.form`
   width:100%;
   height: 100%; 
-  display:flex;
-  flex-direction: column;
+  display:flex;  
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
 `
 
 const LabelFor = styled.label`
-  width: 100%;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  display:flex;  
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
 
 const InputBox = styled.input`
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   margin: 0;
   padding: 0;
   margin-right: 10px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 3px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 3px 1px inset;
 ` 
 
 const Title = styled.span`
   height: 30px;
-  font-size: 24px;
+  font-size: 32px;
   margin: 0;  
   line-height: 30px;
+  margin-right: 20px;
 ` 
+
+const Img = styled.img`
+  width: 68px;
+  height: 68px;
+`
 
 // constructor = () => {
 //   super();
@@ -55,9 +71,8 @@ const Title = styled.span`
 //   });
 // }
 
-const Checkbox = ({
-  valueT = "Recieve news letter and update",
-  valueB = "I agree to the terms and agreement"
+const VeriButton = ({
+  value = "I am not a robot "
 }) => {  
   
   return (
@@ -65,28 +80,18 @@ const Checkbox = ({
       <FormBox>
           <LabelFor>
             <InputBox
-              type="radio"
-              valueT = {valueT}
-              // checked={this.state.name === {valueT}}
-              // onChange={this.onValChange}
-            >
-            </InputBox>
-              <Title>{valueT}</Title>
-          </LabelFor>
-
-          <LabelFor>
-            <InputBox
-              type="radio"              
-              valueB={valueB}
+              type="checkbox"              
+              valueB={value}
               // checked={this.state.name === {valueB}}
               // onChange={this.onValChange}
               required
             />
-              <Title>{valueB}</Title>
+              <Title>{value}</Title>
+              <Img src = "/images/img_verification.png" alt="verification" />
           </LabelFor>
       </FormBox>
     </Cont>
   );
 }
 
-export default Checkbox;
+export default VeriButton;

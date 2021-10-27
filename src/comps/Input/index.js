@@ -21,7 +21,6 @@ const FormBox = styled.form`
 `
 
 const LabelFor = styled.label`
-  max-width: 715px;
   font-size: 32px;
   margin-bottom: 10px;
   margin-left: 20px;

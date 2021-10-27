@@ -4,41 +4,40 @@ import { useState, useEffect } from 'react';
 import React, { Component } from 'react';
 
 
-const Cont = styled.div`
-  max-width: 715px;
-  height: 103px; 
+const RadioCont = styled.div`
+  max-width: 412px;
+  height: 53px; 
+  margin-bottom: 80px;
+`;
+
+const FormCont = styled.form`
   display:flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 25px;
 `
 
-const FormBox = styled.form`
-  width:100%;
-  height: 100%; 
-  display:flex;
-  flex-direction: column;
-  align-items: felx-start;
-  justify-content: center;
+const LabelBox = styled.label`
+  min-width: 158px;
+  height: 53px;  
 `
-
-const LabelFor = styled.label`
-  max-width: 715px;
-  font-size: 32px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-`;
 
 const InputBox = styled.input`
-  width: 100%;
-  height: 57px;
-` 
+  width: 36px;
+  height: 36px;
+  line-height: 54px;
+  margin: 0;
+  margin-right: 10px;
+`
 
-const Title = styled.span`
-  font-size: 24px;
-  padding: 16px;
-` 
+const TextCont = styled.span`
+  width: 100%;
+  height: 100%;
+  font-size: 36px;
+  margin-left: 5px;
+  line-height: 48px;
+`
+
 // constructor = () => {
 //   super();
 //   this.state = {
@@ -55,38 +54,36 @@ const Title = styled.span`
 // }
 
 const RadioButton = ({
-  valueL ="Tenant",
-  valueR = "Landlord",
-  checked = "",
-
+  onChange = () => {},
+  checked = "this.state.name === 'Tenant'"
 }) => {  
-  
+
   return (
-    <Cont className="App">
-      <FormBox>
-          <LabelFor>
+    <RadioCont>
+      <FormCont>
+          <LabelBox>
             <InputBox
               type="radio"
-              valueL={valueL}
-              checked = {checked}
-              // checked={this.state.name === {valueL}}
-              // onChange={this.onValChange}
+              value="Tenant"
+              checked={checked}
+              onChange = {onChange}
             />
-              <Title>={valueL}</Title>
-          </LabelFor>
+              <TextCont>Tenant</TextCont>
+          </LabelBox>
 
-          <LabelFor>
+          <LabelBox>
             <InputBox
-              type="radio"              
-              valueR={valueR}
-              checked = {checked}
-              // checked={this.state.name === {valueR}}
+              type="radio"
+              value="Landlord"
+              // checked={checked}
+              onChange = {onChange}
+              // checked={this.state.name === "Landlord"}
               // onChange={this.onValChange}
             />
-              <Title>{valueR}</Title>
-          </LabelFor>
-      </FormBox>
-    </Cont>
+              <TextCont>Landlord</TextCont>
+          </LabelBox>
+      </FormCont>
+    </RadioCont>
   );
 }
 
