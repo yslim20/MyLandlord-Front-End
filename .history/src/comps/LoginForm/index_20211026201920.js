@@ -18,7 +18,7 @@ const LabelFor = styled.p`
 const InputBox = styled.input`
     width:651px;
     height:83px;
-    border-radius:15px;
+    border-radius:1px;
     border: solid 3px #c4c4c4;
 `;
 
