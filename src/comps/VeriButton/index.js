@@ -71,24 +71,23 @@ const Img = styled.img`
 //   });
 // }
 
-const VeriButton = ({
+function VeriButton({
   value = "I am not a robot "
-}) => {  
-  
+}) {
+
   return (
     <Cont>
       <FormBox>
-          <LabelFor>
-            <InputBox
-              type="checkbox"              
-              valueB={value}
-              // checked={this.state.name === {valueB}}
-              // onChange={this.onValChange}
-              required
-            />
-              <Title>{value}</Title>
-              <Img src = "/images/img_verification.png" alt="verification" />
-          </LabelFor>
+        <LabelFor>
+          <InputBox
+            type="checkbox"
+            valueB={value}
+            // checked={this.state.name === {valueB}}
+            // onChange={this.onValChange}
+            required />
+          <Title>{value}</Title>
+          <Img src="/images/img_verification.png" alt="verification" />
+        </LabelFor>
       </FormBox>
     </Cont>
   );

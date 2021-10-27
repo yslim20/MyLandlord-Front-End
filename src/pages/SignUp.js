@@ -8,6 +8,7 @@ import FullName from '../comps/FullName';
 import Input from '../comps/Input';
 import Checkbox from '../comps/Checkbox';
 import VeriButton from '../comps/VeriButton';
+import ImgBox from '../comps/ImgBox';
 
 const Cont = styled.div`
   display: flex;
@@ -19,11 +20,13 @@ const ContLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  flex: 1;
 `
 
 const ContRight = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
 `
 
 export default function SignUp() {
@@ -41,7 +44,7 @@ export default function SignUp() {
       </ContLeft>
 
       <ContRight>
-
+        <ImgBox />
       </ContRight>     
     </Cont>
   )
