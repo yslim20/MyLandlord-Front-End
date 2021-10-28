@@ -4,6 +4,7 @@ import {useRouter} from 'next/router';
 
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
+    margin-right: ${props=>props.mright}px;
     width: 100%;
     display:flex;
     justify-content:center;
@@ -28,16 +29,17 @@ const ButtonInput = styled.button`
 `;
 
 const ButtonText = styled.p`
-    color:#000000;
-    font-size: 36px;
+    color:${props=>props.color} ;
+    font-size: ${props=>props.fontSize};
     text-align:center;
-    font-weight: 400;
+    font-weight: ${props=>props.fontWeight};
 `;
 
 
 const Button = ({
     text="Log In",
     margintop = 100,
+    marginright="",
     bgcolor = "#C4C4C4",
     radius = 20,
     width = "360px",
@@ -45,13 +47,17 @@ const Button = ({
     border = "none",
     routeTo = "/LogIn",
     hover = "opacity: 0.8",
-    bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"
+    bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+    color="#000000",
+    fontSize="36px",
+    fontWeight="400"
+
 
 }) => {
     const router = useRouter();
 
     return (
-        <ButtonCont mtop={margintop} onClick={()=>router.push(routeTo)}>
+        <ButtonCont mtop={margintop} mright={marginright} onClick={()=>router.push(routeTo)}>
             <ButtonInput 
                 bg={bgcolor} 
                 radius={radius} 
@@ -61,7 +67,12 @@ const Button = ({
                 hover={hover}
                 bshadow={bshadow}
             >
-                <ButtonText>{text}</ButtonText>
+                <ButtonText
+                color={color}
+                fontSize={fontSize}
+                fontWeight={fontWeight}
+                >
+                    {text}</ButtonText>
             </ButtonInput>
         </ButtonCont>
     );
