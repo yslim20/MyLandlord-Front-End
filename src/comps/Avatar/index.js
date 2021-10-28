@@ -3,14 +3,14 @@ import React from 'react';
 
 
 const Icon =styled.img`
-    width:${props => props.width};
-    height: ${props => props.height};
+    width:30px;
+    height:;
     display: block;
-    object-fit: ${props => props.objectFit};  
+    object-fit: fill;  
     src:${props => props.src};
-    border-radius: ${props => props.borderRadius};
-    padding: ${props => props.padding}
-`
+    border-radius: 50%;
+    padding: 10px;
+    `
 const Avatar =({
     //icon
     src= "https://placekitten.com/500/500",
@@ -21,12 +21,7 @@ const Avatar =({
 
 }) =>{
     return(
-        <Icon 
-        src={src}
-        backgroundColor={backgroundColor}
-        borderRadius={borderRadius}
-        border={border}
-        padding={padding}/>
+        <Icon/>
     );
 }
 
