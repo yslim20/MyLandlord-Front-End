@@ -2,26 +2,24 @@ import styled from 'styled-components';
 import React from 'react';
 
 
+
 const Icon =styled.img`
-    width:30px;
-    height:;
-    display: block;
-    object-fit: fill;  
+    width:80px;
+    border-radius:50%;
     src:${props => props.src};
-    border-radius: 50%;
-    padding: 10px;
+    vertical-align: middle;
+    height: 80px;
+    border: "2px solid #C4C4C4";
+
     `
 const Avatar =({
     //icon
-    src= "https://placekitten.com/500/500",
-    backgroundColor= "white",
-    borderRadius= "50%",
-    border="1px solid grey",
-    padding= "10px",
-
+    src= "https://placekitten.com/130/130",
 }) =>{
     return(
-        <Icon/>
+        <Icon
+        src={src}
+        />
     );
 }
 

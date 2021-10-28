@@ -6,7 +6,6 @@ import NavText from '../NavText';
 
 
 const Cont = styled.div`
-  width:15%;
   height: 20%;
   position: relative;  
   display: flex;
@@ -14,21 +13,20 @@ const Cont = styled.div`
   margin-top:${props => props.margintop}
 `
 const Nav = styled.div`
+  width:100%;
     display:flex;
     flex-direction:row;
-    justify-content:space-between;
 `
 const LeftBar =styled.div`
     display:flex;
     flex-direction: row;
     flex: 3;
-
 `
 const RightBar = styled.div`
     display:flex;
     flex: 1;
-    margin-right:0;
     flex-direction: row;
+
 `
 const Img = styled.img`
   width:151px;

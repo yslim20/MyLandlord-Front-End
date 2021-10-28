@@ -13,36 +13,41 @@ import Avatar from '../Avatar'
 // });
 
 const TableCont = styled.div`
-max-width: 650px;
+  width:100%;
 
 `
 const Table = styled.table`
   table-layout: fixed;
-  width: 100%;
+  width: 30%;
   border-collapse: collapse;
-  border: 3px solid purple;
+  margin-left:35%;
+  align-items:center;
+  justify-content:center;
 `
- const Tr = styled.tr`
- padding: 20px;
 
- `
- 
- const Tb = styled.tbody`
- border: 3px solid;
- `
+const Tr = styled.tr`
+:hover {background-color: #ddd;};
+font-size:35px;
+font-style:regular;
+margin-top:50px;
 
 
+`
 const List = () => {
   //const [users] = useState(testUsers);
   //const [selectedUsers, setSelectedUsers] = useState([]);
 
   return (
     <TableCont>
-      <Table className="table">
-     <tr>
-            <th scope="row"> <Avatar/></th>
-            <td>Name</td>
-     </tr>
+      <Table>
+     <Tr>
+            <td scope="row"><Avatar/></td>
+            <td scope="row">Walter White</td>
+     </Tr>
+     <Tr>
+            <td scope="row"><Avatar/></td>
+            <td scope="row">Joyce Chan</td>
+     </Tr>
       </Table>
     </TableCont>
   );

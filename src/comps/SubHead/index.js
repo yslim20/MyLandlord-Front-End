@@ -5,24 +5,25 @@ import React from 'react';
 const HeaderCont = styled.div`
     display:flex;
     justify-content:center;
-    align-items:center;
 
 `;
 
 const Text = styled.p`
-    font-size: 35px;
+    font-size: ${props=>props.fontSize};
     font-weight: 2;
-    margin-left:7%;
     color:#3C424C;
+    align-items:center;
+    margin-top:0;
 `;
 
 
 const Subhead = ({
-    text="Log In"
+    text="Log In",
+    fontSize= "30px",
 }) => {
     return(
         <HeaderCont>
-            <Text>
+            <Text fontSize={fontSize}>
                 {text}
             </Text>
         </HeaderCont>
