@@ -63,6 +63,8 @@ export default function Home() {
              <ListCont>
                 <List/>
             </ListCont>  
+            <Button width="240px" fontSize="24px" text="See More"/>
+
            
         </Cont>
     )
