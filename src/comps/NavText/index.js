@@ -34,7 +34,7 @@ const Content = styled.p`
   }
 
   :hover:before {    
-    width: 90%;
+    width: 100%;
   }
 `
 

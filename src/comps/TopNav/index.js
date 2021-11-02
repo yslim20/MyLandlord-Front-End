@@ -15,7 +15,7 @@ const Cont = styled.div`
   flex-direction: row;
   align-items:center;
   justify-content:center;
-  margin:${props => props.cmargin};
+  padding:${props => props.cpadding};
   box-sizing: border-box;
 `
 const Nav = styled.div`
@@ -26,45 +26,48 @@ const Nav = styled.div`
 const LeftBar =styled.div`
     display:flex;
     flex-direction: row;
-    flex: 1;
+    flex: 1.5;
     align-items:center;
     justify-content:space-between;
 `
 const RightBar = styled.div`
     display:flex;
     flex: 1;
+    align-items:center;
+    justify-content: flex-end;
 `
 const TopNav =({
-  cmargin="36px 68px",
+  cpadding="36px 68px",
 
 })=>{
   // const router = useRouter();
       return (
-    <Cont cmargin={cmargin} >
+    <Cont cpadding={cpadding} >
       <VerLogo marginright= "83"/>
+      
       <Nav>
-          <LeftBar>
-            <NavText/>
-            <NavText 
-              routeTo = "/Landlord"
-              text="Landlord"
-            />
-            <NavText 
-              routeTo = "/Chat"
-              text="Chat"
-            />
-            <NavText 
-              routeTo = "/ContactUs"
-              text="Contact Us"
-            />
+        <LeftBar>
+          <NavText/>
+          <NavText 
+            routeTo = "/Landlord"
+            text="Landlord"
+          />
+          <NavText 
+            routeTo = "/Chat"
+            text="Chat"
+          />
+          <NavText 
+            routeTo = "/ContactUs"
+            text="Contact Us"
+          />
         </LeftBar>
+
         <RightBar>
           <LoginDrop />
-
         </RightBar>
       </Nav>
     </Cont>
-      );
-    }
+  );
+}
 
-  export default TopNav;
+export default TopNav;

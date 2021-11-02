@@ -1,6 +1,5 @@
 import * as React from 'react';
-// import { styled } from '@mui/system';
-import styled from 'styled-components';
+import { styled } from '@mui/system';
 
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -54,7 +53,7 @@ const LoginDrop=({
           height: 66,
           width: 112,
           borderRadius: 66,
-          boxShadow: 'rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px', 
+          boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', 
           position: 'relative',
         }}
       >
