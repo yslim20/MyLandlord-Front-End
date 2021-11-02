@@ -4,6 +4,7 @@ import {useRouter} from 'next/router';
 
 import NavText from '../NavText';
 import VerLogo from '../VerLogo';
+import LoginDrop from '../LoginDrop';
 
 
 const Cont = styled.div`
@@ -58,6 +59,7 @@ const TopNav =({
             />
         </LeftBar>
         <RightBar>
+          <LoginDrop />
 
         </RightBar>
       </Nav>
