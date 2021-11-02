@@ -105,7 +105,12 @@ const LoginDrop=({
                 placement === 'bottom' ? 'center top' : 'center bottom',
             }}
           >
-            <Paper>
+            <Paper
+              style = {{
+                borderRadius: 20,                
+                overflow: 'hidden',
+              }}
+            >
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList id="split-button-menu">
                   {options.map((option, index) => (
