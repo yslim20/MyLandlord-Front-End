@@ -113,7 +113,7 @@ export default function SignUp() {
         </ContLeft>
 
         <ContRight>
-          <ImgBox src="./images/SignUpImg.svg" />
+          <ImgBox src="./images/SignUpImg." />
         </ContRight> 
       </BttmCont>  
     </Cont>

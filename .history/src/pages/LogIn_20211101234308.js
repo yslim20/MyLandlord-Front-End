@@ -1,17 +1,12 @@
-// import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import React from 'react';
-import ReactDOM from 'react-dom';
-// import axios from 'axios'
 
-import RadioButton from '../comps/RadioButton';
-import FullName from '../comps/FullName';
-import Input from '../comps/Input';
-import Checkbox from '../comps/Checkbox';
-import VeriButton from '../comps/VeriButton';
-import ImgBox from '../comps/ImgBox';
-import Button from '../comps/Button'
 import Header from '../comps/Header';
+import LongInForm from '../comps/LoginForm';
+import Button from '../comps/Button';
+import ImgBox from '../comps/ImgBox';
+import Divider from '../comps/Divider';
+import Input from '../comps/Input';
 
 const Cont = styled.div`
   display: flex;
@@ -68,9 +63,9 @@ const BttnCont = styled.div`
   justify-content: space-between;
 `
 
-export default function SignUp() {
-  return (
-    <Cont>
+export default function LogIn() {
+    return(
+        <Cont>
       <Header text="Sign Up"/>
       <RadioCont> 
         <RadioButton />
@@ -113,9 +108,9 @@ export default function SignUp() {
         </ContLeft>
 
         <ContRight>
-          <ImgBox src="./images/SignUpImg.svg" />
+          <ImgBox src="./images/signUpImg.png" />
         </ContRight> 
       </BttmCont>  
     </Cont>
-  )
+    )
 }

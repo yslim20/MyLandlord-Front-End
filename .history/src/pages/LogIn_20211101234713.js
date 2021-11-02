@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 import Header from '../comps/Header';
+import LongInForm from '../comps/LoginForm';
 import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
@@ -52,7 +53,7 @@ export default function LogIn() {
                     <Button text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff"/>
                 </ContLeft>
                 <ContRight>
-                    <ImgBox src="./images/LogInImg.svg"  height="735px"/>
+                    <ImgBox src="./images/logInImg.png"  height="735px"/>
                 </ContRight>
                 
             </BttmCont>

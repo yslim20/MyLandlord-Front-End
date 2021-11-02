@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import axios from 'axios'
 
+
 import RadioButton from '../comps/RadioButton';
 import FullName from '../comps/FullName';
 import Input from '../comps/Input';
@@ -113,7 +114,7 @@ export default function SignUp() {
         </ContLeft>
 
         <ContRight>
-          <ImgBox src="./images/SignUpImg.svg" />
+          <ImgBox src="./images/signUpImg.png" />
         </ContRight> 
       </BttmCont>  
     </Cont>

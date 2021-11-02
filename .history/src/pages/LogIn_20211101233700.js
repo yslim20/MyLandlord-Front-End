@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 import Header from '../comps/Header';
+import LongInForm from '../comps/LoginForm';
 import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
@@ -9,16 +10,16 @@ import Input from '../comps/Input';
 
 const Cont = styled.div`
     display:flex;
+    
     flex-direction: column;
     margin-left:3%;
 `;
 
-const BttmCont = styled.div`
-    margin-top: -10%;
-    display: flex;
-    flex-wrap: row;
+const DivideCont = styled.div`
+    display:flex;
+    flex: 1;
     flex-direction: row;
-`
+`;
 
 const ContLeft = styled.div`
     display: flex;
@@ -41,7 +42,7 @@ export default function LogIn() {
     return(
         <Cont>
             <Header />
-            <BttmCont>
+            <DivideCont>
                 <ContLeft>
                     <Input title="User name"/>
                     <Input title="Password"/>
@@ -52,10 +53,10 @@ export default function LogIn() {
                     <Button text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff"/>
                 </ContLeft>
                 <ContRight>
-                    <ImgBox src="./images/LogInImg.svg"  height="735px"/>
+                    <ImgBox src="./images/logInImg.png"  height="735px"/>
                 </ContRight>
                 
-            </BttmCont>
+            </DivideCont>
         </Cont>
     )
 }

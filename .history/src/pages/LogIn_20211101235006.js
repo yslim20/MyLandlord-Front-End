@@ -52,7 +52,7 @@ export default function LogIn() {
                     <Button text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff"/>
                 </ContLeft>
                 <ContRight>
-                    <ImgBox src="./images/LogInImg.svg"  height="735px"/>
+                    <ImgBox src="./images/LogInImg.png"  height="735px"/>
                 </ContRight>
                 
             </BttmCont>
