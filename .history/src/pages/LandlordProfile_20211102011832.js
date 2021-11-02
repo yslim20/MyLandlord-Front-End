@@ -29,8 +29,8 @@ export default function LandlordProfile() {
             <ShowAll />
             <CenterBox>
                 <PropertyCard>
-                    <PropImg />
                 </PropertyCard>
+                    <PropImg />
 
             </CenterBox>
         </Cont>

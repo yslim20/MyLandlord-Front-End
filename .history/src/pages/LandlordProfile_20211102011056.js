@@ -4,13 +4,13 @@ import React from 'react';
 import ProfileSub from '../comps/ProfileSub';
 import ShowAll from '../comps/ShowAll';
 import PropertyCard from '../comps/PropertyCard';
-import PropImg from '../comps/PropImage';
+import 
 
 const Cont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 3%;
+    margin-left:3%;
 `
 
 const CenterBox = styled.div`
@@ -29,7 +29,7 @@ export default function LandlordProfile() {
             <ShowAll />
             <CenterBox>
                 <PropertyCard>
-                    <PropImg />
+                    <PropImage src="./images/property1.png"  />
                 </PropertyCard>
 
             </CenterBox>
