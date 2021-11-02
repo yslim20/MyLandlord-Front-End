@@ -2,84 +2,65 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-import Button from '../Button';
 import NavText from '../NavText';
 import VerLogo from '../VerLogo';
 
 
 const Cont = styled.div`
-  height: 20%;
+  width: 100%;
+  height: 202px;
   position: relative;  
   display: flex;
   flex-direction: row;
-  margin-top:${props => props.margintop}
+  align-items:center;
+  justify-content:center;
+  margin:${props => props.cmargin};
+  box-sizing: border-box;
 `
 const Nav = styled.div`
   width:100%;
-    display:flex;
-    flex-direction:row;
+  display:flex;
+  flex-direction:row;
 `
 const LeftBar =styled.div`
     display:flex;
     flex-direction: row;
-    flex: 3;
+    flex: 1;
+    align-items:center;
+    justify-content:space-between;
 `
 const RightBar = styled.div`
     display:flex;
     flex: 1;
-    flex-direction: row;
-
 `
-const Img = styled.img`
-  width:151px;
-  height: 84px;
-  display: relective;
-  object-fit:fill; 
-`
-
 const TopNav =({
-  margintop=100,
-  routeTo="/Home",
+  cmargin="36px 68px",
+
 })=>{
-  const router = useRouter();
+  // const router = useRouter();
       return (
-    <Cont mtop={margintop} onClick={()=>router.push(routeTo)}>
-        <VerLogo/>
-        <Nav>
-           <LeftBar>
-              <NavText text="Map"></NavText>
-              <NavText text="List"></NavText>
-            </LeftBar>
-            <RightBar>
-              <Button 
-                  radius="5"
-                  width="164px"
-                  height="48"
-                  bgcolor="#FFFFFF" 
-                  border="1px solid #000"  
-                  text="Log In"
-                  routeTo="../LogIn"
-                  margintop="30"
-                  marginright="20"
-                  //text
-                  fontSize="24"
-                  fontWeight="500"/>
-              <Button 
-                  radius="5"
-                  width="164px"
-                  height="48"
-                  bgcolor="#000000" 
-                  border="1px solid #000"
-                  text="Sign Up"
-                  routeTo="../SignUp"
-                  margintop="30"
-                  marginright="40"
-                  //text
-                  color="#FFFFFF"
-                  fontSize="24"
-                  fontWeight="500"/>
-              </RightBar>
-            </Nav>
+    <Cont cmargin={cmargin} >
+      <VerLogo marginright= "83"/>
+      <Nav>
+          <LeftBar>
+            <NavText/>
+            <NavText 
+              routeTo = "/Landlord"
+              text="Landlord"
+            />
+            <NavText 
+              routeTo = "/Chat"
+              text="Chat"
+            />
+            <NavText 
+              routeTo = "/ContactUs"
+              text="Contact Us"
+            />
+        </LeftBar>
+        <RightBar>
+
+        </RightBar>
+      </Nav>
     </Cont>
       );
     }

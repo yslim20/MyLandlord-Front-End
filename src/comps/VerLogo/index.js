@@ -8,7 +8,8 @@ const LogoCont = styled.div`
     height: ${props=>props.cheight}px;
     display:flex;
     justify-content:center;
-    item-alignment: center;
+    align-items:center;
+    cursor: pointer; 
 `;
 
 const Logo = styled.img`
@@ -26,7 +27,7 @@ const VerLogo = ({
     width = 100,
     height = 100,
     src= "./icons/logo_vertical.png",
-    alt="logo"
+    alt="MyLandlord logo"
 
 }) => {
     const router = useRouter();
@@ -39,10 +40,10 @@ const VerLogo = ({
           onClick={()=>router.push(routeTo)}
         >
           <Logo 
-              width={width} 
-              height={height}
-              src={src}
-              alt={alt}
+            width={width} 
+            height={height}
+            src={src}
+            alt={alt}
           />
         </LogoCont>
     );
