@@ -4,7 +4,7 @@ import React from 'react';
 const Cont = styled.div`
     width:${props => props.cwidth};
     height: ${props => props.cheight}px;
-    position: relative;  
+    position: absolute;  
     display: flex;
     align-items: center;
     justify-content: center;

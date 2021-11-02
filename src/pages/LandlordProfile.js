@@ -28,9 +28,7 @@ export default function LandlordProfile() {
             <ProfileSub />
             <ShowAll />
             <CenterBox>
-                <PropertyCard>
-                    <PropImg />
-                </PropertyCard>
+                <PropertyCard marginTop="25%" />
 
             </CenterBox>
         </Cont>
