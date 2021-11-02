@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
+
 import Button from '../Button';
 import NavText from '../NavText';
+import VerLogo from '../VerLogo';
 
 
 const Cont = styled.div`
@@ -42,41 +44,41 @@ const TopNav =({
   const router = useRouter();
       return (
     <Cont mtop={margintop} onClick={()=>router.push(routeTo)}>
-        <Img src= "https://placekitten.com/100/100"/>
+        <VerLogo/>
         <Nav>
            <LeftBar>
-                    <NavText text="Map"></NavText>
-                    <NavText text="List"></NavText>
+              <NavText text="Map"></NavText>
+              <NavText text="List"></NavText>
             </LeftBar>
             <RightBar>
-                    <Button 
-                        radius="5"
-                        width="164px"
-                        height="48"
-                        bgcolor="#FFFFFF" 
-                        border="1px solid #000"  
-                        text="Log In"
-                        routeTo="../LogIn"
-                        margintop="30"
-                        marginright="20"
-                        //text
-                        fontSize="24"
-                        fontWeight="500"/>
-                    <Button 
-                        radius="5"
-                        width="164px"
-                        height="48"
-                        bgcolor="#000000" 
-                        border="1px solid #000"
-                        text="Sign Up"
-                        routeTo="../SignUp"
-                        margintop="30"
-                        marginright="40"
-                        //text
-                        color="#FFFFFF"
-                        fontSize="24"
-                        fontWeight="500"/>
-                </RightBar>
+              <Button 
+                  radius="5"
+                  width="164px"
+                  height="48"
+                  bgcolor="#FFFFFF" 
+                  border="1px solid #000"  
+                  text="Log In"
+                  routeTo="../LogIn"
+                  margintop="30"
+                  marginright="20"
+                  //text
+                  fontSize="24"
+                  fontWeight="500"/>
+              <Button 
+                  radius="5"
+                  width="164px"
+                  height="48"
+                  bgcolor="#000000" 
+                  border="1px solid #000"
+                  text="Sign Up"
+                  routeTo="../SignUp"
+                  margintop="30"
+                  marginright="40"
+                  //text
+                  color="#FFFFFF"
+                  fontSize="24"
+                  fontWeight="500"/>
+              </RightBar>
             </Nav>
     </Cont>
       );

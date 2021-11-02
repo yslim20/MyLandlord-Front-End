@@ -46,6 +46,7 @@ export default function Home() {
     return(
         <Cont>
             <TopNav/>
+            
             <MidCont>
                     <LeftBox>
                             <ImgBox src="https://placekitten.com/500/500" width="60%" height="70%"/>
