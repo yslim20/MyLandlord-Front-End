@@ -45,8 +45,10 @@ const TopNav =({
         <Img src= "https://placekitten.com/100/100"/>
         <Nav>
            <LeftBar>
-                    <NavText text="Map"></NavText>
-                    <NavText text="List"></NavText>
+                    <NavText text="Home"></NavText>
+                    <NavText text="Landlord"></NavText>
+                    <NavText text="Chat"></NavText>
+                    <NavText text="Contact Us"></NavText>
             </LeftBar>
             <RightBar>
                     <Button 

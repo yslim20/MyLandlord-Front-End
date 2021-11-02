@@ -17,7 +17,7 @@ font-family: Saira SemiCondensed, sans-serif;
 font-style: normal;
 font-weight: normal;
 color: #000000;
-font-size:36px;
+font-size:26px;
 text=${props=>props.text};
 :hover {
     color:#FF008A;
