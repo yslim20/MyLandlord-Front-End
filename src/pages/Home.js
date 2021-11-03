@@ -6,7 +6,8 @@ import ImgBox from '../comps/ImgBox';
 import SubHead from '../comps/SubHead';
 import List from '../comps/List';
 import TopNav from '../comps/TopNav';
-import Header from '../comps/Header'
+import Header from '../comps/Header';
+import VerLogo from '../comps/VerLogo';
 
 const Cont = styled.div`
     display:flex;
@@ -22,9 +23,8 @@ const LeftBox = styled.div`
     display:flex;
     flex: 1;
     flex-direction: column;
-    margin-top:10%;
-    align-items: center;
-    height: 400px;
+    justify-content:center;
+    align-items:center;
 `
 
 const ImgSide = styled.div`
@@ -49,9 +49,16 @@ export default function Home() {
 
             <MidCont>
                 <LeftBox>
-                    <ImgBox src="https://placekitten.com/500/500" width="60%" height="70%"/>
+                    <VerLogo 
+                        cwidth="278"
+                        cheight="auto"
+                        marginright="0"
+                        marginbttm = "20"
+                        routeTo=""
+                        cursor="default"                        
+                    />
                     <SubHead text="Welcome to MyLandlord!"/>
-                    <SubHead text="Can i go sleeeeep:<" fontSize="24px"/>
+                    <SubHead text="Review your landlord now!" fontSize="24px"/>
                     <Button width="240px" fontSize="24px" text="Write Review"/>
                 </LeftBox>
                 <ImgSide>

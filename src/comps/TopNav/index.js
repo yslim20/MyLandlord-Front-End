@@ -17,6 +17,7 @@ const Cont = styled.div`
   justify-content:center;
   padding:${props => props.cpadding};
   box-sizing: border-box;
+  z-index: 999;
 `
 const Nav = styled.div`
   width:100%;
@@ -47,7 +48,9 @@ const TopNav =({
       
       <Nav>
         <LeftBar>
-          <NavText/>
+          <NavText
+            routeTo = "/Home"
+          />
           <NavText 
             routeTo = "/Landlord"
             text="Landlord"

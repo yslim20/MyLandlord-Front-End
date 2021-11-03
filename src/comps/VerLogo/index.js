@@ -2,14 +2,15 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-const LogoCont = styled.div`
-    margin-right: ${props=>props.mright}px;
-    width: ${props=>props.cwidth}px;
+const LogoCont = styled.div`    
+    width: ${props=>props.cwidth};
     height: ${props=>props.cheight}px;
+    margin-right: ${props=>props.mright}px;
+    margin-bottom: ${props=>props.mbttm}px;
     display:flex;
     justify-content:center;
     align-items:center;
-    cursor: pointer; 
+    cursor: ${props=>props.cursor};
 `;
 
 const Logo = styled.img`
@@ -21,13 +22,15 @@ const Logo = styled.img`
 
 const VerLogo = ({
     routeTo="/Home",
+    marginbttm = "",
     marginright= 20,
-    cwidth = 202,
+    cwidth = "202px",
     cheight = 114,
     width = 100,
     height = 100,
     src= "./icons/logo_vertical.png",
-    alt="MyLandlord logo"
+    alt="MyLandlord logo",
+    cursor="pointer"
 
 }) => {
     const router = useRouter();
@@ -37,7 +40,9 @@ const VerLogo = ({
           cwidth={cwidth}
           cheight={cheight}
           mright={marginright} 
+          mbttm={marginbttm}
           onClick={()=>router.push(routeTo)}
+          cursor={cursor}
         >
           <Logo 
             width={width} 

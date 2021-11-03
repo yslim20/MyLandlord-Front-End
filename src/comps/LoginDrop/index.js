@@ -55,10 +55,12 @@ const LoginDrop=({
           borderRadius: 66,
           boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', 
           position: 'relative',
+          overflow: 'hidden',
         }}
       >
         <Button 
           onClick={handleClick}
+          className="bttntext"
           style={{
             width: 112,
             height: 66,
@@ -71,24 +73,26 @@ const LoginDrop=({
             src="./icons/icon_user.png"
             sx={{ width: 42, height: 42 }}
           />
-        </Button>
+        </Button> {/* Avatar button */}
         <Button
           size="medium"
           aria-controls={open ? 'split-button-menu' : undefined}
           aria-expanded={open ? 'true' : undefined}
           aria-label="select merge strategy"
           aria-haspopup="menu"
+          className="bttntext"
           onClick={handleToggle}
           style={{
             backgroundColor: "transparent",
             color: "#5333ED",
             border: 'none',
-            boxShadow: 'none', 
+            boxShadow: 'none',             
           }}
         >
           <ArrowDropDownIcon />
-        </Button>
+        </Button>{/* Arrow button */}
       </ButtonGroup>
+      
       <Popper
         open={open}
         anchorEl={anchorRef.current}
