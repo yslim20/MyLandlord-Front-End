@@ -65,10 +65,10 @@ const Footer = ({
             <Upside>
                 <NavText>
                     <Nav>
-                        <FooterNav routeTo="/Home" />
-                        <FooterNav routeTo="/Home" text="Landlord"/>
-                        <FooterNav routeTo="/Home" text="Chat"/>
-                        <FooterNav routeTo="/Home" text="Contact Us"/>
+                        <FooterNav routeTo="/" />
+                        <FooterNav routeTo="/" text="Landlord"/>
+                        <FooterNav routeTo="/" text="Chat"/>
+                        <FooterNav routeTo="/" text="Contact Us"/>
                     </Nav>
                 </NavText>
                 <LogoPart>

@@ -30,7 +30,7 @@ const ShowAll = ({
     const router = useRouter();
     return(
         <ContButt>
-            <TextButt onClick={()=> router.push("/Home")}>Show All</TextButt>
+            <TextButt onClick={()=> router.push("/")}>Show All</TextButt>
         </ContButt>
     );
 }
