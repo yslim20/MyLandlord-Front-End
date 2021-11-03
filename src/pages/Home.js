@@ -2,70 +2,117 @@ import styled from 'styled-components';
 import React from 'react';
 
 import Button from '../comps/Button';
-import ImgBox from '../comps/ImgBox';
+// import ImgBox from '../comps/ImgBox';
 import SubHead from '../comps/SubHead';
-import List from '../comps/List';
 import TopNav from '../comps/TopNav';
-import Header from '../comps/Header'
+import VerLogo from '../comps/VerLogo';
+import Mediabox from '../comps/Mediabox'
+import HeroImage from '../comps/HeroImage'
 
 const Cont = styled.div`
-    display:flex;
-    flex-direction: column;
+	display:flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
 `
 
 const MidCont = styled.div`
-    display:flex;
-    flex: 1;
-    flex-direction: row;
+	display:flex;
+	flex: 1;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items:center;
+	margin-bottom: 100px;
+	padding: 0 68px 0 68px;
 `
 const LeftBox = styled.div`
-    display:flex;
-    flex: 1;
-    flex-direction: column;
-    margin-top:10%;
-    align-items: center;
-    height: 400px;
+	display:flex;
+	flex: 1;
+	flex-direction: column;	
+	justify-content:center;
+	align-items:center;
+	box-sizing: border-box;
 `
 
-const ImgSide = styled.div`
-    display:flex;
-    flex: 2;
-    justify-content:flex-end;
+const RightBox = styled.div`
+	display:flex;
+	flex: 1.5;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	box-sizing: border-box;
 `
 
-const ListCont = styled.div`
-    display:flex;
-    flex: 1;
-    flex-direction: row;
-    align-items:center;
- justify-content:center;
+const HeroCont = styled.div`
+	display:flex;
+	flex: 1;
+	flex-direction: column;
+	align-items:flex-start;
+	justify-content:center;
+	margin-bottom: 100px;
 `
 
+const FeatSec = styled.div`
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:flex-start;
+	box-sizing: border-box;
+	margin-bottom: 100px;
+	padding: 0 68px 0 68px;
+`
+
+const FeatCont = styled.div`
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
+`
 
 export default function Home() {
-    return(
-        <Cont>
-            <TopNav/>
+	return(
+		<Cont>
+			<TopNav/>
 
-            <MidCont>
-                <LeftBox>
-                    <ImgBox src="https://placekitten.com/500/500" width="60%" height="70%"/>
-                    <SubHead text="Welcome to MyLandlord!"/>
-                    <SubHead text="Can i go sleeeeep:<" fontSize="24px"/>
-                    <Button width="240px" fontSize="24px" text="Write Review"/>
-                </LeftBox>
-                <ImgSide>
-                    <ImgBox src="https://placekitten.com/400/400"  height="90%"/>
-                </ImgSide> 
-            </MidCont>
-       
-            <Header marginLeft="0%" justifyContent="center" alignItems="center" text="Find The Best Landlord!" fontSize="34px"/>
+			<MidCont>
+				<LeftBox>
+					<VerLogo 
+						cwidth="278"
+						cheight="auto"
+						marginright="0"
+						marginbttm = "20"
+						routeTo=""
+						cursor="default"                        
+					/>
+					<SubHead 
+						text="Welcome to MyLandlord!"
+						fontSize="24"
+						fontWeight="500"
+						lineHeight="29"
+					/>
+					<SubHead 
+						text="Review your landlord now!" 	
+						lineHeight="39"						
+					/>
+				</LeftBox>
+				<RightBox>
+					<Mediabox />
+				</RightBox> 
+			</MidCont>
 
-             <ListCont>
-                <List/>
-            </ListCont>  
-            <Button width="240px" fontSize="24px" text="See More"/>
-           
-        </Cont>
-    )
+			<HeroCont>
+				<HeroImage/>
+			</HeroCont>  
+
+			<FeatSec>
+				<SubHead 
+					text = "Discover Features"
+				/>
+			</FeatSec>
+				
+				
+		</Cont>
+	)
 }

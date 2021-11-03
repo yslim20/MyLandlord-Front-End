@@ -9,7 +9,7 @@ import LoginDrop from '../LoginDrop';
 
 const Cont = styled.div`
   width: 100%;
-  height: 202px;
+  height: 150px;
   position: relative;  
   display: flex;
   flex-direction: row;
@@ -17,6 +17,9 @@ const Cont = styled.div`
   justify-content:center;
   padding:${props => props.cpadding};
   box-sizing: border-box;
+  z-index: 999;
+  padding: 0 68px 0 68px;
+  margin-bottom: ${props => props.cmarginB}px;
 `
 const Nav = styled.div`
   width:100%;
@@ -24,30 +27,32 @@ const Nav = styled.div`
   flex-direction:row;
 `
 const LeftBar =styled.div`
-    display:flex;
-    flex-direction: row;
-    flex: 1.5;
-    align-items:center;
-    justify-content:space-between;
+  display:flex;
+  flex-direction: row;
+  flex: 1.5;
+  align-items:center;
+  justify-content:space-between;
 `
 const RightBar = styled.div`
-    display:flex;
-    flex: 1;
-    align-items:center;
-    justify-content: flex-end;
+  display:flex;
+  flex: 1;
+  align-items:center;
+  justify-content: flex-end;
 `
 const TopNav =({
-  cpadding="36px 68px",
-
+  cpadding="",
+  cmarginB=50
 })=>{
   // const router = useRouter();
       return (
-    <Cont cpadding={cpadding} >
+    <Cont cpadding={cpadding} cmarginB={cmarginB} >
       <VerLogo marginright= "83"/>
       
       <Nav>
         <LeftBar>
-          <NavText/>
+          <NavText
+            routeTo = "/Home"
+          />
           <NavText 
             routeTo = "/Landlord"
             text="Landlord"

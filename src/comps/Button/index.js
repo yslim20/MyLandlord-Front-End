@@ -15,13 +15,12 @@ const ButtonInput = styled.button`
     background-color:${props=>props.bg};
     border: ${props=>props.border};
     border-radius:${props=>props.radius}px;
-    width: ${props=>props.width};
+    width: ${props=>props.width}px;
     height: ${props=>props.height}px;
     font-size: ${props=>props.size}px;
     align-items:center;
     justify-content:center;
-    box-shadow: ${props=>props.bshadow};  
-
+    box-shadow: ${props=>props.bshadow}; 
 
     :hover{
         transform: scale(0.85);
@@ -30,6 +29,7 @@ const ButtonInput = styled.button`
 `;
 
 const ButtonText = styled.p`
+    font-family: 'Heebo', sans-serif;  
     color:${props=>props.color} ;
     font-size: ${props=>props.fontSize};
     text-align:center;
@@ -44,15 +44,14 @@ const Button = ({
     marginright="",
     bgcolor = "#ffffff",
     radius = 20,
-    width = "360px",
+    width = 360,
     height = 72,
     border = "5px solid #5333ED;",
     routeTo = "/LogIn",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
-    color="#000000",
+    color="#000",
     fontSize="24px",
-    fontWeight="400"
-
+    fontWeight="500",
 
 }) => {
     const router = useRouter();

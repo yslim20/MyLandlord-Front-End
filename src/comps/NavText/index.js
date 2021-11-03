@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router'
 
 const Nav = styled.div`    
   height: ${props=>props.height}px;
@@ -13,6 +13,7 @@ const Nav = styled.div`
 `;
 
 const Content = styled.p`
+  font-family: 'Heebo', sans-serif;
   font-size: ${props=>props.pSize}px;
   height: ${props=>props.pHeight}%;
   font-weight: ${props=>props.pWeight};
@@ -36,6 +37,10 @@ const Content = styled.p`
   :hover:before {    
     width: 100%;
   }
+
+  :active:before {    
+    width: 100%;
+  }
 `
 
 const NavText = ({
@@ -44,29 +49,30 @@ const NavText = ({
     marginright = "",
     text= "Home",
     className = "bttntxt",
-    routeTo = "",
+    routeTo = "/Home",
     pSize = 24,
     pWeight = 400,
     pHeight = 40,
 
 }) => {
+  const router = useRouter()
 
-    return (
-      <Nav 
-        mright={marginright} 
-        onClick={()=>router.push(routeTo)}
-        height={height}      
+  return (
+    <Nav 
+      mright={marginright} 
+      onClick={() => router.push(routeTo)}
+      height={height}      
+    >
+      
+      <Content 
+        className={className}
+        pSize={pSize}
+        pWeight={pWeight}
+        pHeight={pHeight}
       >
-        
-        <Content 
-          className={className}
-          pSize={pSize}
-          pWeight={pWeight}
-          pHeight={pHeight}
-        >
-          {text}
-        </Content>
-      </Nav>
-    );
+        {text}
+      </Content>
+    </Nav>
+  );
 }
 export default NavText;

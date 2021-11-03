@@ -12,28 +12,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&family=Montserrat:wght@500;600;700&display=swap');
 
 body {
-  font-family: 'Heebo', sans-serif;
   font-family: 'Montserrat', sans-serif;
+  font-family: 'Heebo', sans-serif;  
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3{
+.heading, .subheading, .h3{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
-h1 {
+.heading {
   font-size: 48px;
 }
 
-h2 {
+.h2 {
   font-size: 36px;
 }
 
-h3 {
+.subheading {
   font-size: 24px;
 }
 
-P {
+.P {
   font-family: 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 400;
