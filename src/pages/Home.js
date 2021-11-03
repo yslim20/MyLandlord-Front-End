@@ -2,14 +2,12 @@ import styled from 'styled-components';
 import React from 'react';
 
 import Button from '../comps/Button';
-import ImgBox from '../comps/ImgBox';
+// import ImgBox from '../comps/ImgBox';
 import SubHead from '../comps/SubHead';
-import List from '../comps/List';
 import TopNav from '../comps/TopNav';
-import Header from '../comps/Header';
 import VerLogo from '../comps/VerLogo';
 import Mediabox from '../comps/Mediabox'
-import FullImage from '../comps/FullImage'
+import HeroImage from '../comps/HeroImage'
 
 const Cont = styled.div`
 	display:flex;
@@ -105,7 +103,7 @@ export default function Home() {
 			</MidCont>
 
 			<HeroCont>
-				<FullImage/>
+				<HeroImage/>
 			</HeroCont>  
 
 			<FeatSec>

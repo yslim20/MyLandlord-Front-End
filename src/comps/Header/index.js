@@ -19,7 +19,6 @@ const Text = styled.p`
 
 `;
 
-
 const Header = ({
 	text="Log In",
 	fontSize="50px",

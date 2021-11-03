@@ -49,7 +49,7 @@ const Button = ({
     border = "5px solid #5333ED;",
     routeTo = "/LogIn",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
-    color="#fff",
+    color="#000",
     fontSize="24px",
     fontWeight="500",
 

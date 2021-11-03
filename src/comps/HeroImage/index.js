@@ -33,7 +33,7 @@ const Letterbox = styled.div`
   box-sizing: border-box;
 `
 
-const FullImage = ({
+const HeroImage = ({
   cwidth ="100%",
   cheight = "650",
   url="./images/img_home.svg",
@@ -61,10 +61,13 @@ const FullImage = ({
           height="60"
           width = "395"
           margintop = "0"
+          bgcolor = "#5333ED"
+          border = "none"
+          color="#fff"
         />
       </Letterbox>
     </ImgCont>
   );
 }
 
-export default FullImage;
+export default HeroImage;
