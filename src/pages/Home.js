@@ -8,6 +8,7 @@ import TopNav from '../comps/TopNav';
 import VerLogo from '../comps/VerLogo';
 import Mediabox from '../comps/Mediabox'
 import HeroImage from '../comps/HeroImage'
+import Features from '../comps/Features'
 
 const Cont = styled.div`
 	display:flex;
@@ -64,6 +65,7 @@ const FeatSec = styled.div`
 `
 
 const FeatCont = styled.div`
+	width: 100%;
 	display:flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -109,7 +111,20 @@ export default function Home() {
 			<FeatSec>
 				<SubHead 
 					text = "Discover Features"
+					marginB = "20"
 				/>
+
+				<FeatCont>
+					<Features />
+					<Features 
+						title = "Easy Communication"
+						para= "Users can contact any landlords if they are online on the landlord profile section."
+					/>
+					<Features 
+						title = "Strong Rating System"
+						para= "Users can review their landlord by the rating system."
+					/>
+				</FeatCont>				
 			</FeatSec>
 				
 				
