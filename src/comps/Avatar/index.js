@@ -11,7 +11,7 @@ const Icon =styled.img`
 `
 const Avatar =({
     //icon
-    src= "https://placekitten.com/130/130",
+    src= "./icons/onicon.png",
 }) =>{
     return(
         <Icon
