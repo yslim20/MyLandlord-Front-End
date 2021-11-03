@@ -24,7 +24,7 @@ const Header = ({
 	fontSize="50px",
 	justifyContent="left",
 	alignItems="left",
-	marginLeft="7%"
+	marginLeft="1%"
 }) => {
 	return(
 		<HeaderCont justifyContent={justifyContent} alignItems={alignItems} >

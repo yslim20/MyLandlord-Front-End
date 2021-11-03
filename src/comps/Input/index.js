@@ -10,7 +10,7 @@ const FormCont = styled.div`
   margin-bottom: 25px;
 `
 
-const FormBox = styled.form`
+const FormBox = styled.div`
   width:${props => props.fwidth};
   height: ${props => props.fheight}; 
   display:flex;
@@ -43,6 +43,8 @@ const Input = ({
   fsize = 24,
   iwidth = "100%",
   iheight = 57,
+  type ="text"
+
 }) => {  
 
   return (
@@ -56,7 +58,7 @@ const Input = ({
           fsize = {fsize}
         > {title}</LabelFor>
         <InputBox 
-          type="text" 
+          type={type} 
           name={title} required 
           iwidth={iwidth} 
           iheight={iheight}
