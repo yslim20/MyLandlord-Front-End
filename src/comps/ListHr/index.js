@@ -12,9 +12,8 @@ const Line = styled.div`
     margin-top:20px;
     height:2px;
     background-color:#c4c4c4;
-    width:80%;
+    width:95%;
     margin-right: 5%;
-    margin-left: 5%;
     `;
 
     const ListHr =(

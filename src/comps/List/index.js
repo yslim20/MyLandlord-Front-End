@@ -34,13 +34,13 @@ align-items:center;
 
 const Tr = styled.tr`
 display:flex;
-width: 70%;
+width: 100%;
 justify-content:space-evenly;
 :hover {background-color: #ddd;};
 font-size:35px;
 font-style:regular;
 margin-top:5%;
-margin-left:5%;
+
 `
 const List = () => {
   //const [users] = useState(testUsers);

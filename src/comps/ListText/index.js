@@ -4,14 +4,14 @@ import React from 'react';
 
 const HeaderCont = styled.div`
     display:flex;
-    justify-content:center;
+    justify-content:left;
 `;
 
 const Text = styled.p`
     font-size: ${props=>props.fontSize};
     font-weight: 2;
     color:#6E7076;
-    align-items:center;
+    align-items:left;
     margin-top:${props=>props.marginTop};
 `;
 

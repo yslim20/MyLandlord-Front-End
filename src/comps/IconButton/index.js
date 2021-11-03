@@ -6,6 +6,7 @@ const ButtonCont = styled.div`
     width: 15%;
     display:flex;
     justify-content:right;
+ 
 `;
 
 const ButtonInput = styled.button`
@@ -15,6 +16,7 @@ const ButtonInput = styled.button`
     font-size: ${props=>props.size}px;
     align-items:right;
     justify-content:right;
+    border:none;
 
     :hover{
         transform: scale(0.85);
