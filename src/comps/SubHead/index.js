@@ -5,6 +5,7 @@ import React from 'react';
 const HeaderCont = styled.div`
 	display:flex;
 	justify-content:center;
+	width: ${props=>props.cWidth};
 `;
 
 const Text = styled.p`
@@ -19,6 +20,7 @@ const Text = styled.p`
 `;
 
 const Subhead = ({
+	cWidth = "",
 	text="Log In",
 	fontSize= 32,
 	fontWeight = 500,
@@ -28,7 +30,9 @@ const Subhead = ({
 	marginB=""
 }) => {
 	return(
-		<HeaderCont>
+		<HeaderCont
+			cWidth={cWidth}
+		>
 			<Text 
 				fontSize={fontSize}
 				fontWeight={fontWeight}
