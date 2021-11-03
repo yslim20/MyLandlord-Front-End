@@ -5,7 +5,7 @@ import {useRouter} from 'next/router';
 import NavText from '../NavText';
 import VerLogo from '../VerLogo';
 import LoginDrop from '../LoginDrop';
-
+import Button from '../Button';
 
 const Cont = styled.div`
   width: 100%;
@@ -45,8 +45,7 @@ const TopNav =({
 })=>{
   // const router = useRouter();
       return (
-    <Cont mtop={margintop} onClick={()=>router.push(routeTo)}>
-        <Img src= "https://placekitten.com/100/100"/>
+    <Cont onClick={()=>router.push(routeTo)}>
         <Nav>
            <LeftBar>
                     <NavText text="Home"></NavText>
