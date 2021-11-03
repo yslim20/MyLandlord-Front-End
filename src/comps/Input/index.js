@@ -21,6 +21,7 @@ const FormBox = styled.div`
 
 const LabelFor = styled.label`
   font-size: ${props => props.fsize}px; 
+  font-family: Montserrat;
   margin-bottom: 10px;
   margin-left: 20px;
   font-weight:600;
