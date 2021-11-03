@@ -6,6 +6,7 @@ import ShowAll from '../comps/ShowAll';
 import PropertyCard from '../comps/PropertyCard';
 import ReviewCard from '../comps/ReviewCard';
 import SmileRating from '../comps/SmileRating';
+import Footer from '../comps/Footer';
 
 const Cont = styled.div`
 `;
@@ -56,7 +57,7 @@ export default function LandlordProfile() {
                     <ReviewCard text="CC" name="Corey Conyers" review="The house was quite old, but it was good that the landlord was not too involved in my life." />
                 </CenterBox>
             </ReviewCont>
-
+            <Footer />
         </Cont>
     )
 }
