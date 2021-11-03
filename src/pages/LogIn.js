@@ -13,7 +13,7 @@ const Cont = styled.div`
     margin-left:3%;
 `;
 
-const BttmCont = styled.div`
+const BttmCont = styled.form`
     margin-top: -10%;
     display: flex;
     flex-wrap: row;
@@ -44,7 +44,7 @@ export default function LogIn() {
             <BttmCont>
                 <ContLeft>
                     <Input title="User name"/>
-                    <Input title="Password"/>
+                    <Input title="Password" type="password"/>
                     {/* <LongInForm />
                     <LongInForm title="Password" /> */}
                     <Button text="Log In" />

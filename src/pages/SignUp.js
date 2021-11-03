@@ -28,7 +28,7 @@ const RadioCont = styled.div`
   padding:5px;
 `
 
-const BttmCont = styled.div`
+const BttmCont = styled.form`
   display: flex;
   flex-wrap: row;
   flex-direction: row;
@@ -81,7 +81,7 @@ export default function SignUp() {
           <FullName />  
           <Input />
           <Input title="User Name" />
-          <Input title="Password" />
+          <Input title="Password" type="password"/>
           <Input title="Confirm the Password" />
           
           <CheckCont> 

@@ -11,6 +11,7 @@ const ButtonCont = styled.div`
 `;
 
 const ButtonInput = styled.button`
+    type: submit;
     display:flex;
     background-color:${props=>props.bg};
     border: ${props=>props.border};
