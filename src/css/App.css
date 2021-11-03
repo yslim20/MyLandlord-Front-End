@@ -7,6 +7,62 @@
   pointer-events: none;
 }
 
+/* ================= FONT SETTING STARTS ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&family=Montserrat:wght@500;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Heebo', sans-serif;  
+  margin: 0;
+  padding: 0;
+}
+
+.heading, .subheading, .h3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.heading {
+  font-size: 48px;
+}
+
+.h2 {
+  font-size: 36px;
+}
+
+.subheading {
+  font-size: 24px;
+}
+
+.P {
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.bttntxt {
+  font-family: 'Heebo', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.title {
+  font-family: 'Heebo', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.link{
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: underline;
+} /* Font ends */
+
+
+/* ================= MEDIA ================= */
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

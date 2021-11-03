@@ -1,0 +1,41 @@
+import styled from 'styled-components';
+import React from 'react';
+
+const Text = styled.p`
+  width: ${props=>props.width};
+	font-family: 'Heebo', sans-serif;  
+	font-size: ${props=>props.fontSize}px;
+	font-weight: ${props=>props.fontWeight};
+	color: ${props=>props.fcolor};	
+	text-align: ${props=>props.align};
+	line-height: ${props=>props.lineHeight};
+	margin:0;
+	margin-bottom: ${props=>props.marginB}px;
+`;
+
+const Para = ({
+  width="100%",
+	text="Tenants can write reviews on the current or previous landlord.",
+	fontSize= 16,
+	fontWeight = 400,
+	fcolor="#000",
+	align="left",
+	lineHeight = "1.5em",
+	marginB=""
+}) => {
+	return(
+    <Text 
+      width={width}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
+      fcolor={fcolor}
+      align={align}
+      lineHeight={lineHeight}
+      marginB={marginB}
+    >
+      {text}
+    </Text>
+	);
+}
+
+export default Para;

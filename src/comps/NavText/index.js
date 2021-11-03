@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 import React from 'react';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router'
 
-const Nav = styled.div`
-display: flex;
-width= ${props=>props.width}px; 
-height: ${props=>props.height}px;
-border: none;
-margin-right: ${props=>props.mright}px;
+const Nav = styled.div`    
+  height: ${props=>props.height}px;
+  margin-right: ${props=>props.mright}px;
+  box-sizing: border-box;
+  display: flex;
   align-items:center;
-justify-content:center;
+  justify-content:center;
+  cursor: pointer; 
 `;
 
 const Content = styled.p`
@@ -26,17 +26,35 @@ text=${props=>props.text};
 `
 
 const NavText = ({
-    height=70,
-    marginright = 30,
-    text= "Map"
-}) => {
-    const router = useRouter();
 
-    return (
-            <Nav mright={marginright} onClick={()=>router.push(routeTo)}
-                height={height}>
-                    <Content >{text}</Content>
-            </Nav>
-    );
+    height = 114,
+    marginright = "",
+    text= "Home",
+    className = "bttntxt",
+    routeTo = "/Home",
+    pSize = 24,
+    pWeight = 400,
+    pHeight = 40,
+
+}) => {
+  const router = useRouter()
+
+  return (
+    <Nav 
+      mright={marginright} 
+      onClick={() => router.push(routeTo)}
+      height={height}      
+    >
+      
+      <Content 
+        className={className}
+        pSize={pSize}
+        pWeight={pWeight}
+        pHeight={pHeight}
+      >
+        {text}
+      </Content>
+    </Nav>
+  );
 }
 export default NavText;
