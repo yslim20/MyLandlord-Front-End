@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 
-import Button from "../Button"
+import RoutButton from "../RoutButton"
 import SubHead from "../SubHead"
 
 const ImgCont = styled.div`    
@@ -55,7 +55,7 @@ const HeroImage = ({
           marginB="30"
         />
 
-        <Button
+        <RoutButton
           routeTo = "/Landlord"
           text="Go to the Landlord"
           height="60"
