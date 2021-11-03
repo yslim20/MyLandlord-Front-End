@@ -16,6 +16,7 @@ const Text = styled.p`
 	margin-left:${props=>props.marginLeft};
 	font-weight: 500;
 	color:#000;
+
 `;
 
 

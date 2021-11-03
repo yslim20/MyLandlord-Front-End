@@ -23,7 +23,8 @@ const ButtonInput = styled.button`
     box-shadow: ${props=>props.bshadow}; 
 
     :hover{
-        ${props=>props.hover}        
+        transform: scale(0.85);
+        transition-duration: 0.5s;       
     }
 `;
 
@@ -33,6 +34,7 @@ const ButtonText = styled.p`
     font-size: ${props=>props.fontSize};
     text-align:center;
     font-weight: ${props=>props.fontWeight};
+
 `;
 
 
@@ -40,13 +42,12 @@ const Button = ({
     text="Log In",
     margintop = 100,
     marginright="",
-    bgcolor = "#5333ED",
+    bgcolor = "#ffffff",
     radius = 20,
     width = 360,
     height = 72,
-    border = "none",
+    border = "5px solid #5333ED;",
     routeTo = "/LogIn",
-    hover = "opacity: 0.8",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
     color="#fff",
     fontSize="24px",
@@ -63,7 +64,6 @@ const Button = ({
                 width={width} 
                 height={height}
                 border={border}
-                hover={hover}
                 bshadow={bshadow}
             >
                 <ButtonText
