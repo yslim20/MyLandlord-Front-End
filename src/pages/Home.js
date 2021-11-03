@@ -117,10 +117,12 @@ export default function Home() {
 				<FeatCont>
 					<Features />
 					<Features 
+						src ="./images/img_comm.svg"
 						title = "Easy Communication"
 						para= "Users can contact any landlords if they are online on the landlord profile section."
 					/>
 					<Features 
+						src ="./images/img_rating.svg"
 						title = "Strong Rating System"
 						para= "Users can review their landlord by the rating system."
 					/>
