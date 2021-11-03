@@ -4,8 +4,9 @@ import React from 'react';
 
 const HeaderCont = styled.div`
 	display:flex;
-	justify-content:center;
+	justify-content:${props=>props.justifyContent};
 	width: ${props=>props.cWidth};
+	margin-left: ${props=>props.marginL}px;
 `;
 
 const Text = styled.p`
@@ -27,11 +28,15 @@ const Subhead = ({
 	fcolor="#000",
 	align="center",
 	lineHeight = "",
-	marginB=""
+	marginB="",
+	marginL="20px",
+	justifyContent="center",
 }) => {
 	return(
 		<HeaderCont
 			cWidth={cWidth}
+			justifyContent={justifyContent}
+			marginL={marginL}
 		>
 			<Text 
 				fontSize={fontSize}
