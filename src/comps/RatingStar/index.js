@@ -18,6 +18,8 @@ export default function RatingStar() {
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
+        defaultValue={5} 
+        max={5}
       />
     </Box>
   );

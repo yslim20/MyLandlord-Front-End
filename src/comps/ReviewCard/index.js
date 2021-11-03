@@ -4,9 +4,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
-import TextAvatar from '../TextAvatar';
 import RatingStar from '../RatingStar';
 import { Select } from '@mui/material';
+import SmileRating from '../SmileRating';
 
 const BoxCont = styled.div`
     display:flex;
@@ -33,6 +33,10 @@ const LeftSide = styled.div`
     display:flex;
     flex:1;
 `;
+const RightSide = styled.div`
+    display:flex;
+    flex:1;
+`;
 const RatingCont = styled.div`
     display: flex;
     flex-direction: column;
@@ -53,11 +57,57 @@ const RegText = styled.p`
     margin-top: 5px;
     margin-bottom: 0;
 `;
+const DateTextCont = styled.div`
+    margin-top: 2%;
+    position:absolute;
+    right:${props => props.right};
+`;
+const DateText = styled.p`
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 3px;
+`;
+const SmileCont = styled.div`
+    margin-top: 90%;
+`;
+
+// TextAvatar
+const TextAvatarCont = styled.div`
+    margin-top: 4.5%;
+    margin-left: 3%
+`;
+
+const Circle = styled.div`
+    width: ${props => props.width};
+    height: ${props => props.height};
+    border-radius: 50%;
+    margin-left: 4%;
+    margin-top: ${props => props.marginTop};
+    border: 4px solid #5333ED;
+    display: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+`;
+
+const CircleId = styled.p`
+    display:flex;
+    font-size: 32px;
+    font-weight:400;
+    color: #5333ED;
+    justify-content:center;
+    margin-top: 38%;
+`;
 
 const ReviewCard = ({
     name="Adam Biebe",
-    select="Selectd: 5435 Kincaid St",
-    review="I lived this home for about 1 year last year, and it ways horrible. The room is dirty, the maintenance was not what I expected."
+    select="Selected: 5435 Kincaid St",
+    review="I lived this home for about 1 year last year, and it ways horrible. The room is dirty, the maintenance was not what I expected.",
+    boldDate="19 Jan 2017 19:01",
+    right="80px",
+    marginTop="4.5%",
+    text="AB",
+    width="140px",
+    height="140px"
 }) => {
     
 
@@ -66,7 +116,11 @@ const ReviewCard = ({
             <RevBox>
                 <Cont>
                     <LeftSide>
-                        <TextAvatar/>
+                        <TextAvatarCont>
+                            <Circle width={width} height={height}>
+                                <CircleId>{text}</CircleId>
+                            </Circle>
+                        </TextAvatarCont>
                         <RatingCont>
                             <RatingStar />
                             <BoldText>{name}</BoldText>
@@ -74,6 +128,13 @@ const ReviewCard = ({
                             <RegText>{review}</RegText>
                         </RatingCont>
                     </LeftSide>
+                    <DateTextCont right={right}>
+                        <DateText >{boldDate}</DateText>
+                        <SmileCont>
+                            <SmileRating right={right} />
+                        </SmileCont>
+                    </DateTextCont>
+
                 </Cont>
             </RevBox>
         </BoxCont>

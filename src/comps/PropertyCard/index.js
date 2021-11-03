@@ -58,9 +58,15 @@ const RightSide = styled.div`
     flex:1;
 `;
 
-const DateText = styled.div`
-    margin-top: 0;
-    margin-left: 55%;
+const DateTextCont = styled.div`
+    margin-top: 5%;
+    margin-left: 65%;
+`;
+const DateText = styled.p`
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 3px;
 `;
 
 const PropertyCard = ({
@@ -93,9 +99,9 @@ const PropertyCard = ({
                         </TextCont>
                     </LeftSide>
                     <RightSide>
-                        <DateText>
-                            <BoldText marginTop={marginTop}>{boldDate}</BoldText>
-                        </DateText>
+                        <DateTextCont>
+                            <DateText marginTop={marginTop}>{boldDate}</DateText>
+                        </DateTextCont>
                     </RightSide>
                 </Cont>
 
