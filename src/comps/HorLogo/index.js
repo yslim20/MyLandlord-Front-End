@@ -22,7 +22,7 @@ const Logo = styled.img`
 const HorLogo = ({}) => {
     const router = useRouter();
     return(
-        <LogoCont onClick={()=>router.push("/Home")}>
+        <LogoCont onClick={()=>router.push("/")}>
             <Logo src="./images/logo_horizontal.png" alt="MyLandlord Logo V2" />
         </LogoCont>
     );
