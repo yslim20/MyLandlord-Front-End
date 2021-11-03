@@ -10,7 +10,9 @@ import IconButton from '../comps/IconButton';
 import List from '../comps/List';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
+import MuiTable from '../comps/MuiTable'
 
+//A big wrap for the whole page
 const Cont = styled.div`
 	display:flex;
 	flex-direction: column;
@@ -26,6 +28,7 @@ const MidCont = styled.div`
 	margin-bottom: 100px;
     width:80%;
 `
+//the filter bar with 2 icon 
 const TopBar = styled.div`
     display:flex;
     flex:1;
@@ -33,6 +36,8 @@ const TopBar = styled.div`
     justify-content:right;
 	align-items:right;
     `
+
+//building the page, 
 export default function Landlord() {
 	return(
 		<Cont>
@@ -52,12 +57,8 @@ export default function Landlord() {
                 <SubHead align="left" marginL="100" justifyContent="left"
                     text="Who do you want to search"/>
                 <SearchBar/>
-                <TopBar>
-                    <IconButton text="Popularity" />
-                    <IconButton text="Filter" src="./icons/filter.png"/>
-                </TopBar>
                 
-                <List/>
+                <MuiTable/>
                 
             </MidCont>
 

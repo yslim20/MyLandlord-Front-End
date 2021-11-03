@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 const FormCont = styled.div`
-  height: 103px; 
+  height: 60px; 
   display:flex;
   flex-direction: row;
   align-items: center;
@@ -32,7 +32,7 @@ const Box = styled.div`
 `
 
 const Icon = styled.img`
-    padding: 20px;
+    padding: 10px;
     width: 34px;
     height: 34px;    
 `
