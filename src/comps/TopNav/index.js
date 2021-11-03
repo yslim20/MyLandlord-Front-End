@@ -9,7 +9,7 @@ import LoginDrop from '../LoginDrop';
 
 const Cont = styled.div`
   width: 100%;
-  height: 202px;
+  height: 200px;
   position: relative;  
   display: flex;
   flex-direction: row;
@@ -18,6 +18,7 @@ const Cont = styled.div`
   padding:${props => props.cpadding};
   box-sizing: border-box;
   z-index: 999;
+  margin-bottom: ${props => props.cmarginB}px;
 `
 const Nav = styled.div`
   width:100%;
@@ -25,25 +26,25 @@ const Nav = styled.div`
   flex-direction:row;
 `
 const LeftBar =styled.div`
-    display:flex;
-    flex-direction: row;
-    flex: 1.5;
-    align-items:center;
-    justify-content:space-between;
+  display:flex;
+  flex-direction: row;
+  flex: 1.5;
+  align-items:center;
+  justify-content:space-between;
 `
 const RightBar = styled.div`
-    display:flex;
-    flex: 1;
-    align-items:center;
-    justify-content: flex-end;
+  display:flex;
+  flex: 1;
+  align-items:center;
+  justify-content: flex-end;
 `
 const TopNav =({
-  cpadding="36px 68px",
-
+  cpadding="0px 68px",
+  cmarginB=110
 })=>{
   // const router = useRouter();
       return (
-    <Cont cpadding={cpadding} >
+    <Cont cpadding={cpadding} cmarginB={cmarginB} >
       <VerLogo marginright= "83"/>
       
       <Nav>

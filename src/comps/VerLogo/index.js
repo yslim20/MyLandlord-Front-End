@@ -3,7 +3,7 @@ import React from 'react';
 import {useRouter} from 'next/router';
 
 const LogoCont = styled.div`    
-    width: ${props=>props.cwidth};
+    width: ${props=>props.cwidth}px;
     height: ${props=>props.cheight}px;
     margin-right: ${props=>props.mright}px;
     margin-bottom: ${props=>props.mbttm}px;
@@ -24,7 +24,7 @@ const VerLogo = ({
     routeTo="/Home",
     marginbttm = "",
     marginright= 20,
-    cwidth = "202px",
+    cwidth = 202,
     cheight = 114,
     width = 100,
     height = 100,

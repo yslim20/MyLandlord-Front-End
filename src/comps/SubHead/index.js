@@ -3,30 +3,45 @@ import React from 'react';
 
 
 const HeaderCont = styled.div`
-    display:flex;
-    justify-content:center;
+	display:flex;
+	justify-content:center;
 
 `;
 
 const Text = styled.p`
-    font-size: ${props=>props.fontSize};
-    font-weight: 2;
-    color:#3C424C;
-    align-items:center;
-    margin-top:0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: ${props=>props.fontSize}px;
+	font-weight: ${props=>props.fontWeight};
+	color: ${props=>props.fcolor};	
+	text-align: ${props=>props.align};
+	line-height: ${props=>props.lineHeight}px;
+	margin:0;
+	margin-bottom: ${props=>props.marginB};
 `;
 
 
 const Subhead = ({
     text="Log In",
-    fontSize= "30px",
+    fontSize= 32,
+		fontWeight = 400,
+		fcolor="#000",
+		align="center",
+		lineHeight = "",
+		marginB=""
 }) => {
     return(
-        <HeaderCont>
-            <Text fontSize={fontSize}>
-                {text}
-            </Text>
-        </HeaderCont>
+			<HeaderCont>
+				<Text 
+					fontSize={fontSize}
+					fontWeight={fontWeight}
+					fcolor={fcolor}
+					align={align}
+					lineHeight={lineHeight}
+					marginB={marginB}
+				>
+					{text}
+				</Text>
+			</HeaderCont>
     );
 }
 
