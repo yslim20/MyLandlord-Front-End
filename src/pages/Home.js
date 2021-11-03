@@ -2,13 +2,16 @@ import styled from 'styled-components';
 import React from 'react';
 
 import Button from '../comps/Button';
-// import ImgBox from '../comps/ImgBox';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
 import VerLogo from '../comps/VerLogo';
 import Mediabox from '../comps/Mediabox'
 import HeroImage from '../comps/HeroImage'
 import Features from '../comps/Features'
+
+// testing
+import ChatIcon from '../comps/ChatIcon';
+import LoginErrorBox from '../comps/Features'
 
 const Cont = styled.div`
 	display:flex;
@@ -128,6 +131,10 @@ export default function Home() {
 					/>
 				</FeatCont>				
 			</FeatSec>
+
+			<ChatIcon />
+
+			<LoginErrorBox />
 				
 				
 		</Cont>

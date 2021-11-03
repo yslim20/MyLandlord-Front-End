@@ -28,7 +28,7 @@ const VerLogo = ({
   cheight = 114,
   width = 100,
   height = 100,
-  src= "./icons/logo_vertical.png",
+  src= "./images/logo_vertical.png",
   alt="MyLandlord logo",
   cursor="pointer"
 
