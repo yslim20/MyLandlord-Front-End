@@ -9,6 +9,7 @@ import TopNav from '../comps/TopNav';
 import Header from '../comps/Header';
 import VerLogo from '../comps/VerLogo';
 import Mediabox from '../comps/Mediabox'
+import FullImage from '../comps/FullImage'
 
 const Cont = styled.div`
 	display:flex;
@@ -24,13 +25,13 @@ const MidCont = styled.div`
 	flex-wrap: wrap;
 	justify-content:center;
 	align-items:center;
-	margin-bottom: 110px;
+	margin-bottom: 100px;
+	padding: 0 68px 0 68px;
 `
 const LeftBox = styled.div`
 	display:flex;
 	flex: 1;
 	flex-direction: column;	
-	padding-left: 68px; 
 	justify-content:center;
 	align-items:center;
 	box-sizing: border-box;
@@ -42,61 +43,77 @@ const RightBox = styled.div`
 	flex-direction: column;
 	justify-content:center;
 	align-items:center;
-	padding-right: 68px;
 	box-sizing: border-box;
 `
 
-const ListCont = styled.div`
+const HeroCont = styled.div`
 	display:flex;
 	flex: 1;
-	flex-direction: row;
-	align-items:center;
+	flex-direction: column;
+	align-items:flex-start;
 	justify-content:center;
+	margin-bottom: 100px;
+`
+
+const FeatSec = styled.div`
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:flex-start;
+	box-sizing: border-box;
+	margin-bottom: 100px;
+	padding: 0 68px 0 68px;
+`
+
+const FeatCont = styled.div`
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
 `
 
 export default function Home() {
 	return(
 		<Cont>
-				<TopNav cmarginB="80"/>
+			<TopNav/>
 
-				<MidCont>
-					<LeftBox>
-						<VerLogo 
-							cwidth="278"
-							cheight="auto"
-							marginright="0"
-							marginbttm = "20"
-							routeTo=""
-							cursor="default"                        
-						/>
-						<SubHead 
-							text="Welcome to MyLandlord!"
-							fontSize="24"
-							fontWeight="500"
-							lineHeight="29"
-						/>
-						<SubHead 
-							text="Review your landlord now!" 	
-							lineHeight="39"						
-						/>
-					</LeftBox>
-					<RightBox>
-						<Mediabox />
-					</RightBox> 
-				</MidCont>
-		
-				<Header 
-					marginLeft="0%" 
-					justifyContent="center" 
-					alignItems="center" 
-					text="Find The Best Landlord!" 
-					fontSize="34px"
+			<MidCont>
+				<LeftBox>
+					<VerLogo 
+						cwidth="278"
+						cheight="auto"
+						marginright="0"
+						marginbttm = "20"
+						routeTo=""
+						cursor="default"                        
+					/>
+					<SubHead 
+						text="Welcome to MyLandlord!"
+						fontSize="24"
+						fontWeight="500"
+						lineHeight="29"
+					/>
+					<SubHead 
+						text="Review your landlord now!" 	
+						lineHeight="39"						
+					/>
+				</LeftBox>
+				<RightBox>
+					<Mediabox />
+				</RightBox> 
+			</MidCont>
+
+			<HeroCont>
+				<FullImage/>
+			</HeroCont>  
+
+			<FeatSec>
+				<SubHead 
+					text = "Discover Features"
 				/>
-
-				<ListCont>
-					<List/>
-				</ListCont>  
-				<Button width="240px" fontSize="24px" text="See More"/>
+			</FeatSec>
+				
 				
 		</Cont>
 	)

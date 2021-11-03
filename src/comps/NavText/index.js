@@ -13,6 +13,7 @@ const Nav = styled.div`
 `;
 
 const Content = styled.p`
+  font-family: 'Heebo', sans-serif;
   font-size: ${props=>props.pSize}px;
   height: ${props=>props.pHeight}%;
   font-weight: ${props=>props.pWeight};
