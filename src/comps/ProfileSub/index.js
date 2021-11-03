@@ -15,6 +15,7 @@ const Sub = styled.p`
     font-weight: 500;
     font-size: 36px;
     color: #2F281E;
+    font-family: 'Montserrat', sans-serif;
 `;
 
 const Line = styled.div`

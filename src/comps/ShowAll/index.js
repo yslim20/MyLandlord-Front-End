@@ -27,9 +27,10 @@ const TextButt = styled.a`
 const ShowAll = ({
 
 }) => {
+    const router = useRouter();
     return(
         <ContButt>
-            <TextButt>Show All</TextButt>
+            <TextButt onClick={()=> router.push("/Home")}>Show All</TextButt>
         </ContButt>
     );
 }
