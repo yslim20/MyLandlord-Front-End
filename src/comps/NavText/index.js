@@ -13,15 +13,33 @@ const Nav = styled.div`
 `;
 
 const Content = styled.p`
-font-family: Saira SemiCondensed, sans-serif;
-font-style: normal;
-font-weight: normal;
-color: #000000;
-font-size:26px;
-text=${props=>props.text};
-:hover {
-    color:#FF008A;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;       
+  font-family: 'Heebo', sans-serif;
+  font-size: ${props=>props.pSize}px;
+  height: ${props=>props.pHeight}%;
+  font-weight: ${props=>props.pWeight};
+  position: relative;
+
+  :before{
+    content : "";
+    position: absolute;
+    background-color: #5333ED;
+    height: 2px;
+    width : 0;
+    bottom: 0px; left: 50%;
+    transition: 0.5s; 
+    transform: translateX(-50%);
+  }
+  
+  :hover {
+    color:#5333ED; 
+  }
+
+  :hover:before {    
+    width: 100%;
+  }
+
+  :active:before {    
+    width: 100%;
   }
 `
 

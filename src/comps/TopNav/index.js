@@ -5,7 +5,7 @@ import {useRouter} from 'next/router';
 import NavText from '../NavText';
 import VerLogo from '../VerLogo';
 import LoginDrop from '../LoginDrop';
-import Button from '../Button';
+
 
 const Cont = styled.div`
   width: 100%;
@@ -45,44 +45,32 @@ const TopNav =({
 })=>{
   // const router = useRouter();
       return (
-    <Cont onClick={()=>router.push(routeTo)}>
-        <Nav>
-           <LeftBar>
-                    <NavText text="Home"></NavText>
-                    <NavText text="Landlord"></NavText>
-                    <NavText text="Chat"></NavText>
-                    <NavText text="Contact Us"></NavText>
-            </LeftBar>
-            <RightBar>
-                    <Button 
-                        radius="5"
-                        width="164px"
-                        height="48"
-                        bgcolor="#FFFFFF" 
-                        border="1px solid #000"  
-                        text="Log In"
-                        routeTo="../LogIn"
-                        margintop="30"
-                        marginright="20"
-                        //text
-                        fontSize="24"
-                        fontWeight="500"/>
-                    <Button 
-                        radius="5"
-                        width="164px"
-                        height="48"
-                        bgcolor="#000000" 
-                        border="1px solid #000"
-                        text="Sign Up"
-                        routeTo="../SignUp"
-                        margintop="30"
-                        marginright="40"
-                        //text
-                        color="#FFFFFF"
-                        fontSize="24"
-                        fontWeight="500"/>
-                </RightBar>
-            </Nav>
+    <Cont cpadding={cpadding} cmarginB={cmarginB} >
+      <VerLogo marginright= "83"/>
+      
+      <Nav>
+        <LeftBar>
+          <NavText
+            routeTo = "/Home"
+          />
+          <NavText 
+            routeTo = "/Landlord"
+            text="Landlord"
+          />
+          <NavText 
+            routeTo = "/Chat"
+            text="Chat"
+          />
+          <NavText 
+            routeTo = "/ContactUs"
+            text="Contact Us"
+          />
+        </LeftBar>
+
+        <RightBar>
+          <LoginDrop />
+        </RightBar>
+      </Nav>
     </Cont>
   );
 }
