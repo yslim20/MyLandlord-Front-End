@@ -52,6 +52,7 @@ const CopyRight = styled.p`
     font-size: 16px;
     text-align: center;
     color: #6E7076;
+    font-family: Heebo;
 `;
 
 

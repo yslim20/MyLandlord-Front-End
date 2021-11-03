@@ -40,6 +40,7 @@ const BoldText = styled.p`
     font-size: 24px;
     color: #000000;
     margin-bottom: 3px;
+    font-family: Heebo;
     margin-top:${props => props.marginTop};
 `;
 const RegText = styled.p`
@@ -47,6 +48,7 @@ const RegText = styled.p`
     font-size: 16px;
     color: #000000;
     margin: 5px;
+    font-family: Heebo;
 `;
 
 const LeftSide = styled.div`
@@ -67,6 +69,7 @@ const DateText = styled.p`
     font-size: 20px;
     color: #000000;
     margin-bottom: 3px;
+    font-family: Heebo, sans-serif;
 `;
 
 const PropertyCard = ({

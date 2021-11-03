@@ -49,6 +49,7 @@ const BoldText = styled.p`
     font-size: 20px;
     color: #000000;
     margin-bottom: 3px;
+    font-family: Heebo;
 `;
 const RegText = styled.p`
     font-weight: 400;
@@ -56,6 +57,7 @@ const RegText = styled.p`
     color: #000000;
     margin-top: 5px;
     margin-bottom: 0;
+    font-family: Heebo;
 `;
 const DateTextCont = styled.div`
     margin-top: 2%;
@@ -67,6 +69,7 @@ const DateText = styled.p`
     font-size: 20px;
     color: #000000;
     margin-bottom: 3px;
+    font-family: Heebo;
 `;
 const SmileCont = styled.div`
     margin-top: 90%;
@@ -96,6 +99,7 @@ const CircleId = styled.p`
     color: #5333ED;
     justify-content:center;
     margin-top: 38%;
+    font-family: Heebo;
 `;
 
 const ReviewCard = ({
