@@ -8,6 +8,7 @@ import RatingStar from '../RatingStar';
 import { Select } from '@mui/material';
 import SmileRating from '../SmileRating';
 
+// ============ css ============== //
 const BoxCont = styled.div`
     display:flex;
     justify-content:ceter;
@@ -102,7 +103,9 @@ const CircleId = styled.p`
     font-family: Heebo;
 `;
 
+// ============ Function ============== //
 const ReviewCard = ({
+    // ============ Props
     name="Adam Biebe",
     select="Selected: 5435 Kincaid St",
     review="I lived this home for about 1 year last year, and it ways horrible. The room is dirty, the maintenance was not what I expected.",

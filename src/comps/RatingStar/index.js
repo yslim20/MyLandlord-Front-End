@@ -2,6 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 
+// ============ Function ============== //
+// ============ From React Library mui ============== //
 export default function RatingStar() {
   const [value, setValue] = React.useState(2);
 

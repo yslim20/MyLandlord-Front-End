@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import FooterNav from '../FooterNav';
 import HorLogo from '../HorLogo';
 
+// ============ css ============== //
 const Cont = styled.div`
     width:100%;
     position: relative;
@@ -55,11 +56,8 @@ const CopyRight = styled.p`
     font-family: Heebo;
 `;
 
-
-const Footer = ({
-
-
-}) => {
+// ============ Function ============== //
+const Footer = ({}) => {
     return(
         <Cont>
             <Upside>

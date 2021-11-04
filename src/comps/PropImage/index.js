@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ css ============== //
 const Cont = styled.div`
     width:${props => props.cwidth};
     height: ${props => props.cheight}px;
@@ -17,7 +18,9 @@ const Img = styled.img`
     object-fit: cover;
 `;
 
+// ============ Function ============== //
 const PropImg = ({
+    // ============ Props
     src= "./images/property1.png",
     width= "196px",
     height="130px",

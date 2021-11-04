@@ -13,6 +13,8 @@ import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Header from '../comps/Header';
 
+
+// ============ css ============== //
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -67,7 +69,7 @@ const BttnCont = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
-
+// ============ Function ============== //
 export default function SignUp() {
   return (
     <Cont>

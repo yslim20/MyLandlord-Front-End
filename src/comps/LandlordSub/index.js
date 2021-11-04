@@ -6,6 +6,8 @@ const SubCont = styled.div`
     display:flex;
     justify-content: left;
     align-items: left;
+    margin-left:3%;
+    margin-top: 0px;
 `;
 
 const Sub = styled.p`
@@ -13,11 +15,13 @@ const Sub = styled.p`
     font-size: 36px;
     font-weight:500;
     color: #6E7076;
-    margin-top: 25px;
+    margin-top: 0px;
     margin-left:1%;
 `;
+
 // ============ Function ============== //
 const LandlordSub = ({
+    // ============ Props
     text="Joined in Augest 2011"
 }) => {
     return (
@@ -28,3 +32,5 @@ const LandlordSub = ({
 
     );
 }
+
+export default LandlordSub;

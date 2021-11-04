@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import router, {useRouter} from 'next/router';
 
+// ============ css ============== //
 const LogoCont = styled.div`
     width: 215px;
     height:50px;
@@ -18,8 +19,9 @@ const Logo = styled.img`
     object-fit: contain;
 `;
 
-
+// ============ Function ============== //
 const HorLogo = ({}) => {
+        // ============ Routing
     const router = useRouter();
     return(
         <LogoCont onClick={()=>router.push("/")}>
