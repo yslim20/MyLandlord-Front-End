@@ -21,7 +21,7 @@ const Logo = styled.img`
 `
 
 const VerLogo = ({
-  routeTo="/Home",
+  routeTo="/",
   marginbttm = "",
   marginright= 20,
   cwidth = 202,

@@ -11,7 +11,8 @@ import Features from '../comps/Features'
 
 // testing
 import ChatIcon from '../comps/ChatIcon';
-import LoginErrorBox from '../comps/LoginErrorBox'
+import LoginErrorBox from '../comps/LoginErrorBox';
+import NotiBox from '../comps/NotiBox';
 
 const Cont = styled.div`
 	display:flex;
@@ -133,8 +134,8 @@ export default function Home() {
 			</FeatSec>
 
 			<ChatIcon />
-
 			<LoginErrorBox />
+			<NotiBox />
 				
 				
 		</Cont>

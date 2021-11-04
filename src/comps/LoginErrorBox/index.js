@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
+// ============ Imported comps
 import SubHead from '../SubHead';
 
+// ============ CSS
 const ErrorCont = styled.div`
     width: 30%;
     display:flex;
@@ -42,6 +44,8 @@ const ButtonText = styled.p`
     font-weight: ${props=>props.fontWeight};
 `;
 
+// ============ Function ============== //
+// ============ Props
 const LoginErrorBox = ({
     errortext = "You need to login first.",
     text="Log In",
@@ -49,19 +53,23 @@ const LoginErrorBox = ({
     radius = 20,
     width = 360,
     height = 72,
-    routeTo = "/LogIn",
     cbshadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
     color="#fff",
     fontSize="24px",
     fontWeight="500",
 
+// ============ Route To
+    routeTo = "/LogIn",
+
 }) => {
+
+// ============ Router
     const router = useRouter();
 
+// ============ Layout
     return (
       <ErrorCont 
-        onClick={()=>router.push(routeTo)}
         cbshadow={cbshadow}
       >
         <SubHead 
@@ -75,6 +83,7 @@ const LoginErrorBox = ({
           width={width} 
           height={height}
           bshadow={bshadow}
+          onClick={()=>router.push(routeTo)}
         >          
           <ButtonText
             color={color}

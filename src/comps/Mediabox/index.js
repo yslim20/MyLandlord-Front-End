@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import React from 'react';
-import {useRouter} from 'next/router';
 import CardMedia from '@mui/material/CardMedia';
 
+// ============ CSS
 const MedCont = styled.div`    
-    width: ${props=>props.cwidth}px;
+    max-width: ${props=>props.cwidth}px;
     height: ${props=>props.cheight};
     margin: ${props=>props.cmargin}px;
     display:flex;
@@ -12,16 +12,18 @@ const MedCont = styled.div`
     align-items:center;
 `;
 
+// ============ Function ============== //
+// ============ Props
 const Mediabox = ({
     cwidth = 751,
     cheight = "auto",
     cmargin="auto",
     component = "video" ,
-    src = "./video/Promovideo.mp4"
+    src = "./video/Promovideo.mp4",
 
 }) => {
-    const router = useRouter();
 
+    // ============ Layout
     return (
         <MedCont 
           cwidth={cwidth}
@@ -29,9 +31,10 @@ const Mediabox = ({
           cmargin={cmargin}
         >
           <CardMedia
-            component={component}
-            autoPlay 
+            component={component}                       
             loop
+            autoPlay
+            muted
             controls 
             src={src}
           />  
