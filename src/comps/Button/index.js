@@ -37,7 +37,6 @@ const ButtonText = styled.p`
 
 `;
 
-
 const Button = ({
     text="Log In",
     margintop = 100,

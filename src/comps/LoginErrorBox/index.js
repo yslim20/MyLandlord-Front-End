@@ -25,7 +25,7 @@ const ButtonInput = styled.button`
     border: none;
     background-color:${props=>props.bg};
     border-radius:${props=>props.radius}px;
-    width: ${props=>props.width}px;
+    width: ${props=>props.width};
     height: ${props=>props.height}px;
     font-size: ${props=>props.size}px;    
     box-shadow: ${props=>props.bshadow}; 
@@ -51,7 +51,7 @@ const LoginErrorBox = ({
     text="Log In",
     bgcolor = "#5333ED",
     radius = 20,
-    width = 360,
+    width = "100%",
     height = 72,
     cbshadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",

@@ -24,19 +24,39 @@ const MidCont = styled.div`
   flex-direction: row;
   align-items:flex-end;
   item-alignment: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 `
-
+const LeftCont = styled.div`
+  display:flex;  
+  flex: 1;
+  flex-direction: column;
+  align-items:center;
+  item-alignment: center; 
+`
+const RightCont = styled.div`
+  display:flex;  
+  flex: 1;
+  flex-direction: column;
+  align-items:center;
+  item-alignment: center; 
+`
+// button
 const BttnCont = styled.div`
-  width: 48%;
-  display:flex;
+  width: 100%;
+  display:flex;  
   flex-direction: column;
   align-items:center;
   item-alignment: center; 
   margin-right: ${props=>props.marginR}px; 
+  margin-bottom: 20px; 
+  box-sizing: border-box; 
 `
 
 const ButtonInput = styled.button`
+  width: ${props=>props.width};
+  height: ${props=>props.height}px;
+  padding: 5px 70px;
   display:flex;
   flex-direction: column;
   align-items:center;
@@ -44,8 +64,7 @@ const ButtonInput = styled.button`
   background-color:${props=>props.bg};
   border: ${props=>props.border};
   border-radius:${props=>props.radius}px;
-  width: ${props=>props.width}px;
-  height: ${props=>props.height}px;
+  
   font-size: ${props=>props.size}px;    
   box-shadow: ${props=>props.bshadow};   
 
@@ -82,7 +101,7 @@ const NotiBox = ({
     lbgcolor = "#fff",
     bgcolor = "#5333ED",
     radius = 20,
-    width = 360,
+    width ="100%",
     height = 72,
     border = "solid 5px #5333ED",
     rborder = "none",
@@ -121,54 +140,58 @@ const NotiBox = ({
         
 {/* // ============ Buttons */}
         <MidCont>
-
-{/*  // ============ Resend email button */}
-          <BttnCont marginR={marginR}>
+          <LeftCont>
             <SubHead 
               text = {errortext}
               marginB="10"
-              fontSize = "24"
+              fontSize = "22"
               fontWeight = "600"
             />
-            <ButtonInput 
-              bg={lbgcolor} 
-              radius={radius} 
-              width={width} 
-              height={height}
-              bshadow={bshadow}
-              border={border}
-              onClick={()=> {onButtonInteract();}}
-            >          
-              <ButtonText
-                color={color}
-                fontSize={fontSize}
-                fontWeight={fontWeight}
-              >
-                {text}
-              </ButtonText>
-            </ButtonInput>
-          </BttnCont>
+
+  {/*  // ============ Resend email button */}
+            <BttnCont marginR={marginR}>            
+              <ButtonInput 
+                bg={lbgcolor} 
+                radius={radius} 
+                width={width} 
+                height={height}
+                bshadow={bshadow}
+                border={border}   
+                onClick={()=> {onButtonInteract();}}           
+              >          
+                <ButtonText
+                  color={color}
+                  fontSize={fontSize}
+                  fontWeight={fontWeight}                
+                >
+                  {text}
+                </ButtonText>
+              </ButtonInput>
+            </BttnCont>
+          </LeftCont>          
 
 {/* // ============ Back to Home button */}
-          <BttnCont marginR={rmarginR}>
-            <ButtonInput 
-              bg={bgcolor} 
-              radius={radius} 
-              width={width} 
-              height={height}
-              bshadow={bshadow}
-              border={rborder}
-              onClick={()=>router.push(routeTo)}
-            >          
-              <ButtonText
-                color={rcolor}
-                fontSize={fontSize}
-                fontWeight={fontWeight}
-              >
-                {rtext}
-              </ButtonText>
-            </ButtonInput>
-          </BttnCont>
+          <RightCont> 
+            <BttnCont marginR={rmarginR}>
+              <ButtonInput 
+                bg={bgcolor} 
+                radius={radius} 
+                width={width} 
+                height={height}
+                bshadow={bshadow}
+                border={rborder}
+                onClick={()=>router.push(routeTo)}
+              >          
+                <ButtonText
+                  color={rcolor}
+                  fontSize={fontSize}
+                  fontWeight={fontWeight}
+                >
+                  {rtext}
+                </ButtonText>
+              </ButtonInput>
+            </BttnCont> 
+          </RightCont>          
         </MidCont>
 
 {/* // ============ Link */}

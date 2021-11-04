@@ -18,6 +18,7 @@ const Text = styled.p`
 	line-height: ${props=>props.lineHeight}px;
 	margin:0;
 	margin-bottom: ${props=>props.marginB}px;
+	hyphens: auto;
 `;
 
 // ============ Function ============== //

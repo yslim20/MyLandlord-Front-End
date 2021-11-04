@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
+// ============ CSS
 const LogoCont = styled.div`    
   width: ${props=>props.cwidth}px;
   height: ${props=>props.cheight}px;
@@ -19,7 +20,8 @@ const Logo = styled.img`
   display: block;
   object-fit: contain;
 `
-
+// ============ Function ============== //
+// ============ Props
 const VerLogo = ({
   routeTo="/",
   marginbttm = "",
@@ -33,8 +35,11 @@ const VerLogo = ({
   cursor="pointer"
 
 }) => {
-    const router = useRouter();
 
+// ============ Router
+  const router = useRouter();
+
+// ============ Layout
   return (
     <LogoCont 
       cwidth={cwidth}

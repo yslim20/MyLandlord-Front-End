@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ CSS
 const Text = styled.p`
   width: ${props=>props.width};
 	font-family: 'Heebo', sans-serif;  
@@ -13,6 +14,8 @@ const Text = styled.p`
 	margin-bottom: ${props=>props.marginB}px;
 `;
 
+// ============ Function ============== //
+// ============ Props
 const Para = ({
   width="100%",
 	text="Tenants can write reviews on the current or previous landlord.",
@@ -23,6 +26,9 @@ const Para = ({
 	lineHeight = "1.5em",
 	marginB=""
 }) => {
+
+
+// ============ Layout
 	return(
     <Text 
       width={width}

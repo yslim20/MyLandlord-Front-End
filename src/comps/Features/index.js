@@ -2,9 +2,11 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
+// ============ Imported Comps
 import SubHead from '../SubHead';
 import Para from '../Para'
 
+// ============ CSS
 const FeatCont = styled.div`    
   max-width: ${props=>props.cwidth};
   min-height: ${props=>props.cheight}px;
@@ -40,6 +42,8 @@ const TextBox = styled.p`
 	margin-bottom: ${props=>props.marginB}px;
 `;
 
+// ============ Function ============== //
+// ============ Props
 const Features = ({
 // FeatCont
   bradius = 30,
@@ -58,8 +62,11 @@ const Features = ({
   title="Transparent Review Site",
 	para="Tenants can write reviews on the current or previous landlord.",
 }) => {
+
+// ============ Router 
     const router = useRouter();
 
+// ============ Layout
   return (
     <FeatCont 
       cwidth={cwidth}
@@ -80,7 +87,7 @@ const Features = ({
         fontSize= "24"
         text={title}
         align="left"
-        marginB="20"
+        marginB="20"        
       />
       <Para 
         text = {para}
