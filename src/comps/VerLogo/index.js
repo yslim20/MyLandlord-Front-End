@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
+// ============ CSS
 const LogoCont = styled.div`    
   width: ${props=>props.cwidth}px;
   height: ${props=>props.cheight}px;
@@ -19,22 +20,26 @@ const Logo = styled.img`
   display: block;
   object-fit: contain;
 `
-
+// ============ Function ============== //
+// ============ Props
 const VerLogo = ({
-  routeTo="/Home",
+  routeTo="/",
   marginbttm = "",
   marginright= 20,
   cwidth = 202,
   cheight = 114,
   width = 100,
   height = 100,
-  src= "./icons/logo_vertical.png",
+  src= "./images/logo_vertical.png",
   alt="MyLandlord logo",
   cursor="pointer"
 
 }) => {
-    const router = useRouter();
 
+// ============ Router
+  const router = useRouter();
+
+// ============ Layout
   return (
     <LogoCont 
       cwidth={cwidth}

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import React from 'react';
 
+
+// ============ Imported Comps
 import Button from '../comps/Button';
-// import ImgBox from '../comps/ImgBox';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
 import VerLogo from '../comps/VerLogo';
@@ -10,6 +11,13 @@ import Mediabox from '../comps/Mediabox'
 import HeroImage from '../comps/HeroImage'
 import Features from '../comps/Features'
 
+// ============ testing
+import ChatIcon from '../comps/ChatIcon';
+import LoginErrorBox from '../comps/LoginErrorBox';
+import NotiBox from '../comps/NotiBox';
+import TenantAvatar from '../comps/TenantAvatar'
+
+// ============ CSS
 const Cont = styled.div`
 	display:flex;
 	flex-direction: column;
@@ -73,6 +81,15 @@ const FeatCont = styled.div`
 	align-items: center;
 `
 
+// ============ Function ============== //
+// ============ Layout
+export default function Home() {
+	return(
+		<Cont>
+{/* // ============ Top Navigation */}
+			<TopNav/>
+
+{/* // ============ Video Box */}
 export default function Home() {
 	return(
 		<Cont>
@@ -104,10 +121,14 @@ export default function Home() {
 				</RightBox> 
 			</MidCont>
 
+
+{/* // ============ Hero Image */}
 			<HeroCont>
 				<HeroImage/>
 			</HeroCont>  
 
+
+{/* // ============ Features */}
 			<FeatSec>
 				<SubHead 
 					text = "Discover Features"
@@ -128,7 +149,12 @@ export default function Home() {
 					/>
 				</FeatCont>				
 			</FeatSec>
-				
+
+{/* // ============ testing */}
+			<ChatIcon />
+			<LoginErrorBox />
+			<NotiBox />	
+			<TenantAvatar />	
 				
 		</Cont>
 	)

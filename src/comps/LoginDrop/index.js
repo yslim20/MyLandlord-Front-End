@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/system';
 
+// ============ Imported comps
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -12,11 +13,14 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Avatar from '@mui/material/Avatar';
 
+// ============ Button Titles
 const options = ['Sign Up', 'Log In', 'My Page'];
 
 const LoginDrop=({
 
 })=>{
+
+// ============ UseState
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);
@@ -44,7 +48,10 @@ const LoginDrop=({
 
   return (
 
+// ============ Layout
     <React.Fragment>
+
+{/*  ============ Top Button part */}
       <ButtonGroup 
         variant="contained" 
         ref={anchorRef} 
@@ -58,6 +65,8 @@ const LoginDrop=({
           overflow: 'hidden',
         }}
       >
+
+{/*  ============ Avatar Bttn */}
         <Button 
           onClick={handleClick}
           className="bttntext"
@@ -73,7 +82,9 @@ const LoginDrop=({
             src="./icons/icon_user.png"
             sx={{ width: 42, height: 42 }}
           />
-        </Button> {/* Avatar button */}
+        </Button>
+
+{/*  ============ Arrow Bttn */}
         <Button
           size="medium"
           aria-controls={open ? 'split-button-menu' : undefined}
@@ -90,9 +101,10 @@ const LoginDrop=({
           }}
         >
           <ArrowDropDownIcon />
-        </Button>{/* Arrow button */}
-      </ButtonGroup>
+        </Button>
+      </ButtonGroup> {/* Top Button ends */}
       
+{/*  ============ Bottom Button part - popup */}      
       <Popper
         open={open}
         anchorEl={anchorRef.current}

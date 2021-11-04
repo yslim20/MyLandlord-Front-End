@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-// ============ css ============== //
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
     margin-right: ${props=>props.mright}px;
@@ -12,7 +11,6 @@ const ButtonCont = styled.div`
 `;
 
 const ButtonInput = styled.button`
-    type: submit;
     display:flex;
     background-color:${props=>props.bg};
     border: ${props=>props.border};
@@ -39,10 +37,8 @@ const ButtonText = styled.p`
 
 `;
 
-// ============ Function ============== //
 
-const Button = ({
-    // ============ Props
+const RoutButton = ({
     text="Log In",
     margintop = 100,
     marginright="",
@@ -81,4 +77,4 @@ const Button = ({
     );
 }
 
-export default Button;
+export default RoutButton;

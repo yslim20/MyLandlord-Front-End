@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import React from 'react';
 
-
+// ============ CSS
 const HeaderCont = styled.div`
 	display:flex;
 	justify-content:${props=>props.justifyContent};
 	width: ${props=>props.cWidth};
+	margin-right: ${props=>props.cmarginR}px;
 	margin-left: ${props=>props.marginL}px;
+
 `;
 
 const Text = styled.p`
@@ -18,10 +20,14 @@ const Text = styled.p`
 	line-height: ${props=>props.lineHeight}px;
 	margin:0;
 	margin-bottom: ${props=>props.marginB}px;
+	hyphens: auto;
 `;
 
+// ============ Function ============== //
+// ============ Props
 const Subhead = ({
 	cWidth = "",
+	cmarginR = "",
 	text="Log In",
 	fontSize= 32,
 	fontWeight = 500,
@@ -32,9 +38,12 @@ const Subhead = ({
 	marginL="20px",
 	justifyContent="center",
 }) => {
+
+// ============ Layout
 	return(
 		<HeaderCont
 			cWidth={cWidth}
+			cmarginR={cmarginR}
 			justifyContent={justifyContent}
 			marginL={marginL}
 		>

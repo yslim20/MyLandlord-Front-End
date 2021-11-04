@@ -51,7 +51,7 @@ const TopNav =({
       <Nav>
         <LeftBar>
           <NavText
-            routeTo = "/Home"
+            routeTo = "/"
           />
           <NavText 
             routeTo = "/Landlord"
