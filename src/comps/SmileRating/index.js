@@ -7,6 +7,8 @@ import { margin } from '@mui/system';
 import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 
+// ============ Function ============== //
+// ============ From React Library mui ============== //
 const customIcons = {
     1: {
       icon: <SentimentVeryDissatisfiedIcon />,
@@ -27,6 +29,7 @@ const customIcons = {
     },
   };
   
+  // ============ Handler ============== //
   function IconContainer(props) {
     const { value, ...other } = props;
     return <span {...other}>{customIcons[value].icon}</span>;

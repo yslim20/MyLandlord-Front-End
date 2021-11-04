@@ -7,8 +7,13 @@ import PropertyCard from '../comps/PropertyCard';
 import ReviewCard from '../comps/ReviewCard';
 import SmileRating from '../comps/SmileRating';
 import Footer from '../comps/Footer';
+import Header from '../comps/Header';
+import LandlordSub from '../comps/LandlordSub';
 
+
+// ============ css ============== //
 const Cont = styled.div`
+
 `;
 
 const ProfCont = styled.div`
@@ -35,9 +40,12 @@ const ReviewCont = styled.div`
 `;
 
 
+// ============ Function ============== //
 export default function LandlordProfile() {
     return(
         <Cont>
+            <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
+            <LandlordSub/>
             <ProfCont>
                 <ProfileSub />
                 <ShowAll />

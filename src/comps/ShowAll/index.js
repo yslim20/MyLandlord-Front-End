@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-
+// ============ css ============== //
 const ContButt = styled.div`
     display:flex;
     justify-content:flex-end;
@@ -23,10 +23,9 @@ const TextButt = styled.a`
 `;
 
 
-
-const ShowAll = ({
-
-}) => {
+// ============ Function ============== //
+const ShowAll = ({}) => {
+    // ============ Routing
     const router = useRouter();
     return(
         <ContButt>

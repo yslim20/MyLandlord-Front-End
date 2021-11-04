@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-
+// ============ css ============== //
 const Cont = styled.div`
     display: flex;
     justify-content: left;
@@ -30,7 +30,9 @@ const DisplayRow = styled.div`
     align-items: center;
 `;
 
+// ============ Function ============== //
 const ProfileSub = ({
+    // ============ Props
     text="Properties",
     fontSize="36px"
 }) => {

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ css ============== //
 const BoxCont = styled.div`
     display:flex;
     justify-content:ceter;
@@ -72,7 +73,9 @@ const DateText = styled.p`
     font-family: Heebo, sans-serif;
 `;
 
+// ============ Function ============== //
 const PropertyCard = ({
+    // ============ Props
     src= "./images/property1.png",
     width= "196px",
     height="130px",

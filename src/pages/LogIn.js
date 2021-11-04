@@ -7,6 +7,7 @@ import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
 import Input from '../comps/Input';
 
+// ============ css ============== //
 const Cont = styled.div`
     display:flex;
     flex-direction: column;
@@ -37,6 +38,7 @@ const ContRight = styled.div`
     justify-content: center;
 `
 
+// ============ Function ============== //
 export default function LogIn() {
     return(
         <Cont>
