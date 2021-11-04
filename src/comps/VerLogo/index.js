@@ -19,6 +19,7 @@ const Logo = styled.img`
   height: ${props=>props.height}%;
   display: block;
   object-fit: contain;
+  min-width: ${props=>props.minwidth};
 `
 // ============ Function ============== //
 // ============ Props
@@ -30,6 +31,7 @@ const VerLogo = ({
   cheight = 114,
   width = 100,
   height = 100,
+  minwidth="",
   src= "./images/logo_vertical.png",
   alt="MyLandlord logo",
   cursor="pointer"
@@ -52,6 +54,7 @@ const VerLogo = ({
       <Logo 
         width={width} 
         height={height}
+        minwidth={minwidth}
         src={src}
         alt={alt}
       />

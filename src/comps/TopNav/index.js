@@ -46,7 +46,10 @@ const TopNav =({
   // const router = useRouter();
       return (
     <Cont cpadding={cpadding} cmarginB={cmarginB} >
-      <VerLogo marginright= "83"/>
+      <VerLogo 
+        marginright= "83"
+        minwidth = "150px"
+      />
       
       <Nav>
         <LeftBar>

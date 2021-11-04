@@ -3,11 +3,12 @@ import React from 'react';
 
 const Cont = styled.div`
   width:${props => props.cwidth};
-  height: ${props => props.cheight}px;
+  height: ${props => props.cheight};
   position: relative;  
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: ${props => props.cmargin};
 `
 
 const Img = styled.img`
@@ -31,7 +32,8 @@ const Text = styled.p`
 const ImgBox = ({
 // container 
   cwidth = "80%",
-  cheight = 1000,
+  cheight = "1000px",
+  cmargin="",
 
 // image
   src = "https://placekitten.com/500/500",
@@ -55,6 +57,7 @@ const ImgBox = ({
       <Cont
         cwidth={cwidth}
         cheight={cheight}
+        cmargin={cmargin}
       >
         <Img
           src={src}

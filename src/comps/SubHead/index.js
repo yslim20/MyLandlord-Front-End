@@ -6,9 +6,8 @@ const HeaderCont = styled.div`
 	display:flex;
 	justify-content:${props=>props.justifyContent};
 	width: ${props=>props.cWidth};
-	margin-right: ${props=>props.cmarginR}px;
-	margin-left: ${props=>props.marginL}px;
-
+	margin-right: ${props=>props.cmarginR};
+	padding: ${props=>props.cpadding};
 `;
 
 const Text = styled.p`
@@ -20,32 +19,32 @@ const Text = styled.p`
 	line-height: ${props=>props.lineHeight}px;
 	margin:0;
 	margin-bottom: ${props=>props.marginB}px;
-	hyphens: auto;
+	overflow-wrap: break-word;
 `;
 
 // ============ Function ============== //
 // ============ Props
 const Subhead = ({
+	justifyContent = "center",
 	cWidth = "",
 	cmarginR = "",
 	text="Log In",
+	cpadding ="",
 	fontSize= 32,
 	fontWeight = 500,
 	fcolor="#000",
 	align="center",
 	lineHeight = "",
-	marginB="",
-	marginL="20px",
-	justifyContent="center",
+	marginB=""
 }) => {
 
 // ============ Layout
 	return(
 		<HeaderCont
+			justifyContent={justifyContent}
 			cWidth={cWidth}
 			cmarginR={cmarginR}
-			justifyContent={justifyContent}
-			marginL={marginL}
+			cpadding={cpadding}
 		>
 			<Text 
 				fontSize={fontSize}
