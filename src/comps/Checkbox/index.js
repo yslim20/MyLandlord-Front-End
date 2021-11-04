@@ -12,12 +12,14 @@ import { deepPurple } from '@mui/material/colors';
 import { Typography } from '@mui/material';
 
 
+// ============ Function ============== //
+// ============ From React Library mui ============== //
 const Checkbox = ({
-// text
+	// ============ Props
   value = "Recieve news letter and update",
 
 }) => {  
-  
+  // ============ Handler ============== //
   const [selectedValue, setSelectedValue] = React.useState('a');
 
   const handleChange = (event) => {
@@ -32,6 +34,7 @@ const Checkbox = ({
     inputProps: { 'aria-label': item },
   });
 
+  // ============ css ============== //
   const LabelText = styled.div`
     font-size: 24px
   `;

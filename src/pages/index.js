@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+
 // ============ Imported Comps
 import Button from '../comps/Button';
 import SubHead from '../comps/SubHead';
@@ -79,6 +80,7 @@ const FeatCont = styled.div`
 	justify-content:space-between;
 	align-items: center;
 `
+
 // ============ Function ============== //
 // ============ Layout
 export default function Home() {
@@ -88,6 +90,11 @@ export default function Home() {
 			<TopNav/>
 
 {/* // ============ Video Box */}
+export default function Home() {
+	return(
+		<Cont>
+			<TopNav/>
+
 			<MidCont>
 				<LeftBox>
 					<VerLogo 
@@ -114,10 +121,12 @@ export default function Home() {
 				</RightBox> 
 			</MidCont>
 
+
 {/* // ============ Hero Image */}
 			<HeroCont>
 				<HeroImage/>
 			</HeroCont>  
+
 
 {/* // ============ Features */}
 			<FeatSec>
@@ -145,7 +154,7 @@ export default function Home() {
 			<ChatIcon />
 			<LoginErrorBox />
 			<NotiBox />	
-			<TenantAvatar />			
+			<TenantAvatar />	
 				
 		</Cont>
 	)

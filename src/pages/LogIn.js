@@ -7,13 +7,14 @@ import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
 import Input from '../comps/Input';
 
+// ============ css ============== //
 const Cont = styled.div`
     display:flex;
     flex-direction: column;
     margin-left:3%;
 `;
 
-const BttmCont = styled.div`
+const BttmCont = styled.form`
     margin-top: -10%;
     display: flex;
     flex-wrap: row;
@@ -37,6 +38,7 @@ const ContRight = styled.div`
     justify-content: center;
 `
 
+// ============ Function ============== //
 export default function LogIn() {
     return(
         <Cont>
@@ -44,7 +46,7 @@ export default function LogIn() {
             <BttmCont>
                 <ContLeft>
                     <Input title="User name"/>
-                    <Input title="Password"/>
+                    <Input title="Password" type="password"/>
                     {/* <LongInForm />
                     <LongInForm title="Password" /> */}
                     <Button text="Log In" />

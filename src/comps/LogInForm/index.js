@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ css ============== //
 const FormCont = styled.div`
     max-width: 650px;
     display: flex;
@@ -21,8 +22,9 @@ const InputBox = styled.input`
     border-radius:15px;
     border: solid 3px #5333ED;
 `;
-
+// ============ Function ============== //
 const LongInForm = ({
+    // ============ Props
     title="User Name"
 }) => {
     return (

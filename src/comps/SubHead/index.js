@@ -4,9 +4,11 @@ import React from 'react';
 // ============ CSS
 const HeaderCont = styled.div`
 	display:flex;
-	justify-content:center;
+	justify-content:${props=>props.justifyContent};
 	width: ${props=>props.cWidth};
-	margin-right: ${props=>props.cmarginR};
+	margin-right: ${props=>props.cmarginR}px;
+	margin-left: ${props=>props.marginL}px;
+
 `;
 
 const Text = styled.p`
@@ -32,7 +34,9 @@ const Subhead = ({
 	fcolor="#000",
 	align="center",
 	lineHeight = "",
-	marginB=""
+	marginB="",
+	marginL="20px",
+	justifyContent="center",
 }) => {
 
 // ============ Layout
@@ -40,6 +44,8 @@ const Subhead = ({
 		<HeaderCont
 			cWidth={cWidth}
 			cmarginR={cmarginR}
+			justifyContent={justifyContent}
+			marginL={marginL}
 		>
 			<Text 
 				fontSize={fontSize}

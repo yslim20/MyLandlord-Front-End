@@ -13,6 +13,8 @@ import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Header from '../comps/Header';
 
+
+// ============ css ============== //
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +30,7 @@ const RadioCont = styled.div`
   padding:5px;
 `
 
-const BttmCont = styled.div`
+const BttmCont = styled.form`
   display: flex;
   flex-wrap: row;
   flex-direction: row;
@@ -67,7 +69,7 @@ const BttnCont = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `
-
+// ============ Function ============== //
 export default function SignUp() {
   return (
     <Cont>
@@ -81,7 +83,7 @@ export default function SignUp() {
           <FullName />  
           <Input />
           <Input title="User Name" />
-          <Input title="Password" />
+          <Input title="Password" type="password"/>
           <Input title="Confirm the Password" />
           
           <CheckCont> 

@@ -7,6 +7,8 @@ import SubHead from '../comps/SubHead';
 import List from '../comps/List';
 import TopNav from '../comps/TopNav';
 import Header from '../comps/Header'
+import IconButton  from '../comps/IconButton';
+import MuiTable from '../comps/MuiTable';
 
 const Cont = styled.div`
     display:flex;
@@ -57,11 +59,15 @@ export default function Home() {
                             <ImgBox src="https://placekitten.com/400/400"  height="90%"/>
                     </ImgSide> 
             </MidCont>
+
+            <MidCont>
+                <IconButton></IconButton>
+                </MidCont> 
        
             <Header marginLeft="0%" justifyContent="center" alignItems="center" text="Find The Best Landlord!" fontSize="34px"/>
 
              <ListCont>
-                <List/>
+                <MuiTable/>
             </ListCont>  
            
         </Cont>

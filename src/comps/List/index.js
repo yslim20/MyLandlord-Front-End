@@ -34,13 +34,13 @@ align-items:center;
 
 const Tr = styled.tr`
 display:flex;
-width: 70%;
+width: 100%;
 justify-content:space-evenly;
 :hover {background-color: #ddd;};
 font-size:35px;
 font-style:regular;
 margin-top:5%;
-margin-left:5%;
+
 `
 const List = () => {
   //const [users] = useState(testUsers);
@@ -51,17 +51,17 @@ const List = () => {
       <Table>
                   <Tr>
                           <td scope="row"><Avatar/></td>
-                          <td scope="row">Walter White</td>
+                          <td scope="row">Jasper White </td>
                           <td scope="row">
-                            <ListText marginTop="6px" fontSize="16px" text="1470 Pennyfarthing Dr 203 Vancouver BC V6J 4Y2"/>
+                            <ListText marginTop="6px" fontSize="16px" text="4388 Buchanan St 1901 Burnaby BC V5C 6R8"/>
                           </td>
                   </Tr>
                   <ListHr/>
         
                 <Tr>  
-                        <td scope="row"><Avatar/></td>
+                        <td scope="row"><Avatar src="./icons/officon.png"/></td>
                         <td scope="row">Calvin Harris</td>
-                        <ListText marginTop="6px" fontSize="16px" text="1470 Pennyfarthing Dr 203 Vancouver BC V6J 4Y2"/>
+                        <ListText marginTop="6px" fontSize="16px" text="406 47th Ave E Vancouver BC V5W 2B4"/>
 
                 </Tr>
                 <ListHr/>

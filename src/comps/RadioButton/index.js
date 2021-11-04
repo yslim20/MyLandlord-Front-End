@@ -11,7 +11,8 @@ import FormLabel from '@mui/material/FormLabel';
 import { deepPurple } from '@mui/material/colors';
 import { Typography } from '@mui/material';
 
-
+// ============ Function ============== //
+// ============ From React Library mui ============== //
 export default function ColorRadioButtons() {
   const [selectedValue, setSelectedValue] = React.useState('a');
 
@@ -27,6 +28,7 @@ export default function ColorRadioButtons() {
     inputProps: { 'aria-label': item },
   });
 
+  // ============ css ============== //
   const LabelText = styled.div`
     font-size: 24px
   `;
@@ -72,65 +74,3 @@ export default function ColorRadioButtons() {
     </div>
   );
 }
-
-
-// const RadioButton = ({
-
-// // RadioCont
-//   mbttm = 80,
-//   padding = 5,
-//   mRight = 20,
-
-// // LabelBox
-//   lwidth = 158,
-//   lheight = 53,
-
-// // InputBox
-//   iwidth = 36,
-//   ilheight = 54,
-//   marginR = 10,
-//   onChange = () => {},
-//   checked = "this.state.name === 'Tenant'",
-
-// // TextCont
-//   fsize = 36,
-//   marginL = 5,
-//   lineheight = 48,
-//   text = "Tenant"
-// }) => (
-//   <RadioCont
-//     mbttm={mbttm}
-//     mRight={mRight}
-//     padding={padding}    
-//   >
-//     {/* <FormCont>
-//       <LabelBox
-//         lwidth={lwidth}
-//         lheight={lheight}
-//       >
-//         <InputBox
-//           type="radio"
-//           value="Tenant"
-//           iwidth={iwidth}
-//           ilheight={ilheight}
-//           marginR={marginR}
-//           checked={checked}
-//           onChange={onChange} />
-
-//         <TextCont
-//           fsize={fsize}
-//           marginL={marginL}
-//           lineheight={lineheight}
-//         >
-//           {text}
-//         </TextCont>
-//       </LabelBox>
-//     </FormCont> */}
-//         <RadioGroup row aria-label="gender" name="row-radio-buttons-group">
-//         <FormControlLabel value="Tenant" control={<Radio />} label="Tenant" />
-//         <FormControlLabel value="Landlord" control={<Radio />} label="Landlord" />
-//       </RadioGroup>
-      
-//   </RadioCont>
-// )
-
