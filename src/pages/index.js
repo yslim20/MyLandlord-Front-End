@@ -89,12 +89,6 @@ export default function Home() {
 {/* // ============ Top Navigation */}
 			<TopNav/>
 
-{/* // ============ Video Box */}
-export default function Home() {
-	return(
-		<Cont>
-			<TopNav/>
-
 			<MidCont>
 				<LeftBox>
 					<VerLogo 
