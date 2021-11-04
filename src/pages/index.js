@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 
 
-// ============ Imported Comps
+// ============ Imported Comps ============== //
 import Button from '../comps/Button';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
@@ -17,7 +17,7 @@ import LoginErrorBox from '../comps/LoginErrorBox';
 import NotiBox from '../comps/NotiBox';
 import TenantAvatar from '../comps/TenantAvatar'
 
-// ============ CSS
+// ============ CSS ============== //
 const Cont = styled.div`
 	display:flex;
 	flex-direction: column;
@@ -145,10 +145,10 @@ export default function Home() {
 			</FeatSec>
 
 {/* // ============ testing */}
-			<ChatIcon />
+			{/* <ChatIcon />
 			<LoginErrorBox />
 			<NotiBox />	
-			<TenantAvatar />	
+			<TenantAvatar />	 */}
 				
 		</Cont>
 	)

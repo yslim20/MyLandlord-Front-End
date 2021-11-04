@@ -3,6 +3,7 @@ import React from 'react';
 
 const FormCont = styled.div`
   height: 103px; 
+  min-width: ${props => props.minWidth};
   display:flex;
   flex-direction: row;
   align-items: center;
@@ -38,6 +39,7 @@ const InputBox = styled.input`
 `
 
 const Input = ({
+  minWidth = "",
   title = "Email",
   fwidth = "100%",
   fheight = "100%",
@@ -49,7 +51,9 @@ const Input = ({
 }) => {  
 
   return (
-    <FormCont>
+    <FormCont
+      minWidth={minWidth}
+    >
       <FormBox 
         fwidth={fwidth} 
         fheight={fheight}

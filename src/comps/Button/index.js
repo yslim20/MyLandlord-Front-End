@@ -6,18 +6,19 @@ import {useRouter} from 'next/router';
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
     margin-right: ${props=>props.mright}px;
-    width: 100%;
+    width: 100%;    
     display:flex;
     justify-content:center;
 `;
 
 const ButtonInput = styled.button`
-    type: submit;
+    type: ${props=>props.type};
     display:flex;
     background-color:${props=>props.bg};
     border: ${props=>props.border};
     border-radius:${props=>props.radius}px;
     width: ${props=>props.width}px;
+    min-width: ${props=>props.minWidth}px;
     height: ${props=>props.height}px;
     font-size: ${props=>props.size}px;
     align-items:center;
@@ -43,8 +44,10 @@ const ButtonText = styled.p`
 
 const Button = ({
     // ============ Props
+    type = "submit",
     text="Log In",
     margintop = 100,
+    minWidth="",
     marginright="",
     bgcolor = "#ffffff",
     radius = 20,
@@ -61,19 +64,26 @@ const Button = ({
     const router = useRouter();
 
     return (
-        <ButtonCont mtop={margintop} mright={marginright} onClick={()=>router.push(routeTo)}>
+        <ButtonCont 
+            mtop={margintop} 
+            mright={marginright} 
+            
+            onClick={()=>router.push(routeTo)}            
+        >
             <ButtonInput 
+                type={type}
                 bg={bgcolor} 
                 radius={radius} 
                 width={width} 
                 height={height}
                 border={border}
                 bshadow={bshadow}
+                minWidth={minWidth}
             >
                 <ButtonText
-                color={color}
-                fontSize={fontSize}
-                fontWeight={fontWeight}
+                    color={color}
+                    fontSize={fontSize}
+                    fontWeight={fontWeight}
                 >
                     {text}</ButtonText>
             </ButtonInput>

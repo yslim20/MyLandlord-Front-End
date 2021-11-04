@@ -12,6 +12,7 @@ const Text = styled.p`
 	line-height: ${props=>props.lineHeight};
 	margin:0;
 	margin-bottom: ${props=>props.marginB}px;
+	margin-top: ${props=>props.marginT}px;
 `;
 
 // ============ Function ============== //
@@ -24,7 +25,8 @@ const Para = ({
 	fcolor="#000",
 	align="left",
 	lineHeight = "1.5em",
-	marginB=""
+	marginB="",
+	marginT="",
 }) => {
 
 
@@ -38,6 +40,7 @@ const Para = ({
       align={align}
       lineHeight={lineHeight}
       marginB={marginB}
+			marginT={marginT}
     >
       {text}
     </Text>

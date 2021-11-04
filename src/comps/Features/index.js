@@ -9,6 +9,7 @@ import Para from '../Para'
 // ============ CSS
 const FeatCont = styled.div`    
   max-width: ${props=>props.cwidth};
+  min-width: 300px;
   min-height: ${props=>props.cheight}px;
   border: solid 7px #7763D6;
   border-radius: ${props=>props.bradius}px;
