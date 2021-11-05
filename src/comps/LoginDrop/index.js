@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/system';
+import {useRouter} from 'next/router';
 
 // ============ Imported comps
 import Button from '@mui/material/Button';
@@ -16,7 +17,7 @@ import Avatar from '@mui/material/Avatar';
 // ============ Button Titles
 const options = ['Sign Up', 'Log In', 'My Page'];
 
-const LoginDrop=({
+const LoginDrop=({  
 
 })=>{
 
@@ -44,7 +45,21 @@ const LoginDrop=({
     }
 
     setOpen(false);
-  };
+  }; 
+
+  const buttonClick = (event, index) => {
+    event.preventDefault()
+
+    if (index === 2){
+      router.push("/MyPage")
+    } else if (index === 1) {
+      router.push("/LogIn")
+    } else if (index === 0) {
+      router.push("/SignUp")      
+    }
+  }
+    
+  const router = useRouter();
 
   return (
 
@@ -134,9 +149,11 @@ const LoginDrop=({
                       // disabled={index === 2}
                       selected={index === selectedIndex}
                       onClick={(event) => handleMenuItemClick(event, index)}
+
+                      onClick={(event) => buttonClick(event, index)}
                     >
                       {option}
-                    </MenuItem>
+                    </MenuItem>                    
                   ))}
                 </MenuList>
               </ClickAwayListener>
