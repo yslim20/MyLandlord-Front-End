@@ -51,7 +51,7 @@ export default function LogIn() {
                     <LongInForm title="Password" /> */}
                     <Button text="Log In" />
                     <Divider />
-                    <Button text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff"/>
+                    <Button routeTo="/SignUp" text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff"/>
                 </ContLeft>
                 <ContRight>
                     <ImgBox src="./images/LogInImg.svg"  height="735px"/>
