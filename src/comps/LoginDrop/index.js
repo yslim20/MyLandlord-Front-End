@@ -24,7 +24,7 @@ const LoginDrop=({
 // ============ UseState
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleClick = () => {
     console.info(`You clicked ${options[selectedIndex]}`);
@@ -47,6 +47,7 @@ const LoginDrop=({
     setOpen(false);
   }; 
 
+// ============ Router to pages
   const buttonClick = (event, index) => {
     event.preventDefault()
 
@@ -146,7 +147,6 @@ const LoginDrop=({
                   {options.map((option, index) => (
                     <MenuItem
                       key={option}
-                      // disabled={index === 2}
                       selected={index === selectedIndex}
                       onClick={(event) => handleMenuItemClick(event, index)}
 
