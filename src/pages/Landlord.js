@@ -10,7 +10,9 @@ import IconButton from '../comps/IconButton';
 import List from '../comps/List';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
-import MuiTable from '../comps/MuiTable'
+import MuiTable from '../comps/MuiTable';
+import Footer from '../comps/Footer';
+
 
 //A big wrap for the whole page
 const Cont = styled.div`
@@ -26,7 +28,7 @@ const MidCont = styled.div`
 	justify-content:right;
 	align-items:right;
 	margin-bottom: 100px;
-    width:80%;
+    width:70%;
 `
 //the filter bar with 2 icon 
 const TopBar = styled.div`
@@ -45,7 +47,7 @@ export default function Landlord() {
             <MidCont>
                 <Header text="Map"
                 />
-                <SubHead align="left" marginL="100" justifyContent="left"
+                <SubHead align="left" marginL="200" justifyContent="left"
                     text="Which area do you want to search"/>
                     <SearchBar/>
                     <ImgBox cwidth="50%" cheight="600"/>
@@ -62,7 +64,10 @@ export default function Landlord() {
                 
             </MidCont>
 
+            <Footer/> 
          </Cont>   
+        
+      
 
     )
 }
