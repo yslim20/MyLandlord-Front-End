@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
 
-
 // ============ Imported Comps ============== //
 import Button from '../comps/Button';
 import SubHead from '../comps/SubHead';
@@ -89,6 +88,8 @@ export default function Home() {
 {/* // ============ Top Navigation */}
 			<TopNav/>
 
+
+{/* // ============ Body Starts */}
 			<MidCont>
 				<LeftBox>
 					<VerLogo 

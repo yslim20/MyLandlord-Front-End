@@ -8,6 +8,7 @@ const HeaderCont = styled.div`
 	width: ${props=>props.cWidth};
 	margin-right: ${props=>props.cmarginR};
 	padding: ${props=>props.cpadding};
+	margin-bottom: ${props=>props.marginB}px;
 `;
 
 const Text = styled.p`
@@ -17,8 +18,7 @@ const Text = styled.p`
 	color: ${props=>props.fcolor};	
 	text-align: ${props=>props.align};
 	line-height: ${props=>props.lineHeight}px;
-	margin:0;
-	margin-bottom: ${props=>props.marginB}px;
+	margin:0;	
 	overflow-wrap: break-word;
 `;
 
@@ -45,14 +45,14 @@ const Subhead = ({
 			cWidth={cWidth}
 			cmarginR={cmarginR}
 			cpadding={cpadding}
+			marginB={marginB}
 		>
 			<Text 
 				fontSize={fontSize}
 				fontWeight={fontWeight}
 				fcolor={fcolor}
 				align={align}
-				lineHeight={lineHeight}
-				marginB={marginB}
+				lineHeight={lineHeight}				
 			>
 				{text}
 			</Text>

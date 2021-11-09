@@ -60,6 +60,11 @@ body {
   text-decoration: underline;
 } /* Font ends */
 
+.MuiDataGrid-columnHeaderTitle{
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+}
+
 
 /* ================= MEDIA ================= */
 

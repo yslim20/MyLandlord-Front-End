@@ -8,11 +8,12 @@ import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
 import IconButton from '../comps/IconButton';
 import List from '../comps/List';
+// import ListTable from '../comps/ListTable';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
 import MuiTable from '../comps/MuiTable'
 
-//A big wrap for the whole page
+// ============ CSS ============== //
 const Cont = styled.div`
 	display:flex;
 	flex-direction: column;
@@ -32,46 +33,54 @@ const MidCont = styled.div`
 const TopBar = styled.div`
   display:flex;
   flex:1;
-  flex-firection:row;
-  justify-content:right;
-	align-items:right;
+  flex-direction:row;
+  justify-content:center;
+	align-items:flex-start;
 `
 
-//building the page, 
+// ============ Function ============== //
+// ============ Layout
 export default function Landlord() {
 	return(
 		<Cont>
+{/* // ============ Top Navigation */}
 			<TopNav/>
-      <MidCont>
-        <Header text="Map"
-        />
-        <SubHead 
-          align="left" 
-          marginL="100" 
-          justifyContent="left"
-          text="Which area do you want to search"
-        />
-        <SearchBar/>
-        <ImgBox cwidth="50%" cheight="600"/>
 
-      </MidCont>
+{/* // ============ MAP */}
       <MidCont>
-        <Header text="List of Landlord" 
-        />
+        <Header text="Map" marginLeft="0"/>
         <SubHead 
-          align="left" 
-          marginL="100" 
-          justifyContent="left"            
-          text="Who do you want to search"
+          marginB = "40"
+          justifyContent="left"
+          text="Which area do you want to search?"
         />
         <SearchBar/>
-        
+
+{/* it is a image with img tag */}
+        <ImgBox 
+          cwidth="100%" 
+          cheight="auto"
+          src="./images/img_map.png"
+        />
+      </MidCont>
+
+{/* // ============ LIST OF LANDLORD */} 
+      <MidCont>
+        <Header text="List of Landlord" marginLeft="0"/>
+        <SubHead 
+          marginB = "40"
+          justifyContent="left"            
+          text="Who do you want to search?"
+        />
+        <SearchBar
+          placeholder="Please type your landlord name or address.."
+        />
+
         <MuiTable/>
+        {/* <ListTable /> */}
           
       </MidCont>
-
-    </Cont>   
-
-    )
+    </Cont> 
+  )
 }
 

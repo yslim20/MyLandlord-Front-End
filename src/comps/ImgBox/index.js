@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ CSS
 const Cont = styled.div`
   width:${props => props.cwidth};
   height: ${props => props.cheight};
@@ -28,7 +29,8 @@ const Text = styled.p`
   margin-top: ${props => props.mTop}px;
   margin-left: ${props => props.mLeft}px;
 `
-
+// ============ Function ============== //
+// ============ Props
 const ImgBox = ({
 // container 
   cwidth = "80%",
@@ -53,30 +55,32 @@ const ImgBox = ({
   text = null,
 
 }) => {
-    return (
-      <Cont
-        cwidth={cwidth}
-        cheight={cheight}
-        cmargin={cmargin}
-      >
-        <Img
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          objectFit={objectFit} />
-        <Text
-          fsize={fsize}
-          position={position}
-          zindex={zindex}
-          top={top}
-          left={left}
-          mTop={mTop}
-          mLeft={mLeft}
-        > {text} </Text>
 
-      </Cont>
-    );
-  }
+// ============ Layout
+  return (
+    <Cont
+      cwidth={cwidth}
+      cheight={cheight}
+      cmargin={cmargin}
+    >
+      <Img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        objectFit={objectFit} />
+      <Text
+        fsize={fsize}
+        position={position}
+        zindex={zindex}
+        top={top}
+        left={left}
+        mTop={mTop}
+        mLeft={mLeft}
+      > {text} </Text>
+
+    </Cont>
+  );
+}
 
 export default ImgBox;
