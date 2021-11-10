@@ -3,6 +3,7 @@ import React from 'react';
 
 // ============ Imported Comps ============== //
 import TopNav from '../comps/TopNav';
+import UserDrop from '../comps/UserDrop';
 import ImgBox from '../comps/ImgBox';
 import Header from '../comps/Header';
 import SubHead from '../comps/SubHead';
@@ -36,10 +37,10 @@ const TopBar = styled.div`
 `
 
 //building the page, 
-export default function UserProfile() {
+export default function TenantProfile() {
 	return(
 		<Cont>
-			<TopNav/>
+			<TopNav children = {<UserDrop/>} />
       <MidCont>
           <Header text="Map"
           />
