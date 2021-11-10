@@ -10,12 +10,25 @@ import SubHead from '../comps/SubHead';
 import SearchBar from '../comps/SearchBar';
 import Footer from '../comps/Footer';
 
+import ProfileSub from '../comps/ProfileSub';
+import ShowAll from '../comps/ShowAll';
+import PropertyCard from '../comps/PropertyCard';
+import ReviewCard from '../comps/ReviewCard';
+import LandlordSub from '../comps/LandlordSub';
+
 // ============ CSS ============== //
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;  
 `
+
+const UserCont = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;  
+`
+
 const MidCont = styled.div`
   display:flex;
   flex: 1;
@@ -28,37 +41,62 @@ const MidCont = styled.div`
   box-sizing: border-box;
 `
 //the filter bar with 2 icon 
-const TopBar = styled.div`
-  display:flex;
-  flex:1;
-  flex-firection:row;
-  justify-content:right;
-  align-items:right;
-`
+const ProfCont = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 3%;
+    margin-bottom: 70px;
+`;
+
+const CenterBox = styled.div`
+    display:flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items:center;
+`;
+
+const ReviewCont = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    // margin-left: 3%;
+`;
 
 //building the page, 
 export default function TenantProfile() {
 	return(
 		<Cont>
 			<TopNav children = {<UserDrop/>} />
-      <MidCont>
-          <Header text="Map"
-          />
-          <SubHead align="left" marginL="100" justifyContent="left"
-            text="Which area do you want to search"/>
-          <SearchBar/>
-          <ImgBox cwidth="50%" cheight="600"/>
+{/* =================== Layout */}
 
-      </MidCont>
-      <MidCont>
-          <Header text="List of Landlord" 
-          />
-          <SubHead align="left" marginL="100" justifyContent="left"
-            text="Who do you want to search"/>
-          <SearchBar/>
+      <UserCont>
+      <Header marginBottom="45px" marginLeft="4%" text="Nancy J. Rojas"/>
+      
+        
 
-          
-      </MidCont>
+      </UserCont>
+      
+      <ProfCont>
+        <ProfileSub />
+        <ShowAll />
+        <CenterBox>
+            <PropertyCard marginTop="25%" />
+        </CenterBox>
+      </ProfCont>
+      <ReviewCont>
+        <ProfileSub text="Reviews"/>
+        <CenterBox>
+            <ReviewCard review="The house was newly renovated, and the landlord cared about many things such as electricity and water tanks."/>
+        </CenterBox>
+        <CenterBox>
+            <ReviewCard text="SY" name="Sonia Yepez" />
+        </CenterBox>
+        <CenterBox>
+            <ReviewCard text="CC" name="Corey Conyers" review="The house was quite old, but it was good that the landlord was not too involved in my life." />
+        </CenterBox>
+      </ReviewCont>
+      <Footer />
 
     </Cont>   
 

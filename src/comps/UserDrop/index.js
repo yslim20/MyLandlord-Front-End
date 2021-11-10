@@ -19,6 +19,9 @@ const options = ['My Page', 'Log Out'];
 
 const UserDrop=({  
 
+// ============ User avatar image 
+  src="./images/img_user_tenant.png"
+  
 })=>{
 
 // ============ UseState
@@ -103,7 +106,7 @@ const UserDrop=({
         >
           <Avatar
             alt="Remy Sharp"
-            src="./icons/icon_user.png"
+            src= {src}
             sx={{ width: 42, height: 42 }}
           />
         </Button>
