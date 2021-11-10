@@ -43,7 +43,7 @@ const ContRight = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 290px;
+  padding-top: 350px;
   align-items: flex-end;
   justify-content: center;
 `
@@ -66,7 +66,6 @@ export default function SignUp_test() {
           <ImgBox 
             cwidth = "90%"
             src="./images/img_signup.png" 
-            objectFit = "cover"
           />
         </ContRight> 
       </MidCont>  
