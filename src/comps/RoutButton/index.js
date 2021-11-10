@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
+// ============ css ============== //
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
     margin-right: ${props=>props.mright}px;
@@ -37,8 +38,9 @@ const ButtonText = styled.p`
 
 `;
 
-
+// ============ Function ============== //
 const RoutButton = ({
+    // Props ==============
     text="Log In",
     margintop = 100,
     marginright="",
