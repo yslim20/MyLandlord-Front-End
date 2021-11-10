@@ -82,9 +82,9 @@ export default function SignUp() {
         <ContLeft>        
           <FullName />  
           <Input />
-          <Input title="User Name" />
+          <Input title="User Name" type="email"/>
           <Input title="Password" type="password"/>
-          <Input title="Confirm the Password" />
+          <Input title="Confirm the Password" type="password"/>
           
           <CheckCont> 
             <Checkbox />

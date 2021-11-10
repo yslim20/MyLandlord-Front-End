@@ -105,6 +105,7 @@ const SignUpForm = ({
 
 // =========== Components - Input titles
   typeText ="text", 
+  typeEmail = "email",
   typePW ="password",
   titleFN = "First Name",  
   titleLN = "Last Name",
@@ -168,7 +169,7 @@ const SignUpForm = ({
           > {titleEm}</LabelFor>
           {/* input */}
           <InputBox 
-            type={typeText} 
+            type={typeEmail} 
             name={titleEm} required 
             iwidth={iwidth} 
             iheight={iheight}
