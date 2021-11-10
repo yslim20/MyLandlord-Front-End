@@ -9,6 +9,8 @@ import TopNav from '../comps/TopNav';
 import Header from '../comps/Header'
 import IconButton  from '../comps/IconButton';
 import MuiTable from '../comps/MuiTable';
+import SearchMui from '../comps/SearchMui';
+
 
 const Cont = styled.div`
     display:flex;
@@ -66,6 +68,7 @@ export default function Home() {
        
             <Header marginLeft="0%" justifyContent="center" alignItems="center" text="Find The Best Landlord!" fontSize="34px"/>
 
+            <SearchMui/>
              <ListCont>
                 <MuiTable/>
             </ListCont>  
