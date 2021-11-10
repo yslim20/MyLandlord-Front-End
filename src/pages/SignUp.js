@@ -88,8 +88,6 @@ export default function SignUp() {
           <Input title="User Name" type="email"/>
           <Input title="Password" type="password"/>
           <Input title="Confirm the Password" type="password"/>
-
-          
           <CheckCont> 
             <Checkbox />
             <Checkbox 

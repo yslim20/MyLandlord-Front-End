@@ -43,6 +43,7 @@ const ButtonText = styled.p`
 // ============ Function ============== //
 
 const Button = ({
+
 // ============ Props
     type = "submit",
     text="Log In",
@@ -77,7 +78,8 @@ const Button = ({
 
 // ============ onClick function          
             onClick={()=>{ clickHandler()} }  
-            href={href}          
+            href={href}
+            //justify={justify}
             // onClick={()=>router.push(routeTo)}            
 
         >
