@@ -4,17 +4,19 @@ import React from 'react';
 // ============ Imported Comps ============== //
 import TopNav from '../comps/TopNav';
 import UserDrop from '../comps/UserDrop';
-import ImgBox from '../comps/ImgBox';
-import Header from '../comps/Header';
-import SubHead from '../comps/SubHead';
-import SearchBar from '../comps/SearchBar';
-import Footer from '../comps/Footer';
 
 import ProfileSub from '../comps/ProfileSub';
 import ShowAll from '../comps/ShowAll';
 import PropertyCard from '../comps/PropertyCard';
 import ReviewCard from '../comps/ReviewCard';
+import Footer from '../comps/Footer';
+import Header from '../comps/Header';
 import LandlordSub from '../comps/LandlordSub';
+import LandlordAvatar from '../comps/LandlordAvatar';
+import LandlordInfo from '../comps/LandlordInfo';
+import SubHead from '../comps/SubHead';
+import ChatIcon from '../comps/ChatIcon';
+import RoutButton from '../comps/RoutButton';
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -23,30 +25,43 @@ const Cont = styled.div`
   flex-direction: column;  
 `
 
-const UserCont = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;  
-`
+const HeadCont = styled.div`
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3%;
+`;
 
-const MidCont = styled.div`
-  display:flex;
-  flex: 1;
-  width: 100%;
-  flex-direction: column;
-  justify-content:center;
-  align-items:flex-start;
-  margin-bottom: ${props=>props.cmarginB}; 
-  padding: 0 68px 0 68px;
-  box-sizing: border-box;
-`
-//the filter bar with 2 icon 
+const ButtCont = styled.div`
+    position: absolute;
+    left: 70%;
+    top: 35%;
+    margin-right: 3%;
+    z-index:1;
+`;
+
 const ProfCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin-left: 3%;
     margin-bottom: 70px;
+`;
+
+const InfoCont = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+    
+const InfoText = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const VeriCont = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
 `;
 
 const CenterBox = styled.div`
@@ -70,32 +85,46 @@ export default function TenantProfile() {
 			<TopNav children = {<UserDrop/>} />
 {/* =================== Layout */}
 
-      <UserCont>
-      <Header marginBottom="45px" marginLeft="4%" text="Nancy J. Rojas"/>
-      
-        
-
-      </UserCont>
-      
+      <HeadCont>
+        <Header cwidth = "50%" marginBottom="45px" marginLeft="4%" text="Jasper White"/>
+        <ChatIcon />
+      </HeadCont>
+      <ButtCont>
+        <RoutButton margintop="0" text="Leave Review" routeTo="/Review"/>
+      </ButtCont>
+      <LandlordSub/>
+      <InfoCont>
+        <LandlordAvatar />
+        <InfoText>
+            <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10"/>
+            <LandlordInfo />
+            <VeriCont>
+              <LandlordInfo src="/icons/icon_verification.png" text="Email address"/>
+              <LandlordInfo src="/icons/icon_verification.png" text="Phone number"/>
+              <LandlordInfo src="/icons/icon_verification.png" text="Verify more info"/>
+            </VeriCont> 
+        </InfoText>
+      </InfoCont>
       <ProfCont>
-        <ProfileSub />
-        <ShowAll />
-        <CenterBox>
-            <PropertyCard marginTop="25%" />
-        </CenterBox>
+          <ProfileSub />
+          <ShowAll />
+          <CenterBox>
+              <PropertyCard marginTop="25%" />
+          </CenterBox>
       </ProfCont>
       <ReviewCont>
-        <ProfileSub text="Reviews"/>
-        <CenterBox>
+          <ProfileSub text="Reviews"/>
+          <CenterBox>
             <ReviewCard review="The house was newly renovated, and the landlord cared about many things such as electricity and water tanks."/>
-        </CenterBox>
-        <CenterBox>
+          </CenterBox>
+          <CenterBox>
             <ReviewCard text="SY" name="Sonia Yepez" />
-        </CenterBox>
-        <CenterBox>
+          </CenterBox>
+          <CenterBox>
             <ReviewCard text="CC" name="Corey Conyers" review="The house was quite old, but it was good that the landlord was not too involved in my life." />
-        </CenterBox>
+          </CenterBox>
       </ReviewCont>
+
       <Footer />
 
     </Cont>   
