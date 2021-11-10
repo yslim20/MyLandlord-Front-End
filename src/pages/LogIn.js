@@ -7,6 +7,9 @@ import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
 import Input from '../comps/Input';
 
+import TopNav from '../comps/TopNav'
+import Footer from '../comps/Footer';
+
 // ============ css ============== //
 const Cont = styled.div`
     display:flex;
@@ -42,6 +45,7 @@ const ContRight = styled.div`
 export default function LogIn() {
     return(
         <Cont>
+            <TopNav />
             <Header />
             <BttmCont>
                 <ContLeft>
@@ -58,6 +62,7 @@ export default function LogIn() {
                 </ContRight>
                 
             </BttmCont>
+            <Footer />
         </Cont>
     )
 }

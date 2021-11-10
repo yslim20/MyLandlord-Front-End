@@ -9,6 +9,7 @@ import VerLogo from '../comps/VerLogo';
 import Mediabox from '../comps/Mediabox'
 import HeroImage from '../comps/HeroImage'
 import Features from '../comps/Features'
+import Footer from '../comps/Footer';
 
 // ============ testing
 import ChatIcon from '../comps/ChatIcon';
@@ -67,8 +68,8 @@ const FeatSec = styled.div`
 	justify-content:center;
 	align-items:flex-start;
 	box-sizing: border-box;
-	margin-bottom: 100px;
-	padding: 0 3% 0 3%;
+	padding: 0 68px 0 68px;
+
 `
 
 const FeatCont = styled.div`
@@ -142,7 +143,8 @@ export default function Home() {
 						title = "Strong Rating System"
 						para= "Users can review their landlord by the rating system."
 					/>
-				</FeatCont>				
+				</FeatCont>	
+				<Footer />			
 			</FeatSec>
 
 {/* // ============ testing */}
