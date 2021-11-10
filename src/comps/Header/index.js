@@ -6,7 +6,6 @@ import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
 const HeaderCont = styled.div`
 	width: ${props=>props.cwidth};
 	display:flex;
-	flex: 1;
 	justify-content:${props=>props.justifyContent};
 	align-items:${props=>props.alignItems};
 	min-width:320px;
@@ -24,7 +23,7 @@ const Text = styled.p`
 // ============ Function ============== //
 const Header = ({
 	// ============ Props
-	// cwidth="100%",
+	cwidth="100%",
 	text="Log In",
 	fontSize="50px",
 	justifyContent="flex-start",
@@ -33,7 +32,7 @@ const Header = ({
 	marginBottom="70px"
 }) => {
 	return(
-		<HeaderCont  justifyContent={justifyContent} alignItems={alignItems} >
+		<HeaderCont cwidth ={cwidth} justifyContent={justifyContent} alignItems={alignItems} >
 			<Text fontSize={fontSize}
 					marginLeft={marginLeft}
 					marginBottom={marginBottom}>
