@@ -9,11 +9,16 @@ import SmileRating from '../comps/SmileRating';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import LandlordSub from '../comps/LandlordSub';
+import LandlordAvatar from '../comps/LandlordAvatar';
+import LandlordInfo from '../comps/LandlordInfo';
+import SubHead from '../comps/SubHead';
+import { style } from '@mui/system';
 
 
 // ============ css ============== //
 const Cont = styled.div`
-
+    display: flex;
+    flex-direction: column;
 `;
 
 const ProfCont = styled.div`
@@ -24,6 +29,22 @@ const ProfCont = styled.div`
     margin-bottom: 70px;
 `;
 
+const InfoCont = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+    
+const InfoText = styled.div`
+    display: flex;
+    flex-direction: column;
+
+`;
+
+const VeriCont = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+`;
 
 const CenterBox = styled.div`
     display:flex;
@@ -46,6 +67,18 @@ export default function LandlordProfile() {
         <Cont>
             <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
             <LandlordSub/>
+            <InfoCont>
+                <LandlordAvatar />
+                <InfoText>
+                    <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10"/>
+                    <LandlordInfo />
+                    <VeriCont>
+                        <LandlordInfo src="/icons/icon_verification.png" text="Email address"/>
+                        <LandlordInfo src="/icons/icon_verification.png" text="Phone number"/>
+                        <LandlordInfo src="/icons/icon_verification.png" text="Verify more info"/>
+                    </VeriCont> 
+                </InfoText>
+            </InfoCont>
             <ProfCont>
                 <ProfileSub />
                 <ShowAll />
