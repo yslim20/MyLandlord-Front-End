@@ -7,7 +7,7 @@ const ButtonCont = styled.div`
     margin-right: ${props=>props.mright}px;
     width: 100%;
     display:flex;
-    justify-content:center;
+    justify-content:${props=>props.justify};
 `;
 
 const ButtonInput = styled.button`
@@ -52,12 +52,13 @@ const RoutButton = ({
     color="#000",
     fontSize="24px",
     fontWeight="500",
+    justify="center"
 
 }) => {
     const router = useRouter();
 
     return (
-        <ButtonCont mtop={margintop} mright={marginright} onClick={()=>router.push(routeTo)}>
+        <ButtonCont mtop={margintop} mright={marginright} justify={justify} onClick={()=>router.push(routeTo)}>
             <ButtonInput 
                 bg={bgcolor} 
                 radius={radius} 

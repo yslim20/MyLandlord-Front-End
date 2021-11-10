@@ -12,13 +12,30 @@ import LandlordSub from '../comps/LandlordSub';
 import LandlordAvatar from '../comps/LandlordAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
-import { style } from '@mui/system';
+import ChatIcon from '../comps/ChatIcon';
+import RoutButton from '../comps/RoutButton';
+import TopNav from '../comps/TopNav'
 
 
 // ============ css ============== //
 const Cont = styled.div`
     display: flex;
     flex-direction: column;
+`;
+
+const HeadCont = styled.div`
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 3%;
+`;
+
+const ButtCont = styled.div`
+    position: absolute;
+    left: 70%;
+    top: 35%;
+    margin-right: 3%;
+    z-index:1;
 `;
 
 const ProfCont = styled.div`
@@ -37,7 +54,6 @@ const InfoCont = styled.div`
 const InfoText = styled.div`
     display: flex;
     flex-direction: column;
-
 `;
 
 const VeriCont = styled.div`
@@ -65,7 +81,14 @@ const ReviewCont = styled.div`
 export default function LandlordProfile() {
     return(
         <Cont>
-            <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
+            <TopNav />
+            <HeadCont>
+                <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
+                <ChatIcon />
+            </HeadCont>
+            <ButtCont>
+                <RoutButton margintop="0" text="Leave Review" routeTo="/Review"/>
+            </ButtCont>
             <LandlordSub/>
             <InfoCont>
                 <LandlordAvatar />
