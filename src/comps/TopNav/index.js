@@ -6,7 +6,6 @@ import NavText from '../NavText';
 import VerLogo from '../VerLogo';
 import LoginDrop from '../LoginDrop';
 
-
 const Cont = styled.div`
   width: 100%;
   height: 150px;
@@ -41,7 +40,8 @@ const RightBar = styled.div`
 `
 const TopNav =({
   cpadding="",
-  cmarginB=50
+  cmarginB=50,
+  children = <LoginDrop />
 })=>{
   // const router = useRouter();
       return (
@@ -71,7 +71,8 @@ const TopNav =({
         </LeftBar>
 
         <RightBar>
-          <LoginDrop />
+          {children}
+          
         </RightBar>
       </Nav>
     </Cont>

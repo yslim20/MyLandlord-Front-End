@@ -12,7 +12,7 @@ import Header from '../comps/Header';
 import Footer from '../comps/Footer';
 
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;

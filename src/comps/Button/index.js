@@ -12,7 +12,7 @@ const ButtonCont = styled.div`
 `;
 
 const ButtonInput = styled.button`
-    type: submit;
+    type: ${props=>props.type};
     display:flex;
     background-color:${props=>props.bg};
     border: ${props=>props.border};
@@ -60,7 +60,7 @@ const Button = ({
     color="#000",
     fontSize="24px",
     fontWeight="500",
-    justify="center"
+    justify="center",
 
 // ============ onClick prop
     clickHandler = () => {},
@@ -73,8 +73,8 @@ const Button = ({
     return (
         <ButtonCont 
             mtop={margintop} 
-
             mright={marginright}
+            justify={justify}
 
 // ============ onClick function          
             onClick={()=>{ clickHandler()} }  
@@ -84,6 +84,7 @@ const Button = ({
 
         >
             <ButtonInput 
+                type={type}
                 bg={bgcolor} 
                 radius={radius} 
                 width={width} 

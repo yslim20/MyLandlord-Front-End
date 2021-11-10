@@ -24,7 +24,7 @@ const Text = styled.p`
 // ============ Function ============== //
 const Header = ({
 	// ============ Props
-	cwidth="100%",
+	// cwidth="100%",
 	text="Log In",
 	fontSize="50px",
 	justifyContent="flex-start",
@@ -33,7 +33,7 @@ const Header = ({
 	marginBottom="70px"
 }) => {
 	return(
-		<HeaderCont cwidth={cwidth} justifyContent={justifyContent} alignItems={alignItems} >
+		<HeaderCont  justifyContent={justifyContent} alignItems={alignItems} >
 			<Text fontSize={fontSize}
 					marginLeft={marginLeft}
 					marginBottom={marginBottom}>
