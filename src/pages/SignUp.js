@@ -13,6 +13,8 @@ import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Header from '../comps/Header';
 
+import TopNav from '../comps/TopNav'
+import Footer from '../comps/Footer';
 
 // ============ css ============== //
 const Cont = styled.div`
@@ -73,6 +75,7 @@ const BttnCont = styled.div`
 export default function SignUp() {
   return (
     <Cont>
+      <TopNav />
       <Header text="Sign Up"/>
       <RadioCont> 
         <RadioButton />
@@ -118,6 +121,7 @@ export default function SignUp() {
           <ImgBox src="./images/SignUpImg.svg" />
         </ContRight> 
       </BttmCont>  
+      <Footer />
     </Cont>
   )
 }

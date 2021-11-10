@@ -8,7 +8,7 @@ import ReviewCard from '../comps/ReviewCard';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import LandlordSub from '../comps/LandlordSub';
-import LandlordAvatar from '../comps/LandlordAvatar';
+import LandlordAvatar from '../comps/RectangleAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
 import ChatIcon from '../comps/ChatIcon';
