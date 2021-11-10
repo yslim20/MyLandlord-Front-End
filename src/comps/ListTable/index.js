@@ -11,7 +11,6 @@ const TableCont = styled.div`
   width:90%;
   align-items:center;
   justify-content:center;
-  margin-bottom: ${props => props.marginB};
 `
 
 // ============ COLUMN PROPS
@@ -97,9 +96,7 @@ const rows =[
 
 
 // ============ Function ============== //
-const MuiTable = ({
-  marginB = "40px"
-})=>{
+export default function FilterOperators() {
 //   const { data } = useDemoData({
 //     dataSet: 'Employee',
 //     rowLength: 10,
@@ -107,7 +104,7 @@ const MuiTable = ({
 // const classes = useStyles();
 
   return (
-    <TableCont marginB={marginB}>
+    <TableCont>
       <div style={{ 
         height: 500, 
         width: '90%',
@@ -125,4 +122,3 @@ const MuiTable = ({
     </TableCont>
   );
 }
-export default MuiTable;

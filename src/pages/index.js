@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
 
-
 // ============ Imported Comps ============== //
 import Button from '../comps/Button';
 import SubHead from '../comps/SubHead';
@@ -34,7 +33,7 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:center;
 	margin-bottom: 100px;
-	padding: 0 68px 0 68px;
+	padding: 0 3% 0 3%;
 `
 const LeftBox = styled.div`
 	display:flex;
@@ -70,6 +69,7 @@ const FeatSec = styled.div`
 	align-items:flex-start;
 	box-sizing: border-box;
 	padding: 0 68px 0 68px;
+
 `
 
 const FeatCont = styled.div`
@@ -89,6 +89,8 @@ export default function Home() {
 {/* // ============ Top Navigation */}
 			<TopNav/>
 
+
+{/* // ============ Body Starts */}
 			<MidCont>
 				<LeftBox>
 					<VerLogo 

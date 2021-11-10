@@ -9,7 +9,8 @@ const Cont = styled.div`
   height: ${props=>props.cheight}px;   
   border-radius: ${props=>props.cBRadius}px;   
   border: ${props=>props.border};
-  margin-bottom: ${props=>props.cMBttm}px;   
+  margin-bottom: ${props=>props.cMBttm}px;  
+  margin-top: ${props=>props.cMTop}px;  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -79,6 +80,7 @@ function VeriButton({
   cBRadius = 8, 
   cBshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
   cMBttm = 50,
+  cMTop ="",
 
 // formbox
   width = "",
@@ -103,6 +105,7 @@ function VeriButton({
       border={border}
       cBRadius={cBRadius}
       cMBttm={cMBttm}
+      cMTop={cMTop}
     >
       <FormBox
         width={width}

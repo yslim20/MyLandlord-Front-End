@@ -72,7 +72,7 @@ const ReviewCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 3%;
+    // margin-left: 3%;
 `;
 
 
