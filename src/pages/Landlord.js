@@ -10,8 +10,9 @@ import IconButton from '../comps/IconButton';
 import List from '../comps/List';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
-import MuiTable from '../comps/MuiTable'
-import PaginationRow from '../comps/PaginationRow'
+
+import MuiTable from '../comps/MuiTable';
+import Footer from '../comps/Footer';
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -28,6 +29,7 @@ const MidCont = styled.div`
 	align-items:flex-start;
 	margin-bottom: 100px;
   padding: 0 68px 0 68px;
+
 `
 //the filter bar with 2 icon 
 const TopBar = styled.div`
