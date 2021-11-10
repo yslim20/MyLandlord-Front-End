@@ -28,6 +28,7 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:center;
   padding: 0 68px 0 68px;
+  box-sizing: border-box;
 `
 
 const ContLeft = styled.div`
