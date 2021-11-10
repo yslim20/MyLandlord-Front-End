@@ -39,12 +39,14 @@ const RightBar = styled.div`
   justify-content: flex-end;
 `
 const TopNav =({
+  
   cpadding="",
   cmarginB=50,
-  children = <LoginDrop />
+  children = <LoginDrop />,
+
 })=>{
   // const router = useRouter();
-      return (
+  return (
     <Cont cpadding={cpadding} cmarginB={cmarginB} >
       <VerLogo 
         marginright= "83"

@@ -49,7 +49,7 @@ export default function LogIn() {
             <Header />
             <BttmCont>
                 <ContLeft>
-                    <Input title="User name" type ="email"/>
+                    <Input title="Email" type ="email"/>
                     <Input title="Password" type="password"/>
                     {/* <LongInForm />
                     <LongInForm title="Password" /> */}
