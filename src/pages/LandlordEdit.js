@@ -2,17 +2,10 @@ import styled from 'styled-components';
 import React from 'react';
 
 import ProfileSub from '../comps/ProfileSub';
-import ShowAll from '../comps/ShowAll';
 import PropertyCard from '../comps/PropertyCard';
-import ReviewCard from '../comps/ReviewCard';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
-import LandlordSub from '../comps/LandlordSub';
-import LandlordAvatar from '../comps/LandlordAvatar';
-import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
-import ChatIcon from '../comps/ChatIcon';
-import RoutButton from '../comps/RoutButton';
 import TopNav from '../comps/TopNav'
 import router from 'next/router';
 import CircleAvatar from '../comps/CircleAvatar';
@@ -33,14 +26,6 @@ const HeadCont = styled.div`
     margin-left: 3%;
 `;
 
-const ButtCont = styled.div`
-    position: absolute;
-    left: 70%;
-    top: 35%;
-    margin-right: 3%;
-    z-index:1;
-`;
-
 const ProfCont = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -58,19 +43,11 @@ const InfoCont = styled.div`
     justify-content: center;
     align-items: center;
 `;
-    
-
 
 const InfoForm = styled.div`
     display: flex;
     flex-direction: column;
     margin-left: 7%;
-`;
-
-const VeriCont = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 140px;
 `;
 
 const CenterBox = styled.div`
@@ -80,12 +57,6 @@ const CenterBox = styled.div`
     align-items:center;
 `;
 
-const ReviewCont = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-left: 3%;
-`;
 
 const CenterCont = styled.div`
     display:flex;
