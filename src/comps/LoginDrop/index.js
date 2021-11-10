@@ -15,7 +15,7 @@ import MenuList from '@mui/material/MenuList';
 import Avatar from '@mui/material/Avatar';
 
 // ============ Button Titles
-const options = ['Sign Up', 'Log In', 'My Page'];
+const options = ['Log In', 'Sign Up', 'My Page'];
 
 const LoginDrop=({  
 
@@ -54,9 +54,9 @@ const LoginDrop=({
     if (index === 2){
       router.push("/MyPage")
     } else if (index === 1) {
-      router.push("/LogIn")
+      router.push("/SignUp")
     } else if (index === 0) {
-      router.push("/SignUp")      
+      router.push("/LogIn")      
     }
   }
     

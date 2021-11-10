@@ -132,6 +132,7 @@ const SignUpForm = ({
               for={titleFN} 
               fsize = {fsize}
             > {titleFN}</LabelFor>
+            {/* input */}
             <InputBox 
               type={typeText} 
               name={titleFN} required 
@@ -147,6 +148,7 @@ const SignUpForm = ({
               for={titleLN} 
               fsize = {fsize}
             > {titleLN}</LabelFor>
+            {/* input */}
             <InputBox 
               type={typeText} 
               name={titleLN} required 
@@ -164,6 +166,7 @@ const SignUpForm = ({
             for={titleEm} 
             fsize = {fsize}
           > {titleEm}</LabelFor>
+          {/* input */}
           <InputBox 
             type={typeText} 
             name={titleEm} required 
@@ -177,6 +180,7 @@ const SignUpForm = ({
             for={titleUN} 
             fsize = {fsize}
           > {titleUN}</LabelFor>
+          {/* input */}
           <InputBox 
             type={typeText} 
             name={titleUN} required 
@@ -190,6 +194,7 @@ const SignUpForm = ({
             for={titlePW} 
             fsize = {fsize}
           > {titlePW}</LabelFor>
+          {/* input */}
           <InputBox 
             type={typePW} 
             name={titlePW} required 
@@ -203,6 +208,7 @@ const SignUpForm = ({
             for={typePW} 
             fsize = {fsize}
           > {titleCPW}</LabelFor>
+          {/* input */}
           <InputBox 
             type={typePW} 
             name={titleCPW} required 
@@ -234,7 +240,7 @@ const SignUpForm = ({
           width = "95%"
           marginright="30"
           minWidth="400"
-          routeTo="/ContactUs"
+          clickHandler="/ContactUs"
         />
         <Button 
           text = "Submit"
@@ -245,7 +251,7 @@ const SignUpForm = ({
           hover = "box-shadow: none"
           width = "95%"
           minWidth="400"
-          routeTo=""
+          clickHandler=""
         />
       </BttnCont>
     </Cont>   
