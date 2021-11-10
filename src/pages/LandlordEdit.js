@@ -87,14 +87,19 @@ const ReviewCont = styled.div`
     margin-left: 3%;
 `;
 
-const IconCont = styled.a`
-    display: block;
-    width: 84px;
-    height: 84px;
+const CenterCont = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items: center;
+`;
+
+const IconCont = styled.button`
+    display: flex;
+    justify-content:center;
+    width: 140px;
+    height: 140px;
     border-radius: 50%; 
-    overflow: hidden;
-    bottom: 30px;
-    right: 0px;
+    border: none;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
 
     :hover{
@@ -103,10 +108,12 @@ const IconCont = styled.a`
 `
 
 const Icon = styled.img`
+    justify-content:center;
+    align-items: center;
     display: block;
     object-fit: contain;
-    width: 84px;
-    height: 84px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;  
 `
 
@@ -138,6 +145,11 @@ export default function LandlordEdit() {
                     <PropertyCard marginTop="25%" />
                 </CenterBox>
             </ProfCont>
+            <CenterCont>
+                <IconCont onClick={()=>router.push('/NewProperty')}>
+                    <Icon src="/icons/icon_addProperty.png/" />
+                </IconCont>
+            </CenterCont>
             <Footer />
         </Cont>
     )
