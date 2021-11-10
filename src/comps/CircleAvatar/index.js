@@ -6,6 +6,7 @@ const Cont = styled.div`
   position: relative;
   width:${props=>props.width}px;
   height: ${props=>props.width}px;
+  margin-top: ${props=>props.mtop}px;
 `
 
 const Tenant =styled.img`
@@ -51,7 +52,8 @@ const TenantAvatar =({
   href = "",
   iwidth = 84,
   ibttm = 30,
-  isrc="/icons/icon_camera.png"
+  isrc="/icons/icon_camera.png",
+  mtop=""
 
 }) =>{
     
@@ -59,6 +61,7 @@ const TenantAvatar =({
   return(
     <Cont
       width={width}
+      mtop={mtop}
     >
       <Tenant        
         src={src}
