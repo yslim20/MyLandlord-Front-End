@@ -8,11 +8,11 @@ const ButtonCont = styled.div`
     margin-right: ${props=>props.mright}px;
     width: 100%;    
     display:flex;
-    justify-content:center;
+    justify-content:${props=>props.justify};
 `;
 
 const ButtonInput = styled.button`
-    type: ${props=>props.type};
+    type: submit;
     display:flex;
     background-color:${props=>props.bg};
     border: ${props=>props.border};
@@ -44,7 +44,6 @@ const ButtonText = styled.p`
 
 const Button = ({
     // ============ Props
-    type = "submit",
     text="Log In",
     margintop = 100,
     minWidth="340",
@@ -59,6 +58,7 @@ const Button = ({
     color="#000",
     fontSize="24px",
     fontWeight="500",
+    justify="center"
 
 }) => {
     const router = useRouter();
@@ -67,11 +67,11 @@ const Button = ({
         <ButtonCont 
             mtop={margintop} 
             mright={marginright} 
+            justify={justify}
             
             onClick={()=>router.push(routeTo)}            
         >
             <ButtonInput 
-                type={type}
                 bg={bgcolor} 
                 radius={radius} 
                 width={width} 
