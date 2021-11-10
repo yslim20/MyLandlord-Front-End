@@ -12,6 +12,7 @@ import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
 
 import MuiTable from '../comps/MuiTable';
+import PaginationRow from '../comps/PaginationRow';
 import Footer from '../comps/Footer';
 
 // ============ CSS ============== //
@@ -27,9 +28,8 @@ const MidCont = styled.div`
 	flex-direction: column;
 	justify-content:center;
 	align-items:flex-start;
-	margin-bottom: 100px;
+	margin-bottom: ${props=>props.cmarginB}; 
   padding: 0 68px 0 68px;
-
 `
 //the filter bar with 2 icon 
 const TopBar = styled.div`
@@ -42,14 +42,18 @@ const TopBar = styled.div`
 
 // ============ Function ============== //
 // ============ Layout
-export default function Landlord() {
+const Landlord = ({
+  cmarginB = "100px",
+  cmarginBttm = "0px"
+
+})=>{
 	return(
 		<Cont>
 {/* // ============ Top Navigation */}
 			<TopNav/>
 
 {/* // ============ MAP */}
-      <MidCont>
+      <MidCont cmarginB={cmarginB}>
         <Header text="Map" marginLeft="0"/>
         <SubHead 
           marginB = "40"
@@ -67,7 +71,7 @@ export default function Landlord() {
       </MidCont>
 
 {/* // ============ LIST OF LANDLORD */} 
-      <MidCont>
+      <MidCont cmarginB = {cmarginBttm}>
         <Header text="List of Landlord" marginLeft="0"/>
         <SubHead 
           marginB = "40"
@@ -80,9 +84,14 @@ export default function Landlord() {
 
         <MuiTable/>
         <PaginationRow />
+
+        {/* <PaginationTest /> */}
           
       </MidCont>
+
+      <Footer />
     </Cont> 
   )
 }
 
+export default Landlord;
