@@ -1,41 +1,90 @@
-import styled from 'styled-components';
 import * as React from 'react';
-import { MuiThemeProvider, createTheme } from '@material-ui/core/styles';
+import styled from 'styled-components';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
+// ============ CSS ============== //
 const Cont = styled.div`
-  width: 90%;
-  display:flex;
-	flex: 1;
+  width: ${props=>props.cwidth};
+	display:flex;
 	flex-direction: column;
-	justify-content:center;
-	align-items:center;   
+  justify-content: center;
+	align-items: center;
+	margin: 0;
 `
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#A599EF',
-      darker: '#5333ED', 
-    },   
-  }
-});
+// ============ Function ============== //
+const PaginationRow = ({
 
-export default function PaginationRow() {
+// ============ Props
+  cwidth ="100%",
+  color="#5333ED",
+  bgcolor="#5333ED",
+  width = "60px",
+
+}) => {
+
+// ============ onChange prop
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+
+// ============ Layout
   return (
-    <Cont>      
-      <Stack spacing={2}>
-        <MuiThemeProvider theme={theme}>
-          <Pagination
-            count={10} 
-            showFirstButton 
-            showLastButton 
-            color="primary"            
-          />
-        </MuiThemeProvider>
+    <Cont cwidth={cwidth}>
+       <Stack 
+        className="page_cont"
+        spacing={2}
+        sx={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',          
+        }}
+       
+       >
+        <Pagination 
+          count={10} defaultPage={6} siblingCount={0} boundaryCount={2} 
+          showFirstButton 
+          showLastButton 
+          page={page}
+          
+// ============ onChange prop
+          onChange={handleChange} 
+          
+          sx={{
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            button: {
+              color: {color},
+              ":active": {
+                bgcolor: {bgcolor},
+              }
+              
+            },
+
+            li: {
+              fontFamily: '"Heebo", sans-serif',
+              width: {width},
+              ":nth-child(2)":{
+                marginRight: 20,
+              },
+
+              ":nth-child(10)":{
+                marginLeft: 20,
+              }
+            },
+
+            path:{
+              color: '#5333ED',
+            }
+          }}
+        />
       </Stack>
-      
-    </Cont>
+    </Cont>     
   );
 }
+
+export default PaginationRow;
