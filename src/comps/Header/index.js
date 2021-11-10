@@ -6,7 +6,7 @@ import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
 const HeaderCont = styled.div`
 	width: 100%;
 	display:flex;
-	flex: 1;
+	flex: 0;
 	justify-content:${props=>props.justifyContent};
 	align-items:${props=>props.alignItems};
 	min-width:320px;
