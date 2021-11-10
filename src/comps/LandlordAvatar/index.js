@@ -3,9 +3,9 @@ import React from 'react';
 
 // ============ css ============== //
 const Cont = styled.div`
-    position: relative;
     width:${props=>props.width};
     height:${props=>props.height};
+    margin-right:7%;
 `;
 
 const Avatar = styled.img`
