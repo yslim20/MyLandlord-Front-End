@@ -9,11 +9,11 @@ import SmileRating from '../comps/SmileRating';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import LandlordSub from '../comps/LandlordSub';
+import LandlordAvatar from '../comps/LandlordAvatar';
 
 
 // ============ css ============== //
 const Cont = styled.div`
-
 `;
 
 const ProfCont = styled.div`
@@ -24,6 +24,11 @@ const ProfCont = styled.div`
     margin-bottom: 70px;
 `;
 
+const InfoCont = styled.div`
+    display: flex;
+    jutify-content:center;
+    align-items: center;
+`;
 
 const CenterBox = styled.div`
     display:flex;
@@ -46,6 +51,9 @@ export default function LandlordProfile() {
         <Cont>
             <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
             <LandlordSub/>
+            <InfoCont>
+                <LandlordAvatar />
+            </InfoCont>
             <ProfCont>
                 <ProfileSub />
                 <ShowAll />
