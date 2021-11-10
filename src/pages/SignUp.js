@@ -84,7 +84,7 @@ export default function SignUp() {
           <Input />
           <Input title="User Name" />
           <Input title="Password" type="password"/>
-          <Input title="Confirm the Password" />
+          <Input title="Confirm Password" />
           
           <CheckCont> 
             <Checkbox />

@@ -15,7 +15,7 @@ import Features from '../comps/Features'
 import ChatIcon from '../comps/ChatIcon';
 import LoginErrorBox from '../comps/LoginErrorBox';
 import NotiBox from '../comps/NotiBox';
-import TenantAvatar from '../comps/TenantAvatar'
+import CircleAvatar from '../comps/CircleAvatar'
 
 // ============ CSS ============== //
 const Cont = styled.div`
