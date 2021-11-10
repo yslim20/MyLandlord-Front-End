@@ -68,7 +68,12 @@ const FeatSec = styled.div`
 	justify-content:center;
 	align-items:flex-start;
 	box-sizing: border-box;
+<<<<<<< HEAD
 	padding: 0 3% 0 3%;
+=======
+	padding: 0 68px 0 68px;
+
+>>>>>>> origin
 `
 
 const FeatCont = styled.div`
@@ -142,7 +147,8 @@ export default function Home() {
 						title = "Strong Rating System"
 						para= "Users can review their landlord by the rating system."
 					/>
-				</FeatCont>				
+				</FeatCont>	
+				<Footer />			
 			</FeatSec>
 
 			<Footer />	

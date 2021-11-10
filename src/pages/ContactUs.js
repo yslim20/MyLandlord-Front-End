@@ -7,6 +7,7 @@ import Input from '../comps/Input';
 import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Subhead from '../comps/Subhead';
+import Footer from '../comps/Footer';
 
 import InputGroup from '../comps/InputGroup';
 
@@ -22,7 +23,7 @@ const InputCont = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
 	padding: 0px 68px;
-	margin-bottom: 100px;
+  margin-top: 80px;
 `
 
 // ============ Function ============== //
@@ -37,6 +38,7 @@ export default function ContactUs() {
       <InputCont> 
 				<InputGroup />
 			</InputCont>			
+      <Footer />
     </Cont>
 	)
 }
