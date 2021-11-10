@@ -12,10 +12,10 @@ import VeriButton from '../comps/VeriButton';
 import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Header from '../comps/Header';
-import signup from "../scripts/auth/signup"
-
 import TopNav from '../comps/TopNav'
 import Footer from '../comps/Footer';
+
+import signup from "../scripts/auth/signup";
 
 // ============ css ============== //
 const Cont = styled.div`
