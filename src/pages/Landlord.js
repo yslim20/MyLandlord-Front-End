@@ -12,6 +12,7 @@ import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
 
 import MuiTable from '../comps/MuiTable';
+import EnhancedTable from '../comps/EnhancedTable'
 import PaginationRow from '../comps/PaginationRow';
 import Footer from '../comps/Footer';
 
@@ -82,10 +83,10 @@ const Landlord = ({
           placeholder="Please type your landlord name or address.."
         />
 
-        <MuiTable/>
-        <PaginationRow />
+        <EnhancedTable/>        
 
         {/* <PaginationTest /> */}
+        <PaginationRow />
           
       </MidCont>
 

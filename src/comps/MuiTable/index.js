@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import styled from 'styled-components';
-import { makeStyles } from '@mui/styles';
 
 
 import ProfileSub from '../ProfileSub';
@@ -100,26 +99,39 @@ const rows =[
 const MuiTable = ({
   marginB = "40px"
 })=>{
+
 //   const { data } = useDemoData({
 //     dataSet: 'Employee',
 //     rowLength: 10,
 
-// const classes = useStyles();
 
   return (
     <TableCont marginB={marginB}>
       <div style={{ 
         height: 500, 
         width: '90%',
+        marginRight: 0,
+        
+        boxSizing: "border-box",
+
       }}
-      // className={classes.root}
       >
         <DataGrid 
           rows={rows} 
-          columns={columns}       
-          getRowClassName={(params) =>
-            `super-app-theme--${params.getValue(params.id, 'status')}`
-          }    
+          columns={columns}                
+          
+          style={{ 
+            border: 'hidden',            
+            fontFamily: "'Heebo', sans-serif",
+            
+
+            div: {
+              border: "1px solid #5333ED",
+            },
+            
+            
+          }}
+
         />
       </div>
     </TableCont>
