@@ -61,7 +61,8 @@ const Button = ({
     fontWeight="500",
 
 // ============ onClick prop
-    clickHandler = () => {}
+    clickHandler = () => {},
+    href="/posts" 
 
 }) => {
     // const router = useRouter();
@@ -72,7 +73,8 @@ const Button = ({
             mright={marginright}
 
 // ============ onClick function          
-            onClick={()=>{ clickHandler()} }             
+            onClick={()=>{ clickHandler()} }  
+            href={href}          
             // onClick={()=>router.push(routeTo)}            
         >
             <ButtonInput 
