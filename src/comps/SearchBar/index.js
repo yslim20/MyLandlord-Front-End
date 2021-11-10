@@ -1,63 +1,97 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ CSS
 const FormCont = styled.div`
-  height: 60px; 
+  height: ${props => props.fheight}px;   
+  width: ${props => props.fwidth};
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 3px #5333ED;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  margin-bottom: ${props => props.fmarginB}px; 
+`
+const Form = styled.form`
+  width: 100%;
+  hight: 100%;
+  display:flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 25px;
-  margin-top: 25px;
-  margin-left:100px;
 `
+
 const InputBox = styled.input`
   width:${props => props.iwidth};
-  height: ${props => props.iheight}px; 
-  border:none;
-  border-radius: 20px;
-  padding:10px;
+  height: ${props => props.iheight}; 
+  font-family: 'Heebo', sans-serif;      
   font-size: 18px;
+  border:none;
+  outline: none;
 `
-const Box = styled.div`
-  width:${props => props.fwidth};
-  height: ${props => props.fheight}; 
-  display:flex;
-  flex-direction: row;
-  align-items: felx-start;
-  border-radius: 20px;
-  border: 3px solid #5333ED;
-  padding: 2px;
-  box-sizing: border-box;
+
+const Button = styled.button`  
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  :hover {
+    background: #EAEAEA;
+    transition-duration: 0.5s;    
+  }
+  :active {
+    background: #EAEAEA;
+  }
 `
 
 const Icon = styled.img`
-    padding: 10px;
-    width: 34px;
-    height: 34px;    
+  display: block;
+  width: 100%;
+  height: 100%;    
 `
-
+// ============ Function ============== //
+// ============ Props
 const SearchBar = ({
-    fwidth = "100%",
-    fheight = "100%",
-    iwidth = "100%",
-    iheight = "",
-    src='./icons/search.png',
-  }) => {  
-  
-    return (
-      <FormCont>
-          <Box  fwidth={fwidth} 
-        fheight={fheight}>
-          <InputBox
-            iwidth={iwidth} 
-            iheight={iheight}
-            placeholder="Please type your landlord name or address.."
+    fwidth = "80%",
+    fheight = 60,
+    fmarginB = 40,
+    iwidth = "90%",
+    src='./icons/icon_search.svg',
+    placeholder = "Please type the area..",
+
+// ============ Action after pressing button    
+    action="",
+}) => {  
+
+// ============ Layout
+  return (
+    <FormCont
+      fwidth={fwidth}
+      fheight={fheight}
+      fmarginB={fmarginB}
+    >
+      <Form action={action}>
+        <InputBox 
+          type="text" 
+          placeholder={placeholder} 
+          name="search" 
+          iwidth={iwidth}
+          iheight={iwidth}
         />
-        <Icon src={src}/>
-        </Box>
-      </FormCont>    
-    );
-  }
-  
-  export default SearchBar;
+
+        <Button type="submit">
+          <Icon 
+            src={src}
+          />
+        </Button>
+      </Form>
+    </FormCont>    
+  );
+}
+
+export default SearchBar;

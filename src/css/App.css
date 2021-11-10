@@ -60,6 +60,19 @@ body {
   text-decoration: underline;
 } /* Font ends */
 
+.MuiDataGrid-columnHeaderTitle{
+  font-family: 'Heebo', sans-serif;
+  font-size: 16px;
+}
+
+.MuiPagination-root {
+  font-family: 'Heebo', sans-serif;
+}
+
+.MuiPaginationItem-text{
+  font-family: 'Heebo', sans-serif;
+}
+
 
 /* ================= MEDIA ================= */
 

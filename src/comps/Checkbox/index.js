@@ -62,9 +62,6 @@ const Checkbox = ({
         </RadioCont>
       
       </RadioGroup>
-
-      
-
     </div>
   );
 }

@@ -4,7 +4,9 @@ import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
 
 // ============ css ============== //
 const HeaderCont = styled.div`
+	width: 100%;
 	display:flex;
+	flex: 1;
 	justify-content:${props=>props.justifyContent};
 	align-items:${props=>props.alignItems};
 `;
@@ -23,8 +25,8 @@ const Header = ({
 	// ============ Props
 	text="Log In",
 	fontSize="50px",
-	justifyContent="left",
-	alignItems="left",
+	justifyContent="flex-start",
+	alignItems="center",
 	marginLeft="1%",
 	marginBottom="70px"
 }) => {
