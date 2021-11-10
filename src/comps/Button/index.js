@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
     margin-right: ${props=>props.mright}px;
@@ -67,6 +67,7 @@ const Button = ({
 }) => {
     // const router = useRouter();
 
+// ============ Layout
     return (
         <ButtonCont 
             mtop={margintop} 

@@ -32,7 +32,7 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:center;
 	margin-bottom: 100px;
-	padding: 0 3% 0 3%;
+	padding: 0 68px 0 8px;
 `
 const LeftBox = styled.div`
 	display:flex;

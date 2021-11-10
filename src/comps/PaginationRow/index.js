@@ -2,41 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { PaginationItem } from '@mui/material';
 
-// import { ThemeProvider, createTheme } from '@mui/system';
-
-// const theme = createTheme({
-//   // palette: {
-//   //   background: {
-//   //     paper: '#fff',
-//   //   },
-//   //   text: {
-//   //     primary: '#5333ED',
-//   //     secondary: '#A599EF',
-//   //   },
-//   //   action: {
-//   //     active: '#5333ED',
-//   //   },
-//   //   success: {
-//   //     dark: '#5333ED',
-//   //   },
-//   // },
-//   components: {
-//     // Name of the component
-//     MuiButton: {
-//       styleOverrides: {
-//         // Name of the slot
-//         root: {
-//           // Some CSS
-//           fontSize: '1rem',
-//           primary: '#5333ED',
-//         },
-//       },
-//     },
-//   },
-// });
-
+// ============ CSS ============== //
 const Cont = styled.div`
   width: ${props=>props.cwidth};
 	display:flex;
@@ -44,29 +11,35 @@ const Cont = styled.div`
   justify-content: center;
 	align-items: center;
 	margin: 0;
-  padding: 0 68px 0 68px;
 `
 
+// ============ Function ============== //
 const PaginationRow = ({
+
+// ============ Props
   cwidth ="100%",
-  color="primary",
+  color="#5333ED",
+  bgcolor="#5333ED",
+  width = "60px",
 
 }) => {
 
+// ============ onChange prop
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
   };
 
+// ============ Layout
   return (
-    // <ThemeProvider theme={theme}>
     <Cont cwidth={cwidth}>
        <Stack 
         className="page_cont"
         spacing={2}
         sx={{
-          minWidth: 800,
-          
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%',          
         }}
        
        >
@@ -74,20 +47,43 @@ const PaginationRow = ({
           count={10} defaultPage={6} siblingCount={0} boundaryCount={2} 
           showFirstButton 
           showLastButton 
-          page={page} 
-          onChange={handleChange} 
-          color = {color}
-          className="page_bttn"
+          page={page}
           
-          // sx={{
-          //   color: 'success.dark',
-          //   p: 2,
-          //   minWidth: 800,
-          // }}
+// ============ onChange prop
+          onChange={handleChange} 
+          
+          sx={{
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            button: {
+              color: {color},
+              ":active": {
+                bgcolor: {bgcolor},
+              }
+              
+            },
+
+            li: {
+              fontFamily: '"Heebo", sans-serif',
+              width: {width},
+              ":nth-child(2)":{
+                marginRight: 20,
+              },
+
+              ":nth-child(10)":{
+                marginLeft: 20,
+              }
+            },
+
+            path:{
+              color: '#5333ED',
+            }
+          }}
         />
       </Stack>
     </Cont>     
-    // </ThemeProvider>
   );
 }
 
