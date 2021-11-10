@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
+// ============ css ============== //
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
     margin-right: ${props=>props.mright}px;
     width: 100%;
     display:flex;
-    justify-content:center;
+    justify-content:${props=>props.justify};
 `;
 
 const ButtonInput = styled.button`
@@ -37,8 +38,9 @@ const ButtonText = styled.p`
 
 `;
 
-
+// ============ Function ============== //
 const RoutButton = ({
+    // Props ==============
     text="Log In",
     margintop = 100,
     marginright="",
@@ -52,12 +54,13 @@ const RoutButton = ({
     color="#000",
     fontSize="24px",
     fontWeight="500",
+    justify="center"
 
 }) => {
     const router = useRouter();
 
     return (
-        <ButtonCont mtop={margintop} mright={marginright} onClick={()=>router.push(routeTo)}>
+        <ButtonCont mtop={margintop} mright={marginright} justify={justify} onClick={()=>router.push(routeTo)}>
             <ButtonInput 
                 bg={bgcolor} 
                 radius={radius} 

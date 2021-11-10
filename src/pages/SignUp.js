@@ -14,6 +14,8 @@ import Button from '../comps/Button'
 import Header from '../comps/Header';
 import signup from "../scripts/auth/signup"
 
+import TopNav from '../comps/TopNav'
+import Footer from '../comps/Footer';
 
 // ============ css ============== //
 const Cont = styled.div`
@@ -41,7 +43,7 @@ const ContLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
 `
 
@@ -74,35 +76,36 @@ const BttnCont = styled.div`
 export default function SignUp() {
   return (
     <Cont>
+      <TopNav />
       <Header text="Sign Up"/>
-      <RadioCont> 
+      <RadioCont>
         <RadioButton />
       </RadioCont>
 
       <BttmCont onClick={()=>signup(event)}>
-        <ContLeft>        
-          <FullName />  
+        <ContLeft>
+          <FullName />
           <Input />
+          <Input title="Email" type="email"/>
           <Input title="Password" type="password"/>
-          <Input title="Confirm the Password" />
-          
-          <CheckCont> 
+          <Input title="Confirm the Password" type="password"/>
+          <CheckCont>
             <Checkbox />
-            <Checkbox 
+            <Checkbox
               value = "I agree to the terms and agreement"
               required = "required"
             />
           </CheckCont>
 
-          <VeriButton />  
+          <VeriButton />
 
           <BttnCont>
-            <Button 
+            <Button
               text = "Cancel"
               margintop = "0px"
               width = "95%"
             />
-            <Button 
+            <Button
               text = "Submit"
               margintop = "0px"
               border = "none"
@@ -116,8 +119,9 @@ export default function SignUp() {
 
         <ContRight>
           <ImgBox src="./images/SignUpImg.svg" />
-        </ContRight> 
-      </BttmCont>  
+        </ContRight>
+      </BttmCont>
+      <Footer />
     </Cont>
   )
 }

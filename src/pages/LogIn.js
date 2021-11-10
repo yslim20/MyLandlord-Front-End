@@ -7,7 +7,11 @@ import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
 import Input from '../comps/Input';
 
+
 import login from '../scripts/auth/login'
+import TopNav from '../comps/TopNav'
+import Footer from '../comps/Footer';
+
 
 // ============ css ============== //
 const Cont = styled.div`
@@ -27,7 +31,7 @@ const ContLeft = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
 `
 
@@ -44,10 +48,11 @@ const ContRight = styled.div`
 export default function LogIn() {
     return(
         <Cont>
+            <TopNav />
             <Header />
             <BttmCont  onSubmit={()=>login(event)}    >
                 <ContLeft>
-                    <Input title="User name"/>
+                    <Input title="Email" type ="email"/>
                     <Input title="Password" type="password"/>
                     {/* <LongInForm />
                     <LongInForm title="Password" /> */}
@@ -58,8 +63,9 @@ export default function LogIn() {
                 <ContRight>
                     <ImgBox src="./images/LogInImg.svg"  height="735px"/>
                 </ContRight>
-                
+
             </BttmCont>
+            <Footer />
         </Cont>
     )
 }

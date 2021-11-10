@@ -9,12 +9,13 @@ import VerLogo from '../comps/VerLogo';
 import Mediabox from '../comps/Mediabox'
 import HeroImage from '../comps/HeroImage'
 import Features from '../comps/Features'
+import Footer from '../comps/Footer';
 
 // ============ testing
 import ChatIcon from '../comps/ChatIcon';
 import LoginErrorBox from '../comps/LoginErrorBox';
 import NotiBox from '../comps/NotiBox';
-import TenantAvatar from '../comps/TenantAvatar'
+import CircleAvatar from '../comps/CircleAvatar'
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -32,7 +33,7 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:center;
 	margin-bottom: 100px;
-	padding: 0 3% 0 3%;
+	padding: 0 68px 0 8px;
 `
 const LeftBox = styled.div`
 	display:flex;
@@ -67,8 +68,12 @@ const FeatSec = styled.div`
 	justify-content:center;
 	align-items:flex-start;
 	box-sizing: border-box;
-	margin-bottom: 100px;
+<<<<<<< HEAD
 	padding: 0 3% 0 3%;
+=======
+	padding: 0 68px 0 68px;
+
+>>>>>>> origin
 `
 
 const FeatCont = styled.div`
@@ -142,15 +147,11 @@ export default function Home() {
 						title = "Strong Rating System"
 						para= "Users can review their landlord by the rating system."
 					/>
-				</FeatCont>				
+				</FeatCont>	
+				<Footer />			
 			</FeatSec>
 
-{/* // ============ testing */}
-			{/* <ChatIcon />
-			<LoginErrorBox />
-			<NotiBox />	
-			<TenantAvatar />	 */}
-				
+			<Footer />	
 		</Cont>
 	)
 }

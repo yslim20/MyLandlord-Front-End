@@ -11,9 +11,8 @@ import LandlordSub from '../comps/LandlordSub';
 import LandlordAvatar from '../comps/RectangleAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
-import ChatIcon from '../comps/ChatIcon';
-import RoutButton from '../comps/RoutButton';
 import TopNav from '../comps/TopNav'
+import router from 'next/router';
 
 
 // ============ css ============== //
@@ -72,8 +71,31 @@ const ReviewCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    // margin-left: 3%;
+    margin-left: 3%;
 `;
+
+const IconCont = styled.a`
+    display: block;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%; 
+    overflow: hidden;
+    bottom: 30px;
+    right: 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
+
+    :hover{
+        transform: scale(0.95);
+    transition-duration: 0.5s;    
+`
+
+const Icon = styled.img`
+    display: block;
+    object-fit: contain;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;  
+`
 
 
 // ============ Function ============== //
@@ -83,11 +105,10 @@ export default function LandlordProfile() {
             <TopNav />
             <HeadCont>
                 <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
-                <ChatIcon />
+                <IconCont onClick={()=>router.push('/LandlordEdit')}> 
+                    <Icon src="/icons/icon_edit.png"/>
+                </IconCont>
             </HeadCont>
-            <ButtCont>
-                <RoutButton margintop="0" text="Leave Review" routeTo="/Review"/>
-            </ButtCont>
             <LandlordSub/>
             <InfoCont>
                 <LandlordAvatar />
