@@ -67,7 +67,6 @@ const PaginationRow = ({
         sx={{
           minWidth: 800,
           
-          
         }}
        
        >

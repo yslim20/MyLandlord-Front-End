@@ -43,7 +43,7 @@ const ButtonText = styled.p`
 // ============ Function ============== //
 
 const Button = ({
-    // ============ Props
+// ============ Props
     type = "submit",
     text="Log In",
     margintop = 100,
@@ -54,21 +54,26 @@ const Button = ({
     width = 360,
     height = 72,
     border = "5px solid #5333ED;",
-    routeTo = "/LogIn",
+    // routeTo = "/LogIn",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
     color="#000",
     fontSize="24px",
     fontWeight="500",
 
+// ============ onClick prop
+    clickHandler = () => {}
+
 }) => {
-    const router = useRouter();
+    // const router = useRouter();
 
     return (
         <ButtonCont 
             mtop={margintop} 
-            mright={marginright} 
-            
-            onClick={()=>router.push(routeTo)}            
+            mright={marginright}
+
+// ============ onClick function          
+            onClick={()=>{ clickHandler()} }             
+            // onClick={()=>router.push(routeTo)}            
         >
             <ButtonInput 
                 type={type}
