@@ -92,7 +92,7 @@ export default function LandlordProfile() {
             <InfoCont>
                 <LandlordAvatar />
                 <InfoText>
-                    <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10"/>
+                    <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10" marginL="3%"/>
                     <LandlordInfo />
                     <VeriCont>
                         <LandlordInfo src="/icons/icon_verification.png" text="Email address"/>
