@@ -8,10 +8,10 @@ import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
 import IconButton from '../comps/IconButton';
 import List from '../comps/List';
-// import ListTable from '../comps/ListTable';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
 import MuiTable from '../comps/MuiTable'
+import PaginationRow from '../comps/PaginationRow'
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -77,7 +77,7 @@ export default function Landlord() {
         />
 
         <MuiTable/>
-        {/* <ListTable /> */}
+        <PaginationRow />
           
       </MidCont>
     </Cont> 

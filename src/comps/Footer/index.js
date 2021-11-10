@@ -64,9 +64,9 @@ const Footer = ({}) => {
                 <NavText>
                     <Nav>
                         <FooterNav routeTo="/" />
-                        <FooterNav routeTo="/" text="Landlord"/>
-                        <FooterNav routeTo="/" text="Chat"/>
-                        <FooterNav routeTo="/" text="Contact Us"/>
+                        <FooterNav routeTo="/Landlord" text="Landlord"/>
+                        <FooterNav routeTo="/Chat" text="Chat"/>
+                        <FooterNav routeTo="/ContactUs" text="Contact Us"/>
                     </Nav>
                 </NavText>
                 <LogoPart>

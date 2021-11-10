@@ -1,113 +1,124 @@
 import * as React from 'react';
-// import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@mui/styles';
-import Rating from '@mui/material/Rating';
 import { DataGrid } from '@mui/x-data-grid';
-import { useDemoData } from '@mui/x-data-grid-generator';
-
-const useStyles = makeStyles({
-  root: {
-    display: 'inline-flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    height: 48,
-    paddingLeft: 20,
-  },
-});
-
-const fakeData = {
-  id:1, 
-  avastar: 'img',
-  name:'Jasper White',
-  property:'4388 Buchanan St 1901 Burnaby BC V5C 6R8',
-  rating:'5/10',
-}
+import styled from 'styled-components';
+import { makeStyles } from '@mui/styles';
 
 
-function RatingInputValue(props) {
-  const classes = useStyles();
-  const { item, applyValue } = props;
+import ProfileSub from '../ProfileSub';
 
-  const handleFilterChange = (event) => {
-    applyValue({ ...item, value: event.target.value });
-  };
+// ============ CSS
+const TableCont = styled.div`
+  width:90%;
+  align-items:center;
+  justify-content:center;
+`
 
-  return (
-    <div className={classes.root}>
-      <Rating
-        name="custom-rating-filter-operator"
-        placeholder="Filter value"
-        value={Number(item.value)}
-        onChange={handleFilterChange}
-        precision={0.5}
-      />
-    </div>
-  );
-}
-
-RatingInputValue.propTypes = {
-  applyValue: PropTypes.func.isRequired,
-  item: PropTypes.shape({
-    columnField: PropTypes.string,
-    id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    operatorValue: PropTypes.string,
-    value: PropTypes.any,
-  }).isRequired,
-};
-
-const ratingOnlyOperators = [
+// ============ COLUMN PROPS
+const columns = [
   {
-    label: 'From',
-    value: 'from',
-    getApplyFilterFn: (filterItem) => {
-      if (
-        !filterItem.columnField ||
-        !filterItem.value ||
-        !filterItem.operatorValue
-      ) {
-        return null;
-      }
-
-      return (params) => {
-        return Number(params.value) >= Number(filterItem.value);
-      };
-    },
-    InputComponent: RatingInputValue,
-    InputComponentProps: { type: 'number' },
+    field: 'avastar',
+    headerName: 'Avastar',
+    width: 150,
+    type: 'image',
+  },
+  { field: 'name', 
+    headerName: 'Name', 
+    width: 180 
+  },
+  {
+    field: 'address',
+    headerName: 'Address',
+    width: 400,
+  },
+  {
+    field: 'rating',
+    headerName: 'Rating',
+    type: 'number',
+    width: 140,
   },
 ];
 
-const ListTable = ({
+// ============ FAKE DATA
+const rows =[
 
-}) => {
-  const { data } = useDemoData({ dataSet: 'Landlord', rowLength: 100 });
-  const columns = [...data.columns];
-  const [filterModel, setFilterModel] = React.useState({
-    items: [{ columnField: 'rating', value: '3.5', operatorValue: 'from' }],
-  });
+  { id:1, 
+    avastar: <ProfileSub />,
+    name:'Jasper White',
+    address:'4388 Buchanan St 1901 Burnaby BC V5C 6R8',
+    rating:'5',
+  },
+  {
+    id:2, 
+    avastar: 'img',
+    name:'Calvin Harris',
+    address:'406 47th Ave E Vancouver BC V5W 2B4',
+    rating:'2',
+  },
+  {
+    id:3, 
+    avastar: 'img',
+    name:'Calvin Harris',
+    address:'406 47th Ave E Vancouver BC V5W 2B4',
+    rating:'2',
+  },
+  { id:4, 
+    avastar: 'img',
+    name:'Jasper White',
+    address:'4388 Buchanan St 1901 Burnaby BC V5C 6R8',
+    rating:'5',
+  },
+  {
+    id:5, 
+    avastar: 'img',
+    name:'Calvin Harris',
+    address:'406 47th Ave E Vancouver BC V5W 2B4',
+    rating:'2',
+  },
+  {
+    id:6, 
+    avastar: 'img',
+    name:'Calvin Harris',
+    address:'406 47th Ave E Vancouver BC V5W 2B4',
+    rating:'3',
+  },
+];
 
-  if (columns.length > 0) {
-    const ratingColumn = columns.find((col) => col.field === 'rating');
-    const newRatingColumn = {
-      ...ratingColumn,
-      filterOperators: ratingOnlyOperators,
-    };
+// const useStyles = makeStyles({
+//   root: {
+//     '& .super-app-theme--header': 
+//     {
+//       backgroundColor: 'rgba(255, 7, 0, 0.55)',
+//       fontFamily: "'Heebo', sans-serif",
+//       border: "none"
+//     },
+//   },
+// });
 
-    const ratingColIndex = columns.findIndex((col) => col.field === 'rating');
-    columns[ratingColIndex] = newRatingColumn;
-  }
+
+// ============ Function ============== //
+export default function FilterOperators() {
+//   const { data } = useDemoData({
+//     dataSet: 'Employee',
+//     rowLength: 10,
+
+// const classes = useStyles();
 
   return (
-    <div style={{ height: 400, width: '100%' }}>
-      <DataGrid
-        rows={data.rows}
-        columns={columns}
-        filterModel={filterModel}
-        onFilterModelChange={(model) => setFilterModel(model)}
-      />
-    </div>
+    <TableCont>
+      <div style={{ 
+        height: 500, 
+        width: '90%',
+      }}
+      // className={classes.root}
+      >
+        <DataGrid 
+          rows={rows} 
+          columns={columns}       
+          getRowClassName={(params) =>
+            `super-app-theme--${params.getValue(params.id, 'status')}`
+          }    
+        />
+      </div>
+    </TableCont>
   );
 }
-
-export default ListTable;
