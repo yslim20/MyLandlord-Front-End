@@ -79,7 +79,6 @@ const Button = ({
 // ============ onClick function          
             onClick={()=>{ clickHandler()} }  
             href={href}
-            //justify={justify}
             // onClick={()=>router.push(routeTo)}            
 
         >
