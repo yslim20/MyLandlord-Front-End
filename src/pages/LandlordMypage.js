@@ -76,13 +76,14 @@ const ReviewCont = styled.div`
 
 const IconCont = styled.a`
     display: block;
+    justify-content:center;
+    align-items:center;
     width: 84px;
     height: 84px;
     border-radius: 50%; 
     overflow: hidden;
     bottom: 30px;
     right: 0px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
 
     :hover{
         transform: scale(0.95);
@@ -90,7 +91,9 @@ const IconCont = styled.a`
 `
 
 const Icon = styled.img`
-    display: block;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     object-fit: contain;
     width: 84px;
     height: 84px;
