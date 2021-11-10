@@ -12,6 +12,7 @@ import VeriButton from '../comps/VeriButton';
 import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Header from '../comps/Header';
+import signup from "../scripts/auth/signup"
 
 
 // ============ css ============== //
@@ -78,11 +79,10 @@ export default function SignUp() {
         <RadioButton />
       </RadioCont>
 
-      <BttmCont>
+      <BttmCont onClick={()=>signup(event)}>
         <ContLeft>        
           <FullName />  
           <Input />
-          <Input title="User Name" />
           <Input title="Password" type="password"/>
           <Input title="Confirm the Password" />
           
@@ -98,7 +98,7 @@ export default function SignUp() {
 
           <BttnCont>
             <Button 
-              text = "Cancle"
+              text = "Cancel"
               margintop = "0px"
               width = "95%"
             />

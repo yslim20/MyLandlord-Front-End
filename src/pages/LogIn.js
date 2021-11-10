@@ -7,6 +7,8 @@ import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
 import Input from '../comps/Input';
 
+import login from '../scripts/auth/login'
+
 // ============ css ============== //
 const Cont = styled.div`
     display:flex;
@@ -43,7 +45,7 @@ export default function LogIn() {
     return(
         <Cont>
             <Header />
-            <BttmCont>
+            <BttmCont  onSubmit={()=>login(event)}    >
                 <ContLeft>
                     <Input title="User name"/>
                     <Input title="Password" type="password"/>

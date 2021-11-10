@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
+import login from '../../scripts/auth/login'
 
 // ============ css ============== //
 const ButtonCont = styled.div`
@@ -68,7 +69,7 @@ const Button = ({
             mtop={margintop} 
             mright={marginright} 
             
-            onClick={()=>router.push(routeTo)}            
+            // onClick={()=>login(event)}            
         >
             <ButtonInput 
                 type={type}
