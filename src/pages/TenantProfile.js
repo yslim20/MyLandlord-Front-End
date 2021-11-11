@@ -34,7 +34,6 @@ const ProfCont = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   margin: 0 3%;
-  margin-bottom: 70px;
 `;
 
 const UserInfo = styled.div`
@@ -59,13 +58,6 @@ const CenterBox = styled.div`
   margin-top: 50px;
   justify-content: center;
   align-items:center;
-`;
-
-
-const CenterCont = styled.div`
-  display:flex;
-  justify-content:center;
-  align-items: center;
 `;
 
 const IconCont = styled.a`
@@ -97,7 +89,7 @@ export default function TenantProfile() {
 
 {/* =================== Layout */}
       <HeadCont>
-          <Header cwidth = "35%" marginBottom="45px" text="Nancy J. Rojas"/>
+          <Header marginBottom="45px" text="Nancy J. Rojas"/>
           <IconCont onClick={()=>router.push('/TenantEdit')}> 
             <Icon src="/icons/icon_edit.png"/>
           </IconCont>
@@ -121,21 +113,28 @@ export default function TenantProfile() {
       <ProfCont>
           <ProfileSub text="Reviews"/>
           <CenterBox>
-              <ReviewCard review="The house was newly renovated, and the landlord cared about many things such as electricity and water tanks."/>
+              <ReviewCard 
+                name="Landlord: Malcolm Christie"
+                select="Selectd: 6379 Longheed Hwy"
+                review="I lived this home for about 1 year last year,, and it ways horrible... The room is dirty, the maintenance was not what I expected."
+                boldDate="29 Sep 2021 19:01"
+              />
           </CenterBox>
           <CenterBox>
-              <ReviewCard text="SY" name="Sonia Yepez" />
+              <ReviewCard 
+                text="SY" 
+                name="Sonia Yepez" 
+              />
           </CenterBox>
           <CenterBox>
-              <ReviewCard text="CC" name="Corey Conyers" review="The house was quite old, but it was good that the landlord was not too involved in my life." />
+              <ReviewCard 
+                text="CC" 
+                name="Corey Conyers" 
+                review="The house was quite old, but it was good that the landlord was not too involved in my life." 
+              />
           </CenterBox>
       </ProfCont>
 
-      <CenterCont>
-          <IconCont onClick={()=>router.push('/NewProperty')}>
-            <Icon src="/icons/icon_addProperty.png/" />
-          </IconCont>
-      </CenterCont>
       <Footer />
 
     </Cont>   

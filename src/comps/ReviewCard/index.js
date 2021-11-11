@@ -111,7 +111,7 @@ const ReviewCard = ({
     review="I lived this home for about 1 year last year, and it ways horrible. The room is dirty, the maintenance was not what I expected.",
     boldDate="19 Jan 2017 19:01",
     right="80px",
-    marginTop="4.5%",
+    marginTop="",
     text="AB",
     width="140px",
     height="140px"
@@ -124,7 +124,7 @@ const ReviewCard = ({
                 <Cont>
                     <LeftSide>
                         <TextAvatarCont>
-                            <Circle width={width} height={height}>
+                            <Circle width={width} height={height} marginTop={marginTop}>
                                 <CircleId>{text}</CircleId>
                             </Circle>
                         </TextAvatarCont>
