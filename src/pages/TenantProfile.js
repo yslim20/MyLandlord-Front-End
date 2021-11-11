@@ -6,7 +6,7 @@ import router from 'next/router';
 import TopNav from '../comps/TopNav';
 import UserDrop from '../comps/UserDrop';
 import ProfileSub from '../comps/ProfileSub';
-import ReviewCard from '../comps/ReviewCard';
+import ReviewCardImg from '../comps/ReviewCardImg';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import SubHead from '../comps/SubHead';
@@ -113,24 +113,36 @@ export default function TenantProfile() {
       <ProfCont>
           <ProfileSub text="Reviews"/>
           <CenterBox>
-              <ReviewCard 
+              <ReviewCardImg 
+                bgImage='url("/images/img_avatar_malcom.png")'
+                text=""
+                cborder="none"
                 name="Landlord: Malcolm Christie"
-                select="Selectd: 6379 Longheed Hwy"
+                select="Selected: 6379 Longheed Hwy"
                 review="I lived this home for about 1 year last year,, and it ways horrible... The room is dirty, the maintenance was not what I expected."
                 boldDate="29 Sep 2021 19:01"
               />
           </CenterBox>
           <CenterBox>
-              <ReviewCard 
-                text="SY" 
-                name="Sonia Yepez" 
+              <ReviewCardImg 
+                bgImage='url("/images/img_avatar_ruzica.png")'
+                text=""
+                cborder="none"
+                name="Landlord: Ruzica Adamovic" 
+                select="Selected: 101-5000 Imperial St"
+                review="I lived this home for about 2 year last year,, and it I had a really great memory in her. The landlord is so kind and reasonable. So..."
+                boldDate="15 Sep 2020 19:01"
               />
           </CenterBox>
           <CenterBox>
-              <ReviewCard 
-                text="CC" 
-                name="Corey Conyers" 
-                review="The house was quite old, but it was good that the landlord was not too involved in my life." 
+              <ReviewCardImg 
+                bgImage='url("/images/img_avatar_xiu.png")'
+                text=""
+                cborder="none"
+                name="Landlord: Xiu Juan Chiu" 
+                select="Selected: 290 Fell Ave"
+                review="I love this landlord!! She was sooo great. She was so helpful. Because I was new in Vancouver, she gave me all the information tha..."
+                boldDate="10 Oct 2018 19:01" 
               />
           </CenterBox>
       </ProfCont>
