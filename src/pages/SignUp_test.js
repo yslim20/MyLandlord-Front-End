@@ -43,7 +43,7 @@ const ContRight = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 350px;
+  padding-top: 280px;
   align-items: flex-end;
   justify-content: center;
 `

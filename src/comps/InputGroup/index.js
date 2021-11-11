@@ -186,7 +186,11 @@ const InputGroup = ({
           minRows={8}
           aria-label="maximum height"
           placeholder="Type here..."
-          style={{ width: "100%" }}
+          style={{ 
+            width: "100%", 
+            padding: "20px", 
+            boxSizing: "border-box"
+          }}
         />   
         <Para 
           fontSize="20"

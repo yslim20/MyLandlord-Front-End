@@ -5,7 +5,8 @@ import React from 'react';
 import TopNav from '../comps/TopNav';
 import Input from '../comps/Input';
 import ImgBox from '../comps/ImgBox';
-import Button from '../comps/Button'
+import Button from '../comps/Button';
+import Header from '../comps/Header';
 import Subhead from '../comps/Subhead';
 import Footer from '../comps/Footer';
 
@@ -23,7 +24,6 @@ const InputCont = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
 	padding: 0px 68px;
-  margin-top: 80px;
 `
 
 // ============ Function ============== //
@@ -36,6 +36,7 @@ export default function ContactUs() {
 
 {/* // ============ Content Start */}
       <InputCont> 
+        <Header text = "Contact Us"/>
 				<InputGroup />
 			</InputCont>			
       <Footer />
