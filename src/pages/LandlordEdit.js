@@ -99,10 +99,11 @@ export default function LandlordEdit() {
             </HeadCont>
             <UserInfo>
                 <InfoCont>
-                    <CircleAvatar src="/images/img_landlordProfile.png"/>
+                    <CircleAvatar mtop="-100" src="/images/img_landlordProfile.png"/>
                     <InfoForm>
                         <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="32"/>
-                        <Input title="User Name" iheight="54" minWidth="574px"/>
+                        <Input title="First Name" iheight="54" minWidth="574px"/>
+                        <Input title="Last Name" iheight="54" minWidth="574px"/>
                         <Input title="Password" type="password" iheight="54"/>
                         <Input title="Email Address" iheight="54"/>
                         <Input title="Phone Number" iheight="54"/>
