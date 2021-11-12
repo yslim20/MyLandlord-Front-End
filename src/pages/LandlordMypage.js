@@ -10,7 +10,7 @@ import ReviewCard from '../comps/ReviewCard';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import LandlordSub from '../comps/LandlordSub';
-import LandlordAvatar from '../comps/RectangleAvatar';
+import RetangleAvatar from '../comps/RectangleAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
@@ -124,7 +124,7 @@ export default function LandlordMypage() {
             </HeadCont>
             <LandlordSub/>
             <InfoCont>
-                <LandlordAvatar />
+                <RetangleAvatar />
                 <InfoText>
                     <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10"/>
                     <LandlordInfo />

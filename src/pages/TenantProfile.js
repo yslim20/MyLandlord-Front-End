@@ -3,62 +3,31 @@ import React from 'react';
 import router from 'next/router';
 
 // ============ Imported Comps ============== //
-import TopNav from '../comps/TopNav';
-import UserDrop from '../comps/UserDrop';
 import ProfileSub from '../comps/ProfileSub';
-import ReviewCardImg from '../comps/ReviewCardImg';
+import UserDrop from '../comps/UserDrop';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
+import LandlordSub from '../comps/LandlordSub';
+import RetangleAvatar from '../comps/RectangleAvatar';
+import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
-import CircleAvatar from '../comps/CircleAvatar';
-import Input from '../comps/Input';
-import Button from '../comps/Button';
+import ReviewCardImg from '../comps/ReviewCardImg';
+import TopNav from '../comps/TopNav'
+import TenantInfo from '../comps/TenantInfo';
+
 
 // ============ CSS ============== //
 const Cont = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;  
-  margin: 0;
-	padding: 0 4% 0 4%;
-  box-sizing: border-box;
-`
+    display: flex;
+    flex-direction: column;
+    padding: 0 4% 0 4%;
+    box-sizing: border-box;
+`;
 
 const HeadCont = styled.div`
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-`;
-
-const ProfCont = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-`;
-
-const UserInfo = styled.div`
-  display:flex;
-  flex-direction: column;
-`;
-
-const InfoCont = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const InfoForm = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 7%;
-`;
-
-const CenterBox = styled.div`
-  display:flex;
-  margin-top: 50px;
-  justify-content: center;
-  align-items:center;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
 `;
 
 const IconCont = styled.a`
@@ -82,84 +51,123 @@ const Icon = styled.img`
     border-radius: 50%;  
 `;
 
+const ProfCont = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+`;
+
+const InfoCont = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+    
+const InfoText = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const VeriCont = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+`;
+
+const CenterBox = styled.div`
+    display:flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items:center;
+`;
+
 // ============ Function ============== //
 // ============ Layout
 export default function TenantProfile() {
-	return(
-		<Cont>
+    return(
+        <Cont>
 
 {/* // ============ Top Navigation */}
-			<TopNav children = {<UserDrop/>} />
+            <TopNav children = {<UserDrop/>} />
 
-{/* =================== Header */}
-      <HeadCont>
-          <Header marginBottom="45px" text="Nancy J. Rojas"/>
-          <IconCont onClick={()=>router.push('/TenantEdit')}> 
-            <Icon src="/icons/icon_edit.png"/>
-          </IconCont>
-      </HeadCont>
+{/* // ============ Landlord information */}
+            <HeadCont>
+                <Header marginBottom="45px" marginLeft="4%" text="Nancy J. Rojas"/>
+                <IconCont onClick={()=>router.push('/TenantEdit')}> 
+                    <Icon src="/icons/icon_edit.png"/>
+                </IconCont>
+            </HeadCont>
 
-{/* =================== Information */}      
-      <UserInfo>
-          <InfoCont>
-              <CircleAvatar src="/images/img_tenant.png" href =""/>
-              <InfoForm>
-                <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="32"/>
-                <Input title="First Name" iheight="54" minWidth="574px"/>
-                <Input title="Last Name" iheight="54" minWidth="574px"/>
-                <Input title="Password" type="password" iheight="54"/>
-                <Input title="Email" iheight="54"/>
-                <Input title="Phone Number" iheight="54"/>
-                <Button text="Save" margintop="80" minWidth="275" width="275" height="62" justify="right" routeTo="/"/>
-              </InfoForm>
-          </InfoCont>
-      </UserInfo>
-
-{/* =================== Reviews */}    
-      <ProfCont>
-          <ProfileSub text="Reviews"/>
-          <CenterBox>
-            <ReviewCardImg 
-              bgImage='url("/images/img_avatar_malcom.png")'
-              text=""
-              cborder="none"
-              name="Landlord: Malcolm Christie"
-              select="Selected: 6379 Longheed Hwy"
-              review="I lived this home for about 1 year last year,, and it ways horrible... The room is dirty, the maintenance was not what I expected."
-              boldDate="29 Sep 2021 19:01"
-              routeTo=""
+            <LandlordSub
+                text ="Joined in October 2018"
             />
-          </CenterBox>
-          <CenterBox>
-            <ReviewCardImg 
-              bgImage='url("/images/img_avatar_ruzica.png")'
-              text=""
-              cborder="none"
-              name="Landlord: Ruzica Adamovic" 
-              select="Selected: 101-5000 Imperial St"
-              review="I lived this home for about 2 year last year,, and it I had a really great memory in her. The landlord is so kind and reasonable. So..."
-              boldDate="15 Sep 2020 19:01"
-              routeTo=""
-            />
-          </CenterBox>
-          <CenterBox>
-            <ReviewCardImg 
-              bgImage='url("/images/img_avatar_xiu.png")'
-              text=""
-              cborder="none"
-              name="Landlord: Xiu Juan Chiu" 
-              select="Selected: 290 Fell Ave"
-              review="I love this landlord!! She was sooo great. She was so helpful. Because I was new in Vancouver, she gave me all the information tha..."
-              boldDate="10 Oct 2018 19:01" 
-              routeTo=""
-            />
-          </CenterBox>
-      </ProfCont>
 
-{/* // ============ Bottom Navigation */}
-      <Footer />
-    </Cont>   
+            <InfoCont>
+                <RetangleAvatar 
+                    src="/images/img_tenant.png"
+                />
+                <InfoText>
+                    <SubHead 
+                        text="Burnaby, BC." 
+                        fontSize="24" 
+                        justifyContent="left" 
+                        marginB="10" 
+                        marginL="3%"
+                    />
+                    <LandlordInfo 
+                        text = "3 reviews"
+                    />
+                    <VeriCont>
+                        <TenantInfo />
+                        <TenantInfo title = "Phone Number : " text="604-434-3245"/>
+                        <TenantInfo title = "Phone Number : " text="Verify more info"/>
+                    </VeriCont> 
+                </InfoText>
+            </InfoCont>
 
-  )
+{/* // ============ Reviews */}
+            <ProfCont>
+                <ProfileSub text="Reviews"/>
+                <CenterBox>
+                    <ReviewCardImg 
+                    bgImage='url("/images/img_avatar_malcom.png")'
+                    text=""
+                    cborder="none"
+                    name="Landlord: Malcolm Christie"
+                    select="Selected: 6379 Longheed Hwy"
+                    review="I lived this home for about 1 year last year,, and it ways horrible... The room is dirty, the maintenance was not what I expected."
+                    boldDate="29 Sep 2021 19:01"
+                    routeTo=""
+                    />
+                </CenterBox>
+                <CenterBox>
+                    <ReviewCardImg 
+                    bgImage='url("/images/img_avatar_ruzica.png")'
+                    text=""
+                    cborder="none"
+                    name="Landlord: Ruzica Adamovic" 
+                    select="Selected: 101-5000 Imperial St"
+                    review="I lived this home for about 2 year last year,, and it I had a really great memory in her. The landlord is so kind and reasonable. So..."
+                    boldDate="15 Sep 2020 19:01"
+                    routeTo=""
+                    />
+                </CenterBox>
+                <CenterBox>
+                    <ReviewCardImg 
+                    bgImage='url("/images/img_avatar_xiu.png")'
+                    text=""
+                    cborder="none"
+                    name="Landlord: Xiu Juan Chiu" 
+                    select="Selected: 290 Fell Ave"
+                    review="I love this landlord!! She was sooo great. She was so helpful. Because I was new in Vancouver, she gave me all the information tha..."
+                    boldDate="10 Oct 2018 19:01" 
+                    routeTo=""
+                    />
+                </CenterBox>
+            </ProfCont>
+            
+{/* // ============ Footer Navigation */}
+            <Footer />
+        </Cont>
+    )
 }
-
