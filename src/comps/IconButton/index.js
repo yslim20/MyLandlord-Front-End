@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
+// ============ CSS ============== //
 const ButtonCont = styled.div`
     width: 15%;
     display:flex;
-    justify-content:right;
- 
+    justify-content:right; 
 `;
 
 const ButtonInput = styled.button`
@@ -38,7 +38,10 @@ const Icon = styled.img`
     height: 50px;    
 `
 
+// ============ Function ============== //
 const IconButton = ({
+
+// ============ Properties
     text="Popularity",
     width = 120,
     height = 72,
@@ -46,8 +49,11 @@ const IconButton = ({
     fontWeight="500",
     src="./icons/updown.png",
 }) => {
+
+// ============ Router
     const router = useRouter();
 
+// ============ Layout
     return (
         <ButtonCont onClick={()=>router.push(routeTo)}>
             <ButtonInput 
@@ -58,14 +64,12 @@ const IconButton = ({
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 >
-                    {text}</ButtonText>
-                    
+                    {text}
+                </ButtonText>                    
                 <Icon src={src}/>
-            </ButtonInput>
-      
+            </ButtonInput>      
         </ButtonCont>
     );
 }
-
 
 export default IconButton;

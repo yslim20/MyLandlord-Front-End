@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/system';
 import {useRouter} from 'next/router';
 
-// ============ Imported comps
+// ============ Imported comps ============== //
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -59,7 +59,8 @@ const LoginDrop=({
       router.push("/LogIn")      
     }
   }
-    
+  
+// ============ Router    
   const router = useRouter();
 
   return (

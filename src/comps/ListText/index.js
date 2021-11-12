@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-
+// ============ CSS ============== //
 const HeaderCont = styled.div`
     display:flex;
     justify-content:left;
@@ -15,12 +15,16 @@ const Text = styled.p`
     margin-top:${props=>props.marginTop};
 `;
 
-
+// ============ Function ============== //
 const ListText = ({
+
+// ============ Props
     text="Log In",
     fontSize= "30",
     marginTop="0",
 }) => {
+    
+// ============ Layout
     return(
         <HeaderCont>
             <Text fontSize={fontSize}>

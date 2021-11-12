@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
     width:${props => props.cwidth};
     height: ${props => props.cheight}px;
@@ -20,13 +20,16 @@ const Img = styled.img`
 
 // ============ Function ============== //
 const PropImg = ({
-    // ============ Props
+    
+// ============ Props
     src= "./images/property1.png",
     width= "196px",
     height="130px",
     cwidth = "100%",
     cheight = 1000,
 }) => {
+
+// ============ Layout
     return(
         <Cont
             cwidth={cwidth}

@@ -15,11 +15,12 @@ import { Typography } from '@mui/material';
 // ============ Function ============== //
 // ============ From React Library mui ============== //
 const Checkbox = ({
-	// ============ Props
+// ============ Props
   value = "Recieve news letter and update",
 
 }) => {  
-  // ============ Handler ============== //
+  
+// ============ Handler ============== //
   const [selectedValue, setSelectedValue] = React.useState('a');
 
   const handleChange = (event) => {
@@ -34,7 +35,7 @@ const Checkbox = ({
     inputProps: { 'aria-label': item },
   });
 
-  // ============ css ============== //
+// ============ CSS ============== //
   const LabelText = styled.div`
     font-size: 24px
   `;
@@ -42,6 +43,7 @@ const Checkbox = ({
     margin-right:50px;
   `;
 
+// ============ Layout
   return (
     <div>
       <RadioGroup row aria-label="login" name="row-radio-buttons-group">

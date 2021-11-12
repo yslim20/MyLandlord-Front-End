@@ -13,8 +13,8 @@ const Icon =styled.img`
     box-sizing: border-box;
 `
 // ============ Function ============== //
-// ============ Props
 const Avatar =({
+// ============ Props
     //icon
     src= "./icons/onicon.png",
     bshadow="",

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ CSS
+// ============ CSS ============== //
 const Text = styled.p`
   width: ${props=>props.width};
 	font-family: 'Heebo', sans-serif;  
@@ -16,8 +16,9 @@ const Text = styled.p`
 `;
 
 // ============ Function ============== //
-// ============ Props
 const Para = ({
+
+// ============ Props
   width="100%",
 	text="Tenants can write reviews on the current or previous landlord.",
 	fontSize= 16,

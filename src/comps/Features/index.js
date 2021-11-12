@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-// ============ Imported Comps
+// ============ Imported Comps ============== //
 import SubHead from '../SubHead';
 import Para from '../Para'
 
-// ============ CSS
+// ============ CSS ============== //
 const FeatCont = styled.div`    
   max-width: ${props=>props.cwidth};
   min-width: 300px;
@@ -44,8 +44,9 @@ const TextBox = styled.p`
 `;
 
 // ============ Function ============== //
-// ============ Props
 const Features = ({
+  
+// ============ Props
 // FeatCont
   bradius = 30,
   cwidth = "30%",

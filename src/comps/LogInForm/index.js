@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const FormCont = styled.div`
     max-width: 650px;
     display: flex;
@@ -24,9 +24,12 @@ const InputBox = styled.input`
 `;
 // ============ Function ============== //
 const LongInForm = ({
-    // ============ Props
+
+// ============ Props
     title="User Name"
 }) => {
+
+// ===========Layout
     return (
         <FormCont>
             <LabelFor>{title}</LabelFor>

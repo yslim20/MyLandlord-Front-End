@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ CSS ============== //
 const FormCont = styled.div`
   height: 103px; 
   min-width: ${props => props.minWidth};
@@ -37,8 +38,10 @@ const InputBox = styled.input`
   padding: 16px;
   box-sizing: border-box;
 `
-
+// ============ Function ============== //
 const Input = ({
+  
+// ============ Properties
   minWidth = "",
   title = "Email",
   fwidth = "100%",
@@ -49,7 +52,7 @@ const Input = ({
   type ="text"
 
 }) => {  
-
+// ============ Layout
   return (
     <FormCont
       minWidth={minWidth}

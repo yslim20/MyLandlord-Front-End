@@ -2,9 +2,11 @@ import * as React from "react";
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
 
+// ============ Imported Comps ============== //
 import RoutButton from "../RoutButton"
 import SubHead from "../SubHead"
 
+// ============ CSS ============== //
 const ImgCont = styled.div`    
   width: ${props=>props.cwidth};
   height: ${props=>props.cheight}px;
@@ -32,15 +34,20 @@ const Letterbox = styled.div`
   padding: 0px 110px 0 40px;
   box-sizing: border-box;
 `
-
+// ============ Function ============== //
 const HeroImage = ({
+
+// ============ Properties
   cwidth ="100%",
   cheight = "650",
   imgurl="./images/img_home.svg",
 
 }) => {
+
+// ============ Router
   const router = useRouter();
 
+// ============ Layout
   return (
     <ImgCont
       cwidth={cwidth}

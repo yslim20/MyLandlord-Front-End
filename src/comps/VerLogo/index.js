@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-// ============ CSS
+// ============ CSS ============== //
 const LogoCont = styled.div`    
   width: ${props=>props.cwidth}px;
   height: ${props=>props.cheight}px;
@@ -22,9 +22,12 @@ const Logo = styled.img`
   min-width: ${props=>props.minwidth};
 `
 // ============ Function ============== //
-// ============ Props
 const VerLogo = ({
+
+// ============ Routing
   routeTo="/",
+
+// ============ Props
   marginbttm = "",
   marginright= 20,
   cwidth = 202,

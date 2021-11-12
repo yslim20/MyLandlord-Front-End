@@ -189,7 +189,7 @@ const EnhancedTable = ({
 
 // ============ clickHandler or Router  
   // clickHandler = () => {},
-  routeTo = "/",
+  routeTo = "/LandlordProfile",
 
 }) => {
 

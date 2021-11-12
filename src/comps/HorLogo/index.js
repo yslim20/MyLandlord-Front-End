@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import router, {useRouter} from 'next/router';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const LogoCont = styled.div`
     width: 215px;
     height:50px;
@@ -21,8 +21,10 @@ const Logo = styled.img`
 
 // ============ Function ============== //
 const HorLogo = ({}) => {
-        // ============ Routing
+// ============ Routing
     const router = useRouter();
+
+// ============ Layout
     return(
         <LogoCont onClick={()=>router.push("/")}>
             <Logo src="./images/logo_horizontal.png" alt="MyLandlord Logo V2" />

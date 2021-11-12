@@ -39,8 +39,9 @@ const customIcons = {
     value: PropTypes.number.isRequired,
   };
 
-  
+  // ============ Function ============== //
   export default function SmileRating() {
+  // ============ Layout
     return (
       <Box
         sx={{

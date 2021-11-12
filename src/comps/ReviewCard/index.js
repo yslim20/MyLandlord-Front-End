@@ -8,7 +8,7 @@ import RatingStar from '../RatingStar';
 import { Select } from '@mui/material';
 import SmileRating from '../SmileRating';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const BoxCont = styled.div`
     display:flex;
     justify-content:ceter;
@@ -112,7 +112,7 @@ const CircleId = styled.p`
 
 // ============ Function ============== //
 const ReviewCard = ({
-    // ============ Props
+// ============ Props
     name="Adam Biebe",
     select="Selected: 5435 Kincaid St",
     review="I lived this home for about 1 year last year, and it ways horrible. The room is dirty, the maintenance was not what I expected.",
@@ -127,7 +127,7 @@ const ReviewCard = ({
 
 }) => {
     
-
+// ============ Layout
     return(
         <BoxCont>
             <RevBox>

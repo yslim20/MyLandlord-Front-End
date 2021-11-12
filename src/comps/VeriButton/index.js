@@ -3,7 +3,7 @@ import router, {useRouter} from 'next/router';
 import { useState, useEffect } from 'react';
 import React, { Component } from 'react';
 
-
+// ============ CSS ============== //
 const Cont = styled.div`
   width: ${props=>props.cwidth};
   height: ${props=>props.cheight}px;   
@@ -72,7 +72,10 @@ const Img = styled.img`
 //   });
 // }
 
+// ============ Function ============== //
 function VeriButton({
+
+// ============ Props
 // container
   cwidth = "",
   cheight = 96,
@@ -96,6 +99,7 @@ function VeriButton({
 
 }) {
 
+// ============ Layout
   return (
     <Cont
       cBshadow={cBshadow}

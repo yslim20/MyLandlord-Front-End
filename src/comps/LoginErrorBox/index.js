@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-// ============ Imported comps
+// ============ Imported comps ============== //
 import SubHead from '../SubHead';
 
-// ============ CSS
+// ============ CSS ============== //
 const ErrorCont = styled.div`
     width: 30%;
     display:flex;
@@ -45,8 +45,9 @@ const ButtonText = styled.p`
 `;
 
 // ============ Function ============== //
-// ============ Props
 const LoginErrorBox = ({
+  
+// ============ Props
     errortext = "You need to login first.",
     text="Log In",
     bgcolor = "#5333ED",

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Divdercont = styled.div`
     margin-top:90px;
     display:flex;
@@ -28,6 +28,8 @@ const DividerText = styled.p`
 
 // ============ Function ============== //
 const Divider = ({}) => {
+    
+// ============ Layout
     return(
         <Divdercont>
             <Line />
