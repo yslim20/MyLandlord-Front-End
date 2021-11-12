@@ -38,7 +38,6 @@ const TopBar = styled.div`
 `
 
 // ============ Function ============== //
-// ============ Layout
 const Landlord = ({
 
 // ============ Properties
@@ -46,7 +45,7 @@ const Landlord = ({
   cmarginBttm = "0px"
 
 })=>{
-  
+
 // ============ Layout
 	return(
 		<Cont>

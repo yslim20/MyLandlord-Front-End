@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ CSS
+// ============ CSS ============== //
 const Icon =styled.img`
     width:80px;
     height: 80px;

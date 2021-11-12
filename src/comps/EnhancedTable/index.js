@@ -1,5 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/router'
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -12,6 +13,7 @@ import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 import { visuallyHidden } from '@mui/utils';
 
+// ============ Imported Components ============== //
 import Avatar from '../Avatar';
 
 // ============ Tabel Head Create Data
@@ -183,7 +185,11 @@ const EnhancedTable = ({
   boxSizing = "border-box",
   marginB = 30,
   width = "100%",
-  checkcolor="#5333ED"
+  checkcolor="#5333ED",
+
+// ============ clickHandler or Router  
+  // clickHandler = () => {},
+  routeTo = "/",
 
 }) => {
 
@@ -193,6 +199,9 @@ const EnhancedTable = ({
   const [selected, setSelected] = React.useState([]);
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
+
+// ============ Routing
+  const router = useRouter()
 
 // Row to show
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -286,7 +295,11 @@ const EnhancedTable = ({
                   return (
                     <TableRow
                       hover
+
+// ============ onClick or onPress handler 
                       onClick={(event) => handleClick(event, row.name)}
+                      // onPress={()=>{ clickHandler()} }  
+                      onClick={() => router.push(routeTo)}                      
                       
                       role="checkbox"
                       aria-checked={isItemSelected}
@@ -299,6 +312,7 @@ const EnhancedTable = ({
                           fontFamily: "'Heebo', sans-serif",
                           fontSize: "1em",
                           borderBottomColor: "C4C4C4",
+                          cursor: "pointer",
                         }
                       }}
                     >

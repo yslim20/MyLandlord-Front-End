@@ -38,13 +38,13 @@ const Content = styled.p`
 
 // ============ Function ============== //
 const FooterNav = ({
-    // ============ Props
+// ============ Props
     height = 50,
     mright = "30px",
     text="Home",
     routeTo = "/Home"
 }) => {
-    // ============ Routing
+// ============ Routing
     const router = useRouter()
     return(
         <Nav height={height} mright={mright} onClick={() => router.push(routeTo)}>
