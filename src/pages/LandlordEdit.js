@@ -12,7 +12,8 @@ import TopNav from '../comps/TopNav';
 import CircleAvatar from '../comps/CircleAvatar';
 import Input from '../comps/Input';
 import Button from '../comps/Button';
-
+import UserDrop from '../comps/UserDrop';
+import FullName from '../comps/FullName';
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -97,7 +98,12 @@ export default function LandlordEdit() {
     return(
         <Cont>
 {/* // ============ Top Navigation */}
-            <TopNav />
+            <TopNav children = 
+                {<UserDrop 
+                    src="./images/img_avatar_jasper.png"
+                    routeTo = "/LandlordMypage"
+                />} 
+            />
             <HeadCont>
                 <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
             </HeadCont>
@@ -108,8 +114,7 @@ export default function LandlordEdit() {
                     <CircleAvatar mtop="-100" src="/images/img_landlordProfile.png"/>
                     <InfoForm>
                         <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="32"/>
-                        <Input title="First Name" iheight="54" minWidth="574px"/>
-                        <Input title="Last Name" iheight="54" minWidth="574px"/>
+                        <FullName />
                         <Input title="Password" type="password" iheight="54"/>
                         <Input title="Email Address" iheight="54"/>
                         <Input title="Phone Number" iheight="54"/>

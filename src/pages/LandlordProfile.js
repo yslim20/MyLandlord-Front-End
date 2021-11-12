@@ -4,6 +4,7 @@ import React from 'react';
 // ============ Imported Comps ============== //
 import ProfileSub from '../comps/ProfileSub';
 import ShowAll from '../comps/ShowAll';
+import UserDrop from '../comps/UserDrop';
 import PropertyCard from '../comps/PropertyCard';
 import ReviewCard from '../comps/ReviewCard';
 import Footer from '../comps/Footer';
@@ -82,7 +83,7 @@ export default function LandlordProfile() {
         <Cont>
 
 {/* // ============ Top Navigation */}
-            <TopNav />
+            <TopNav children = {<UserDrop/>} />
 
 {/* // ============ Landlord information */}
             <HeadCont>

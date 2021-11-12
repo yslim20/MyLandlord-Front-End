@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
     width:${props=>props.width};
     height:${props=>props.height};
@@ -17,15 +17,16 @@ const Avatar = styled.img`
     border-radius: 100px;
 `;
 
-
 // ============ Function ============== //
 const LandlordAvatar = ({
-    // ============ Props
+// ============ Props
     width="463px",
     height="486px",
     src="/images/img_landlordProfile.png"
 
 }) => {
+
+// ============ Layout
     return(
         <Cont width={width} height={height}>
             <Avatar src={src} />

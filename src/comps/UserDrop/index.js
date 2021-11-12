@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/system';
 import {useRouter} from 'next/router';
 
-// ============ Imported comps
+// ============ Imported comps ============== //
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -20,11 +20,13 @@ const options = ['My Page', 'Log Out'];
 const UserDrop=({  
 
 // ============ User avatar image 
-  src="./images/img_user_tenant.png"
-  
+  src="./images/img_user_tenant.png",
+
+// ============ User Router 
+  routeTo="/TenantProfile"
 })=>{
 
-// ============ UseState
+// ============ UseState ============== //
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -58,19 +60,21 @@ const UserDrop=({
     if (index === 1) {
       router.push("/")
     } else if (index === 0) {
+      router.push(routeTo)
 
-// ============ Router to landlord profile
-      if(userName == "Landlord"){
-        router.push("/LandlordProfile") 
-      }
+// // ============ Router to landlord profile
+//       if(userName == "Landlord"){
+//         router.push("/LandlordProfile") 
+//       }
 
-// ============ Router to user profile
-      else if(userName == "Tenant"){
-        router.push("/UserProfile") 
-      }   
+// // ============ Router to user profile
+//       else if(userName == "Tenant"){
+//         router.push("/UserProfile") 
+//       }   
     }
   }
-    
+  
+// ============ Router  
   const router = useRouter();
 
   return (
@@ -162,6 +166,7 @@ const UserDrop=({
                       onClick={(event) => handleMenuItemClick(event, index)}
 
                       onClick={(event) => buttonClick(event, index)}
+                      routeTo={routeTo}
                     >
                       {option}
                     </MenuItem>                    

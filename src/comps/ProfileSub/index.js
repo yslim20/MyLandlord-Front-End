@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
     display: flex;
     justify-content: left;
@@ -32,10 +32,12 @@ const DisplayRow = styled.div`
 
 // ============ Function ============== //
 const ProfileSub = ({
-    // ============ Props
+// ============ Props
     text="Properties",
     fontSize="36px"
 }) => {
+
+// ============ Layout
     return(
         <Cont>
             <DisplayRow>

@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import React from 'react';
 import { useRouter } from 'next/router'
 
+// ============ Imported Comps ============== //
 import FooterNav from '../FooterNav';
 import HorLogo from '../HorLogo';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
     width:100%;
     position: relative;
@@ -58,6 +59,8 @@ const CopyRight = styled.p`
 
 // ============ Function ============== //
 const Footer = ({}) => {
+
+// ============ Layout
     return(
         <Cont>
             <Upside>
@@ -76,7 +79,6 @@ const Footer = ({}) => {
             <Line />
             <CopyRight>© MyLandlord. We love our users!</CopyRight>
         </Cont>
-
     );
 }
 

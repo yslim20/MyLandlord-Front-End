@@ -44,7 +44,7 @@ const RightBar = styled.div`
 // ============ Layout
 const TopNav =({
 
-// ============ Properties  
+// ============ Props  
   cpadding="",
   cmarginB=50,
   children = <LoginDrop />,

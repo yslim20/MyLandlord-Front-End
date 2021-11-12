@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ CSS ============== //
 const Divdercont = styled.div`
     height:10px;
     width:100%;
@@ -14,8 +15,10 @@ const Line = styled.div`
     background-color:#c4c4c4;
     width:95%;
     margin-right: 5%;
-    `;
+`;
 
+// ============ Function ============== //
+// ============ Layout
     const ListHr =(
 
     )=> {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import { useRouter } from 'next/router'
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Nav = styled.div`
     height: ${props=>props.height}px;
     margin-right: ${props=>props.mright}px;
@@ -38,14 +38,16 @@ const Content = styled.p`
 
 // ============ Function ============== //
 const FooterNav = ({
-    // ============ Props
+// ============ Props
     height = 50,
     mright = "30px",
     text="Home",
     routeTo = "/Home"
 }) => {
-    // ============ Routing
+// ============ Routing
     const router = useRouter()
+
+// ============ Layout
     return(
         <Nav height={height} mright={mright} onClick={() => router.push(routeTo)}>
             <Content>{text}</Content>

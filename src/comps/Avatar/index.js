@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ CSS
+// ============ CSS ============== //
 const Icon =styled.img`
     width:80px;
     height: 80px;
@@ -13,8 +13,8 @@ const Icon =styled.img`
     box-sizing: border-box;
 `
 // ============ Function ============== //
-// ============ Props
 const Avatar =({
+// ============ Props
     //icon
     src= "./icons/onicon.png",
     bshadow="",

@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import styled from 'styled-components';
+import { makeStyles } from '@mui/styles';
 
-
-import ProfileSub from '../ProfileSub';
+// ============ Imported Comps ============== //
+import ProfileSub from '../../ProfileSub';
 
 // ============ CSS
 const TableCont = styled.div`
   width:90%;
   align-items:center;
   justify-content:center;
-  margin-bottom: ${props => props.marginB};
 `
 
 // ============ COLUMN PROPS
@@ -96,45 +96,30 @@ const rows =[
 
 
 // ============ Function ============== //
-const MuiTable = ({
-  marginB = "40px"
-})=>{
-
+export default function FilterOperators() {
 //   const { data } = useDemoData({
 //     dataSet: 'Employee',
 //     rowLength: 10,
 
+// const classes = useStyles();
 
+// ============ Layout
   return (
-    <TableCont marginB={marginB}>
+    <TableCont>
       <div style={{ 
         height: 500, 
         width: '90%',
-        marginRight: 0,
-        
-        boxSizing: "border-box",
-
       }}
+      // className={classes.root}
       >
         <DataGrid 
           rows={rows} 
-          columns={columns}                
-          
-          style={{ 
-            border: 'hidden',            
-            fontFamily: "'Heebo', sans-serif",
-            
-
-            div: {
-              border: "1px solid #5333ED",
-            },
-            
-            
-          }}
-
+          columns={columns}       
+          getRowClassName={(params) =>
+            `super-app-theme--${params.getValue(params.id, 'status')}`
+          }    
         />
       </div>
     </TableCont>
   );
 }
-export default MuiTable;

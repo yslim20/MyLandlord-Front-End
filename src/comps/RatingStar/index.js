@@ -7,6 +7,7 @@ import Rating from '@mui/material/Rating';
 export default function RatingStar() {
   const [value, setValue] = React.useState(2);
 
+// ============ Layout
   return (
     <Box
       sx={{

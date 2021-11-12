@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ CSS
+// ============ CSS ============== //
 const Cont = styled.div`
   width:${props => props.cwidth};
   height: ${props => props.cheight};

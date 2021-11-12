@@ -84,8 +84,9 @@ const BttnCont = styled.div`
 `
 
 // ============ Function ============== //
-// ============ Properties
 const InputGroup = ({
+  
+// ============ Properties
   cwidth = "100%",  
   fwidth = "100%",
   fheight = "100%",

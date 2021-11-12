@@ -14,7 +14,7 @@ import LandlordAvatar from '../comps/RectangleAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
-
+import UserDrop from '../comps/UserDrop';
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -108,7 +108,12 @@ export default function LandlordMypage() {
         <Cont>
 
 {/* // ============ Top Navigation */}
-            <TopNav />
+            <TopNav children = 
+                {<UserDrop 
+                    src="./images/img_avatar_jasper.png"
+                    routeTo = "/LandlordMypage"
+                />} 
+            />
             
 {/* // ============ Content start*/}
             <HeadCont>

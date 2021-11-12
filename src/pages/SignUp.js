@@ -32,7 +32,7 @@ const RadioCont = styled.div`
   margin-bottom:30px;
   padding-left:5px;
 `
-
+// ============ Form box
 const MidCont = styled.form`
   display: flex;
   flex: 1;
@@ -90,8 +90,8 @@ export default function SignUp() {
         <RadioButton />
       </RadioCont>
 
-{/* // ============ Signup form */}  
-      <MidCont>
+{/* // ============ Signup form */} 
+      <MidCont> {/*  Form box starts */}
         <ContLeft>        
           <FullName />  
           <Input />
@@ -139,7 +139,7 @@ export default function SignUp() {
             // objectFit = "contain"
           />
         </ContRight> 
-      </MidCont>  
+      </MidCont> {/*  Form box ends */}  
 
 {/* // ============ Footer Navigation */}
       <Footer />   

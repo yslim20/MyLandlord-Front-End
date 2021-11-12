@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-// ============ CSS
+// ============ CSS ============== //
 const Cont = styled.button`
   width:${props => props.cwidth}px;
   height: ${props => props.cwidth}px;
@@ -49,6 +49,8 @@ const ChatIcon = ({
 // ============ Layout  
     return (
       <Cont 
+
+// ============ Router
         onClick={()=>router.push(routeTo)}
         cwidth={cwidth}
       >
