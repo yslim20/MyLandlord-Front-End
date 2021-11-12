@@ -80,7 +80,7 @@ export default function TenantEdit() {
 {/* =================== Information */}      
       <UserInfo>
           <InfoCont>
-              <CircleAvatar src="/images/img_tenant.png" href =""/>
+              <CircleAvatar mtop="-100" src="/images/img_tenant.png" href =""/>
               <InfoForm>
                 <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="32"/>
                 <FullName />
