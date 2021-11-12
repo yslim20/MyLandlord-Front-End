@@ -19,6 +19,9 @@ const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;  
+  margin: 0;
+	padding: 0 4% 0 4%;
+  box-sizing: border-box;
 `
 
 const HeadCont = styled.div`
@@ -26,14 +29,12 @@ const HeadCont = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 3%;
 `;
 
 const ProfCont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 0 3%;
 `;
 
 const UserInfo = styled.div`
@@ -81,23 +82,27 @@ const Icon = styled.img`
     border-radius: 50%;  
 `;
 
-//building the page, 
+// ============ Function ============== //
+// ============ Layout
 export default function TenantProfile() {
 	return(
 		<Cont>
+
+{/* // ============ Top Navigation */}
 			<TopNav children = {<UserDrop/>} />
 
-{/* =================== Layout */}
+{/* =================== Header */}
       <HeadCont>
           <Header marginBottom="45px" text="Nancy J. Rojas"/>
           <IconCont onClick={()=>router.push('/TenantEdit')}> 
             <Icon src="/icons/icon_edit.png"/>
           </IconCont>
       </HeadCont>
-      
+
+{/* =================== Information */}      
       <UserInfo>
           <InfoCont>
-              <CircleAvatar src="/images/img_tenant.png"/>
+              <CircleAvatar src="/images/img_tenant.png" href =""/>
               <InfoForm>
                 <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="32"/>
                 <Input title="First Name" iheight="54" minWidth="574px"/>
@@ -110,45 +115,49 @@ export default function TenantProfile() {
           </InfoCont>
       </UserInfo>
 
+{/* =================== Reviews */}    
       <ProfCont>
           <ProfileSub text="Reviews"/>
           <CenterBox>
-              <ReviewCardImg 
-                bgImage='url("/images/img_avatar_malcom.png")'
-                text=""
-                cborder="none"
-                name="Landlord: Malcolm Christie"
-                select="Selected: 6379 Longheed Hwy"
-                review="I lived this home for about 1 year last year,, and it ways horrible... The room is dirty, the maintenance was not what I expected."
-                boldDate="29 Sep 2021 19:01"
-              />
+            <ReviewCardImg 
+              bgImage='url("/images/img_avatar_malcom.png")'
+              text=""
+              cborder="none"
+              name="Landlord: Malcolm Christie"
+              select="Selected: 6379 Longheed Hwy"
+              review="I lived this home for about 1 year last year,, and it ways horrible... The room is dirty, the maintenance was not what I expected."
+              boldDate="29 Sep 2021 19:01"
+              routeTo=""
+            />
           </CenterBox>
           <CenterBox>
-              <ReviewCardImg 
-                bgImage='url("/images/img_avatar_ruzica.png")'
-                text=""
-                cborder="none"
-                name="Landlord: Ruzica Adamovic" 
-                select="Selected: 101-5000 Imperial St"
-                review="I lived this home for about 2 year last year,, and it I had a really great memory in her. The landlord is so kind and reasonable. So..."
-                boldDate="15 Sep 2020 19:01"
-              />
+            <ReviewCardImg 
+              bgImage='url("/images/img_avatar_ruzica.png")'
+              text=""
+              cborder="none"
+              name="Landlord: Ruzica Adamovic" 
+              select="Selected: 101-5000 Imperial St"
+              review="I lived this home for about 2 year last year,, and it I had a really great memory in her. The landlord is so kind and reasonable. So..."
+              boldDate="15 Sep 2020 19:01"
+              routeTo=""
+            />
           </CenterBox>
           <CenterBox>
-              <ReviewCardImg 
-                bgImage='url("/images/img_avatar_xiu.png")'
-                text=""
-                cborder="none"
-                name="Landlord: Xiu Juan Chiu" 
-                select="Selected: 290 Fell Ave"
-                review="I love this landlord!! She was sooo great. She was so helpful. Because I was new in Vancouver, she gave me all the information tha..."
-                boldDate="10 Oct 2018 19:01" 
-              />
+            <ReviewCardImg 
+              bgImage='url("/images/img_avatar_xiu.png")'
+              text=""
+              cborder="none"
+              name="Landlord: Xiu Juan Chiu" 
+              select="Selected: 290 Fell Ave"
+              review="I love this landlord!! She was sooo great. She was so helpful. Because I was new in Vancouver, she gave me all the information tha..."
+              boldDate="10 Oct 2018 19:01" 
+              routeTo=""
+            />
           </CenterBox>
       </ProfCont>
 
+{/* // ============ Bottom Navigation */}
       <Footer />
-
     </Cont>   
 
   )

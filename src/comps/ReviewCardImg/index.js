@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
+import router from 'next/router';
 
+// ============ Imported Comps ============== //
 import RatingStar from '../RatingStar';
 import SmileRating from '../SmileRating';
 
@@ -22,6 +24,7 @@ const RevBox = styled.div`
 	position: relative;  
 	display: flex;
 	flex-direction: row;
+	cursor: pointer;
 `;
 
 // TextAvatar
@@ -84,6 +87,7 @@ const BoldText = styled.p`
 
 // ============ Function ============== //
 const ReviewCardImg = ({
+
 // ============ Props		
 		bWidth = "1100px",
 		bHeight = "245px",
@@ -95,12 +99,19 @@ const ReviewCardImg = ({
     height="140px",
     bgImage="",
 
+// ============ Router		
+		routTo = "/",
+
 }) => {
     
-
+// ============ Layout	
 	return(
 		<BoxCont>
-			<RevBox bWidth={bWidth} bHeight={bHeight}>
+			<RevBox 
+				bWidth={bWidth} bHeight={bHeight}
+				onClick={()=>router.push(routTo)}
+			>
+{/* // ============ Avatar */}
 				<TextAvatarCont>
 					<Circle 
 						width={width} 
@@ -109,6 +120,7 @@ const ReviewCardImg = ({
 					/>
 				</TextAvatarCont>
 
+{/* // ============ Reviews */}
 				<RatingCont>
 					<FirstRow> 
 						<RatingStar />
@@ -120,7 +132,6 @@ const ReviewCardImg = ({
 					<RegText>{review}</RegText>
 
 					<SmileRating />
-
 				</RatingCont>
 
 			</RevBox>

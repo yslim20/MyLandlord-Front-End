@@ -16,7 +16,9 @@ import Footer from '../comps/Footer';
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;  
+  flex-direction: column; 
+  padding: 0 4% 0 4%;
+  box-sizing: border-box; 
 `
 
 const MidCont = styled.div`
@@ -27,8 +29,6 @@ const MidCont = styled.div`
 	flex-wrap: wrap;
 	justify-content:center;
 	align-items:center;
-  padding: 0 68px 0 68px;
-  box-sizing: border-box;
 `
 
 const ContLeft = styled.div`
@@ -49,13 +49,14 @@ const ContRight = styled.div`
 `
 
 // ============ Function ============== //
+// ============ Layout
 export default function SignUp_test() {
   return (
     <Cont>
 {/* // ============ Top Navigation */}
 			<TopNav/>
 
-{/* // ============ Body Starts */}     
+{/* // ============ Content Starts */}     
       <MidCont>
         <ContLeft>   
           <Header text="Sign Up"/>     

@@ -20,6 +20,7 @@ const FormBox = styled.form`
 
 const LabelFor = styled.label`
   font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 10px;
   margin-left: 20px;
   font-size: 24px;

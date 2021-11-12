@@ -1,6 +1,5 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -14,7 +13,6 @@ import Checkbox from '@mui/material/Checkbox';
 import { visuallyHidden } from '@mui/utils';
 
 import Avatar from '../Avatar';
-
 
 // ============ Tabel Head Create Data
 function createData(avatar, name, address, rate) {
@@ -289,6 +287,7 @@ const EnhancedTable = ({
                     <TableRow
                       hover
                       onClick={(event) => handleClick(event, row.name)}
+                      
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}

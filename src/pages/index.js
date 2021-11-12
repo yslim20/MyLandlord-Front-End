@@ -31,7 +31,7 @@ const NavCont = styled.div`
 	display:flex;
 	width: 100%;
 	flex-direction: column;
-	padding: 0 3% 0 3%;
+	padding: 0 4% 0 4%;
 	box-sizing: border-box;
 ` 
 
@@ -44,7 +44,7 @@ const MidCont = styled.div`
 	justify-content: center;
 	align-items:center;
 	margin-bottom: 100px;
-	padding: 0 3% 0 3%;
+	padding: 0 4% 0 4%;
 	box-sizing: border-box;
 `
 const LeftBox = styled.div`
@@ -77,9 +77,9 @@ const FeatSec = styled.div`
 	display:flex;
 	flex-direction: column;
 	justify-content:center;
-	align-items:flex-start;
+	align-items:flex-start;	
+	padding: 0 4% 0 4%;
 	box-sizing: border-box;
-	padding: 0 3% 0 3%;
 `
 
 const FeatCont = styled.div`

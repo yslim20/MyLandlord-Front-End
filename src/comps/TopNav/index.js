@@ -2,10 +2,12 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
+// ============ Imported Components ============== //
 import NavText from '../NavText';
 import VerLogo from '../VerLogo';
 import LoginDrop from '../LoginDrop';
 
+// ============ CSS ============== //
 const Cont = styled.div`
   width: 100%;
   height: 150px;
@@ -37,14 +39,21 @@ const RightBar = styled.div`
   align-items:center;
   justify-content: flex-end;
 `
+
+// ============ Function ============== //
+// ============ Layout
 const TopNav =({
-  
+
+// ============ Properties  
   cpadding="",
   cmarginB=50,
   children = <LoginDrop />,
 
 })=>{
+  
   // const router = useRouter();
+
+// ============ Layout
   return (
     <Cont cpadding={cpadding} cmarginB={cmarginB} >
       <VerLogo 
@@ -72,8 +81,7 @@ const TopNav =({
         </LeftBar>
 
         <RightBar>
-          {children}
-          
+          {children}          
         </RightBar>
       </Nav>
     </Cont>

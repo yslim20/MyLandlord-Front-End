@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import axios from 'axios'
 
+// ============ Imported Comps ============== //
 import RadioButton from '../comps/RadioButton';
 import FullName from '../comps/FullName';
 import Input from '../comps/Input';
@@ -12,16 +13,16 @@ import VeriButton from '../comps/VeriButton';
 import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Header from '../comps/Header';
-
 import TopNav from '../comps/TopNav'
 import Footer from '../comps/Footer';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-left:3%;
+  padding: 0 4% 0 4%;
+  box-sizing: border-box;
 `
 
 const RadioCont = styled.div`
@@ -29,19 +30,23 @@ const RadioCont = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom:30px;
-  padding:5px;
+  padding-left:5px;
 `
 
-const BttmCont = styled.form`
+const MidCont = styled.form`
   display: flex;
-  flex-wrap: row;
+  flex: 1;
+  width: 100%;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content:center;
+	align-items:center;
 `
 
 const ContLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex: 1;
+  flex: 1.5;
   flex-direction: column; 
   justify-content: center;
 `
@@ -51,7 +56,7 @@ const ContRight = styled.div`
   flex-direction: column;
   flex: 1;
   padding-top: 30px;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 `
 
@@ -72,22 +77,29 @@ const BttnCont = styled.div`
   justify-content: space-between;
 `
 // ============ Function ============== //
+// ============ Layout
 export default function SignUp() {
   return (
     <Cont>
+{/* // ============ Top Navigation */}
       <TopNav />
+
+{/* // ============ Content Starts */}  
       <Header text="Sign Up"/>
       <RadioCont> 
         <RadioButton />
       </RadioCont>
 
-      <BttmCont>
+{/* // ============ Signup form */}  
+      <MidCont>
         <ContLeft>        
           <FullName />  
           <Input />
           <Input title="User Name" type="email"/>
           <Input title="Password" type="password"/>
           <Input title="Confirm the Password" type="password"/>
+
+{/* // ============ Check box */}           
           <CheckCont> 
             <Checkbox />
             <Checkbox 
@@ -96,8 +108,10 @@ export default function SignUp() {
             />
           </CheckCont>
 
-          <VeriButton />  
+{/* // ============ Verification button */}   
+          <VeriButton /> 
 
+{/* // ============ Buttons */}   
           <BttnCont>
             <Button 
               text = "Cancle"
@@ -116,11 +130,19 @@ export default function SignUp() {
           </BttnCont>
         </ContLeft>
 
+{/* // ============ Image */} 
         <ContRight>
-          <ImgBox src="./images/SignUpImg.svg" />
+          <ImgBox 
+            src="./images/img_signup.png" 
+            cwidth = "90%"
+            // cheight = "1000px"
+            // objectFit = "contain"
+          />
         </ContRight> 
-      </BttmCont>  
-      <Footer />
+      </MidCont>  
+
+{/* // ============ Footer Navigation */}
+      <Footer />   
     </Cont>
   )
 }

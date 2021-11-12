@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ Imported Comps ============== //
 import ProfileSub from '../comps/ProfileSub';
 import ShowAll from '../comps/ShowAll';
 import PropertyCard from '../comps/PropertyCard';
@@ -16,17 +17,18 @@ import RoutButton from '../comps/RoutButton';
 import TopNav from '../comps/TopNav'
 
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
     display: flex;
     flex-direction: column;
+    padding: 0 4% 0 4%;
+    box-sizing: border-box;
 `;
 
 const HeadCont = styled.div`
     display:flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 3%;
 `;
 
 const ButtCont = styled.div`
@@ -41,7 +43,6 @@ const ProfCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 3%;
     margin-bottom: 70px;
 `;
 
@@ -72,15 +73,18 @@ const ReviewCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    // margin-left: 3%;
 `;
 
-
 // ============ Function ============== //
+// ============ Layout
 export default function LandlordProfile() {
     return(
         <Cont>
+
+{/* // ============ Top Navigation */}
             <TopNav />
+
+{/* // ============ Landlord information */}
             <HeadCont>
                 <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
                 <ChatIcon />
@@ -101,6 +105,8 @@ export default function LandlordProfile() {
                     </VeriCont> 
                 </InfoText>
             </InfoCont>
+
+{/* // ============ Property information */}
             <ProfCont>
                 <ProfileSub />
                 <ShowAll />
@@ -108,6 +114,8 @@ export default function LandlordProfile() {
                     <PropertyCard marginTop="25%" />
                 </CenterBox>
             </ProfCont>
+
+{/* // ============ Reviews */}
             <ReviewCont>
                 <ProfileSub text="Reviews"/>
                 <CenterBox>
@@ -120,6 +128,8 @@ export default function LandlordProfile() {
                     <ReviewCard text="CC" name="Corey Conyers" review="The house was quite old, but it was good that the landlord was not too involved in my life." />
                 </CenterBox>
             </ReviewCont>
+            
+{/* // ============ Footer Navigation */}
             <Footer />
         </Cont>
     )
