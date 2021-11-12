@@ -16,7 +16,9 @@ import Header from '../comps/Header';
 import TopNav from '../comps/TopNav'
 import Footer from '../comps/Footer';
 
-// ============ CSS ============== //
+import signup from "../scripts/auth/signup";
+
+// ============ css ============== //
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +49,7 @@ const ContLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex: 1.5;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
 `
 
@@ -84,41 +86,41 @@ export default function SignUp() {
 {/* // ============ Top Navigation */}
       <TopNav />
 
-{/* // ============ Content Starts */}  
+{/* // ============ Content Starts */}
       <Header text="Sign Up"/>
-      <RadioCont> 
+      <RadioCont>
         <RadioButton />
       </RadioCont>
 
-{/* // ============ Signup form */} 
+{/* // ============ Signup form */}
       <MidCont> {/*  Form box starts */}
-        <ContLeft>        
-          <FullName />  
+        <ContLeft>
+          <FullName />
           <Input />
-          <Input title="User Name" type="email"/>
+          <Input title="Email" type="email"/>
           <Input title="Password" type="password"/>
           <Input title="Confirm the Password" type="password"/>
+{/* // ============ Check box */}
+          <CheckCont>
 
-{/* // ============ Check box */}           
-          <CheckCont> 
             <Checkbox />
-            <Checkbox 
+            <Checkbox
               value = "I agree to the terms and agreement"
               required = "required"
             />
           </CheckCont>
 
-{/* // ============ Verification button */}   
-          <VeriButton /> 
 
-{/* // ============ Buttons */}   
+{/* // ============ Verification button */}
+          <VeriButton />
+{/* // ============ Buttons */}
           <BttnCont>
-            <Button 
-              text = "Cancle"
+            <Button
+              text = "Cancel"
               margintop = "0px"
               width = "95%"
             />
-            <Button 
+            <Button
               text = "Submit"
               margintop = "0px"
               border = "none"
@@ -130,19 +132,19 @@ export default function SignUp() {
           </BttnCont>
         </ContLeft>
 
-{/* // ============ Image */} 
+{/* // ============ Image */}
         <ContRight>
-          <ImgBox 
-            src="./images/img_signup.png" 
+          <ImgBox
+            src="./images/img_signup.png"
             cwidth = "90%"
             // cheight = "1000px"
             // objectFit = "contain"
           />
-        </ContRight> 
-      </MidCont> {/*  Form box ends */}  
+        </ContRight>
+      </MidCont> {/*  Form box ends */}
 
 {/* // ============ Footer Navigation */}
-      <Footer />   
+      <Footer />
     </Cont>
   )
 }

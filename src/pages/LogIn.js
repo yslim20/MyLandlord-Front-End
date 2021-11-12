@@ -7,10 +7,14 @@ import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
 import Input from '../comps/Input';
+
+
+import login from '../scripts/auth/login'
 import TopNav from '../comps/TopNav'
 import Footer from '../comps/Footer';
 
-// ============ CSS ============== //
+
+// ============ css ============== //
 const Cont = styled.div`
     display:flex;
     flex-direction: column;
@@ -28,7 +32,7 @@ const ContLeft = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
 `
 
@@ -50,9 +54,8 @@ export default function LogIn() {
 
 {/* // ============ Top Navigation */}
             <TopNav />
-
 {/* // ============ Content start*/}
-            <Header />            
+            <Header />
             <BttmCont>
 {/* // ============ Form*/}
                 <ContLeft>
@@ -65,13 +68,13 @@ export default function LogIn() {
 
 {/* // ============ Image*/}
                 <ContRight>
-                    <ImgBox 
-                        src="./images/LogInImg.svg"  
+                    <ImgBox
+                        src="./images/LogInImg.svg"
                         height="735px"
                         cwidth="90%"
                         cheight="auto"
                     />
-                </ContRight>                
+                </ContRight>
             </BttmCont>
 
 {/* // ============ Bottom Navigation */}
