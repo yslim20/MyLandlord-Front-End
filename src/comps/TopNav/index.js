@@ -17,7 +17,6 @@ const Cont = styled.div`
   padding:${props => props.cpadding};
   box-sizing: border-box;
   z-index: 999;
-  padding: 0 68px 0 68px;
   margin-bottom: ${props => props.cmarginB}px;
 `
 const Nav = styled.div`

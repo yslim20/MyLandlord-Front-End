@@ -21,7 +21,7 @@ const Cont = styled.div`
 	display:flex;
 	flex-direction: column;
 	margin: 0;
-	padding: 0;
+	padding: 0 68px 0 68px;
 `
 const MidCont = styled.div`
 	display:flex;
@@ -30,7 +30,6 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:flex-start;
 	margin-bottom: ${props=>props.cmarginB}; 
-  padding: 0 68px 0 68px;
 `
 //the filter bar with 2 icon 
 const TopBar = styled.div`

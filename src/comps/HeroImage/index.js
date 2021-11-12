@@ -13,9 +13,9 @@ const ImgCont = styled.div`
   align-items:center;
   flex-wrap: wrap;
   position: relative;
-  background-image: url(${props=>props.url});
+  background-image: url(${props=>props.imgurl});
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center center;
   background-size: cover;
 `;
 
@@ -36,7 +36,7 @@ const Letterbox = styled.div`
 const HeroImage = ({
   cwidth ="100%",
   cheight = "650",
-  url="./images/img_home.svg",
+  imgurl="./images/img_home.svg",
 
 }) => {
   const router = useRouter();
@@ -45,7 +45,7 @@ const HeroImage = ({
     <ImgCont
       cwidth={cwidth}
       cheight={cheight}
-      url={url}
+      imgurl={imgurl}
     >
       <Letterbox>
         <SubHead 
