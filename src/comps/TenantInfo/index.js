@@ -9,7 +9,8 @@ const Cont = styled.div`
   flex-directoin:row;
   align-items: center;
   justify-content: flex-start;
-  height: 60px;
+  padding: 20px 0px;
+  box-sizing: border-box;
 `;
 
 const Title = styled.p`

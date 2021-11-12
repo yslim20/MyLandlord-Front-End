@@ -72,6 +72,8 @@ const VeriCont = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 230px;
+    box-sizing: border-box;
 `;
 
 const CenterBox = styled.div`
@@ -117,10 +119,10 @@ export default function TenantProfile() {
                     <LandlordInfo 
                         text = "3 reviews"
                     />
+
                     <VeriCont>
                         <TenantInfo />
                         <TenantInfo title = "Phone Number : " text="604-434-3245"/>
-                        <TenantInfo title = "Phone Number : " text="Verify more info"/>
                     </VeriCont> 
                 </InfoText>
             </InfoCont>
