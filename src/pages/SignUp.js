@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import axios from 'axios'
 
+// ============ Imported Comps ============== //
 import RadioButton from '../comps/RadioButton';
 import FullName from '../comps/FullName';
 import Input from '../comps/Input';
@@ -22,7 +23,8 @@ const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-left:3%;
+  padding: 0 4% 0 4%;
+  box-sizing: border-box;
 `
 
 const RadioCont = styled.div`
@@ -30,20 +32,29 @@ const RadioCont = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom:30px;
-  padding:5px;
+  padding-left:5px;
 `
-
-const BttmCont = styled.form`
+// ============ Form box
+const MidCont = styled.form`
   display: flex;
-  flex-wrap: row;
+  flex: 1;
+  width: 100%;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content:center;
+	align-items:center;
 `
 
 const ContLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
+<<<<<<< HEAD
   flex: 1;
   flex-direction: column;
+=======
+  flex: 1.5;
+  flex-direction: column;
+>>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
   justify-content: center;
 `
 
@@ -52,7 +63,7 @@ const ContRight = styled.div`
   flex-direction: column;
   flex: 1;
   padding-top: 30px;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 `
 
@@ -73,23 +84,40 @@ const BttnCont = styled.div`
   justify-content: space-between;
 `
 // ============ Function ============== //
+// ============ Layout
 export default function SignUp() {
   return (
     <Cont>
+{/* // ============ Top Navigation */}
       <TopNav />
+
+{/* // ============ Content Starts */}
       <Header text="Sign Up"/>
       <RadioCont>
         <RadioButton />
       </RadioCont>
 
+<<<<<<< HEAD
       <BttmCont onClick={()=>signup(event)}>
         <ContLeft>
           <FullName />
+=======
+{/* // ============ Signup form */}
+      <MidCont> {/*  Form box starts */}
+        <ContLeft>
+          <FullName />
+>>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
           <Input />
           <Input title="Email" type="email"/>
           <Input title="Password" type="password"/>
           <Input title="Confirm the Password" type="password"/>
+<<<<<<< HEAD
           <CheckCont>
+=======
+
+{/* // ============ Check box */}
+          <CheckCont>
+>>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
             <Checkbox />
             <Checkbox
               value = "I agree to the terms and agreement"
@@ -97,8 +125,14 @@ export default function SignUp() {
             />
           </CheckCont>
 
+<<<<<<< HEAD
           <VeriButton />
+=======
+{/* // ============ Verification button */}
+          <VeriButton />
+>>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
 
+{/* // ============ Buttons */}
           <BttnCont>
             <Button
               text = "Cancel"
@@ -117,11 +151,26 @@ export default function SignUp() {
           </BttnCont>
         </ContLeft>
 
+{/* // ============ Image */}
         <ContRight>
+<<<<<<< HEAD
           <ImgBox src="./images/SignUpImg.svg" />
         </ContRight>
       </BttmCont>
       <Footer />
+=======
+          <ImgBox
+            src="./images/img_signup.png"
+            cwidth = "90%"
+            // cheight = "1000px"
+            // objectFit = "contain"
+          />
+        </ContRight>
+      </MidCont> {/*  Form box ends */}
+
+{/* // ============ Footer Navigation */}
+      <Footer />
+>>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
     </Cont>
   )
 }

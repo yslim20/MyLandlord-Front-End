@@ -6,7 +6,7 @@ import router from 'next/router';
 import TopNav from '../comps/TopNav';
 import UserDrop from '../comps/UserDrop';
 import ProfileSub from '../comps/ProfileSub';
-import PropertyCard from '../comps/PropertyCard';
+import ReviewCardImg from '../comps/ReviewCardImg';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import SubHead from '../comps/SubHead';
@@ -19,21 +19,22 @@ const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;  
+  margin: 0;
+	padding: 0 4% 0 4%;
+  box-sizing: border-box;
 `
 
 const HeadCont = styled.div`
   display:flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 3%;
+  justify-content: flex-start;
 `;
 
 const ProfCont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 0 3%;
-  margin-bottom: 70px;
 `;
 
 const UserInfo = styled.div`
@@ -60,74 +61,103 @@ const CenterBox = styled.div`
   align-items:center;
 `;
 
-
-const CenterCont = styled.div`
-  display:flex;
-  justify-content:center;
-  align-items: center;
-`;
-
-const IconCont = styled.button`
-  display: flex;
-  justify-content:center;
+const IconCont = styled.a`
+  display: block;
   width: 84px;
   height: 84px;
   border: none;
   border-radius: 50%; 
+  bottom: 30px;
+
   :hover{
     transform: scale(0.95);
     transition-duration: 0.5s;    
 `
 
 const Icon = styled.img`
-    justify-content:center;
-    align-items: center;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     width: 84px;
     height: 84px;
     border-radius: 50%;  
 `;
 
-//building the page, 
+// ============ Function ============== //
+// ============ Layout
 export default function TenantProfile() {
 	return(
 		<Cont>
+
+{/* // ============ Top Navigation */}
 			<TopNav children = {<UserDrop/>} />
 
-{/* =================== Layout */}
+{/* =================== Header */}
       <HeadCont>
-          <Header marginBottom="45px" marginLeft="4%" text="Nancy J. Rojas"/>
+          <Header marginBottom="45px" text="Nancy J. Rojas"/>
           <IconCont onClick={()=>router.push('/TenantEdit')}> 
             <Icon src="/icons/icon_edit.png"/>
           </IconCont>
       </HeadCont>
+
+{/* =================== Information */}      
       <UserInfo>
           <InfoCont>
-              <CircleAvatar src="/images/img_landlordProfile.png"/>
+              <CircleAvatar src="/images/img_tenant.png" href =""/>
               <InfoForm>
-                  <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="32"/>
-                  <Input title="User Name" iheight="54" minWidth="574px"/>
-                  <Input title="Password" type="password" iheight="54"/>
-                  <Input title="Email Address" iheight="54"/>
-                  <Input title="Phone Number" iheight="54"/>
-                  <Button text="Save" margintop="80" minWidth="275" width="275" height="62" justify="right" routeTo="/"/>
+                <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="32"/>
+                <Input title="First Name" iheight="54" minWidth="574px"/>
+                <Input title="Last Name" iheight="54" minWidth="574px"/>
+                <Input title="Password" type="password" iheight="54"/>
+                <Input title="Email" iheight="54"/>
+                <Input title="Phone Number" iheight="54"/>
+                <Button text="Save" margintop="80" minWidth="275" width="275" height="62" justify="right" routeTo="/"/>
               </InfoForm>
           </InfoCont>
       </UserInfo>
+
+{/* =================== Reviews */}    
       <ProfCont>
-          <ProfileSub />
+          <ProfileSub text="Reviews"/>
           <CenterBox>
-              <PropertyCard marginTop="25%" />
+            <ReviewCardImg 
+              bgImage='url("/images/img_avatar_malcom.png")'
+              text=""
+              cborder="none"
+              name="Landlord: Malcolm Christie"
+              select="Selected: 6379 Longheed Hwy"
+              review="I lived this home for about 1 year last year,, and it ways horrible... The room is dirty, the maintenance was not what I expected."
+              boldDate="29 Sep 2021 19:01"
+              routeTo=""
+            />
+          </CenterBox>
+          <CenterBox>
+            <ReviewCardImg 
+              bgImage='url("/images/img_avatar_ruzica.png")'
+              text=""
+              cborder="none"
+              name="Landlord: Ruzica Adamovic" 
+              select="Selected: 101-5000 Imperial St"
+              review="I lived this home for about 2 year last year,, and it I had a really great memory in her. The landlord is so kind and reasonable. So..."
+              boldDate="15 Sep 2020 19:01"
+              routeTo=""
+            />
+          </CenterBox>
+          <CenterBox>
+            <ReviewCardImg 
+              bgImage='url("/images/img_avatar_xiu.png")'
+              text=""
+              cborder="none"
+              name="Landlord: Xiu Juan Chiu" 
+              select="Selected: 290 Fell Ave"
+              review="I love this landlord!! She was sooo great. She was so helpful. Because I was new in Vancouver, she gave me all the information tha..."
+              boldDate="10 Oct 2018 19:01" 
+              routeTo=""
+            />
           </CenterBox>
       </ProfCont>
-      <CenterCont>
-          <IconCont onClick={()=>router.push('/NewProperty')}>
-              <Icon src="/icons/icon_addProperty.png/" />
-          </IconCont>
-      </CenterCont>
-      <Footer />
 
+{/* // ============ Bottom Navigation */}
+      <Footer />
     </Cont>   
 
   )

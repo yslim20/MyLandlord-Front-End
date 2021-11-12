@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 import React from 'react';
+import TextareaAutosize from '@mui/material/TextareaAutosize'
 
+// ============ Imported Comps ============== //
 import Button from '../Button'
 import Para from '../Para'
-import TextareaAutosize from '@mui/material/TextareaAutosize'
 import ImgBox from '../ImgBox'
 
 // ============ CSS ============== //
 const Cont = styled.div`
-  min-width: ${props => props.minWidth};
+  width: ${props => props.cwidth};
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -16,13 +17,13 @@ const Cont = styled.div`
 `
 
 const TopCont =styled.div`
-  margin-bottom: 25px;
   display:flex;  
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
   flex-wrap: wrap;
+  box-sizing: border-box;
 `
 
 const LeftCont=styled.div`
@@ -41,6 +42,7 @@ const RightCont=styled.div`
   justify-content: center;
 `
 
+// ============ Form
 const FormBox = styled.form`
   width:${props => props.fwidth};
   height: ${props => props.fheight}; 
@@ -53,7 +55,7 @@ const FormBox = styled.form`
 
 const LabelFor = styled.label`
   font-size: ${props => props.fsize}px; 
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 10px;
   margin-left: 20px;
   font-weight:600;
@@ -82,9 +84,10 @@ const BttnCont = styled.div`
 `
 
 // ============ Function ============== //
-// ============ Layout
 const InputGroup = ({
-  minWidth = "",  
+  
+// ============ Properties
+  cwidth = "100%",  
   fwidth = "100%",
   fheight = "100%",
   fsize = 24,
@@ -105,24 +108,27 @@ const InputGroup = ({
   imarginB ="40",
 
 }) => {  
+// ============ Layout
 	return(
 		<Cont
-      minWidth={minWidth}
+      cwidth={cwidth}
     >
       <FormBox 
         fwidth={fwidth} 
         fheight={fheight}
       >
         <TopCont> 
+{/* // ============ Image */}
           <LeftCont> 
             <ImgBox 
               src="./images/img_contactus.png" 						
               cheight ="100%"
-              cwidth = "100%"
+              cwidth = "90%"
               cmargin = "0 60px 0 0"
             />
           </LeftCont>
 
+{/* // ============ Inputs */}
           <RightCont> 
             <LabelFor 
               for={titleOne} 
@@ -177,6 +183,7 @@ const InputGroup = ({
           </RightCont>          
         </TopCont>
 
+{/* // ============ Textarea */}
         <LabelFor 
           for={titleFive} 
           fsize = {fsize}
@@ -186,7 +193,11 @@ const InputGroup = ({
           minRows={8}
           aria-label="maximum height"
           placeholder="Type here..."
-          style={{ width: "100%" }}
+          style={{ 
+            width: "100%", 
+            padding: "20px", 
+            boxSizing: "border-box"
+          }}
         />   
         <Para 
           fontSize="20"
@@ -195,8 +206,9 @@ const InputGroup = ({
           fcolor="#6E7076"
           marginT="5"
         />     
-      </FormBox>      
+      </FormBox> 
 
+{/* // ============ Buttons */}
       <BttnCont>
         <Button 
           type ="cancel"

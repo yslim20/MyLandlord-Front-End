@@ -23,37 +23,48 @@ const Cont = styled.div`
 	flex-direction: column;
 	margin: 0;
 	padding: 0;
-`
-
-const MidCont = styled.div`
-	display:flex;
-	flex: 1;
-	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content:center;
 	align-items:center;
+`
+
+const NavCont = styled.div`
+	display:flex;
+	width: 100%;
+	flex-direction: column;
+	padding: 0 4% 0 4%;
+	box-sizing: border-box;
+` 
+
+const MidCont = styled.div`
+	width: 100%;
+	display:flex;
+	flex-direction: row;
+	flex: 1;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items:center;
 	margin-bottom: 100px;
-	padding: 0 68px 0 8px;
+	padding: 0 4% 0 4%;
+	box-sizing: border-box;
 `
 const LeftBox = styled.div`
 	display:flex;
-	flex: 1;
 	flex-direction: column;	
 	justify-content:center;
 	align-items:center;
-	box-sizing: border-box;
+	flex: 1;
 `
 
 const RightBox = styled.div`
-	display:flex;
-	flex: 1.5;
+	display:flex;	
 	flex-direction: column;
-	justify-content:center;
-	align-items:center;
-	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	flex: 1.5;
 `
 
 const HeroCont = styled.div`
+	width: 100%;
 	display:flex;
 	flex: 1;
 	flex-direction: column;
@@ -66,14 +77,9 @@ const FeatSec = styled.div`
 	display:flex;
 	flex-direction: column;
 	justify-content:center;
-	align-items:flex-start;
+	align-items:flex-start;	
+	padding: 0 4% 0 4%;
 	box-sizing: border-box;
-<<<<<<< HEAD
-	padding: 0 3% 0 3%;
-=======
-	padding: 0 68px 0 68px;
-
->>>>>>> origin
 `
 
 const FeatCont = styled.div`
@@ -91,8 +97,9 @@ export default function Home() {
 	return(
 		<Cont>
 {/* // ============ Top Navigation */}
+		<NavCont> 
 			<TopNav/>
-
+		</NavCont>			
 
 {/* // ============ Body Starts */}
 			<MidCont>
@@ -127,7 +134,6 @@ export default function Home() {
 				<HeroImage/>
 			</HeroCont>  
 
-
 {/* // ============ Features */}
 			<FeatSec>
 				<SubHead 
@@ -147,11 +153,13 @@ export default function Home() {
 						title = "Strong Rating System"
 						para= "Users can review their landlord by the rating system."
 					/>
-				</FeatCont>	
-				<Footer />			
+				</FeatCont>		
 			</FeatSec>
 
-			<Footer />	
+{/* // ============ Bottom Navigation */}
+			<NavCont> 		
+				<Footer />
+			</NavCont>	
 		</Cont>
 	)
 }

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
+import router from 'next/router';
 
+// ============ Imported Comps ============== //
 import ProfileSub from '../comps/ProfileSub';
 import ShowAll from '../comps/ShowAll';
 import PropertyCard from '../comps/PropertyCard';
@@ -11,21 +13,21 @@ import LandlordSub from '../comps/LandlordSub';
 import LandlordAvatar from '../comps/RectangleAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
-import TopNav from '../comps/TopNav'
-import router from 'next/router';
+import TopNav from '../comps/TopNav';
+import UserDrop from '../comps/UserDrop';
 
-
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
     display: flex;
     flex-direction: column;
+    padding: 0 4% 0 4%;
+    box-sizing: border-box;
 `;
 
 const HeadCont = styled.div`
     display:flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 3%;
 `;
 
 const ButtCont = styled.div`
@@ -40,7 +42,6 @@ const ProfCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 3%;
     margin-bottom: 70px;
 `;
 
@@ -71,26 +72,28 @@ const ReviewCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 3%;
 `;
 
 const IconCont = styled.a`
     display: block;
+    justify-content:center;
+    align-items:center;
     width: 84px;
     height: 84px;
     border-radius: 50%; 
     overflow: hidden;
     bottom: 30px;
     right: 0px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; 
 
     :hover{
         transform: scale(0.95);
-    transition-duration: 0.5s;    
+        transition-duration: 0.5s;    
 `
 
 const Icon = styled.img`
-    display: block;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     object-fit: contain;
     width: 84px;
     height: 84px;
@@ -99,10 +102,20 @@ const Icon = styled.img`
 
 
 // ============ Function ============== //
-export default function LandlordProfile() {
+// ============ Layout
+export default function LandlordMypage() {
     return(
         <Cont>
-            <TopNav />
+
+{/* // ============ Top Navigation */}
+            <TopNav children = 
+                {<UserDrop 
+                    src="./images/img_avatar_jasper.png"
+                    routeTo = "/LandlordMypage"
+                />} 
+            />
+            
+{/* // ============ Content start*/}
             <HeadCont>
                 <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
                 <IconCont onClick={()=>router.push('/LandlordEdit')}> 

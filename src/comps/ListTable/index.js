@@ -3,8 +3,8 @@ import { DataGrid } from '@mui/x-data-grid';
 import styled from 'styled-components';
 import { makeStyles } from '@mui/styles';
 
-
-import ProfileSub from '../ProfileSub';
+// ============ Imported Comps ============== //
+import ProfileSub from '../../ProfileSub';
 
 // ============ CSS
 const TableCont = styled.div`
@@ -103,6 +103,7 @@ export default function FilterOperators() {
 
 // const classes = useStyles();
 
+// ============ Layout
   return (
     <TableCont>
       <div style={{ 

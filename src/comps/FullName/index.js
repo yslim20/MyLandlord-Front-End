@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 
-const FormCont = styled.div`
+// ============ CSS ============== //
+const Cont = styled.div`
   display:flex;
   flex-direction: row;
   align-items: center;
@@ -9,17 +10,18 @@ const FormCont = styled.div`
   margin-bottom: 25px;
 `
 
-const FormBox = styled.form`
+const MidCont = styled.div`
   width: 48%;
-  height: 100%; 
+  height: 100%;   
   display:flex;
   flex-direction: column;
   align-items: felx-start;
-  justify-content: space-between;
+  justify-content: center;
 `
 
 const LabelFor = styled.label`
   font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
   margin-bottom: 10px;
   margin-left: 20px;
   font-size: 24px;
@@ -36,20 +38,21 @@ const InputBox = styled.input`
   font-size: 24px;
 `
 
+// ============ Function ============== //
 const FullName = () => {  
-
+// ============ Layout
   return (
-    <FormCont>
-      <FormBox>
+    <Cont>
+      <MidCont> 
         <LabelFor for="fname">First Name</LabelFor>
         <InputBox type="text" name="fname" autoComplete="name" required />
-      </FormBox>
-
-      <FormBox>
+      </MidCont>
+      
+      <MidCont>
         <LabelFor for="lname">Last Name</LabelFor>
-        <InputBox type="text" name="lname" autoComplete="name" required />
-      </FormBox>
-    </FormCont>    
+        <InputBox type="text" name="lname" autoComplete="name" required />          
+      </MidCont>        
+    </Cont>    
   );
 
 }

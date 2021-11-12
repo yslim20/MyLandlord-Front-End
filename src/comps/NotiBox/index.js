@@ -3,11 +3,11 @@ import React from 'react';
 import {useRouter} from 'next/router';
 import Link from '@mui/material/Link';
 
-// ============ Imported comps
+// ============ Imported comps ============== //
 import SubHead from '../SubHead';
 import Para from '../Para';
 
-// ============ CSS
+// ============ CSS ============== //
 const ErrorCont = styled.div`
   width: 50%;
   display:flex;
@@ -91,132 +91,133 @@ const BttmCont = styled.div`
 `
 
 // ============ Function ============== //
-// ============ Props
 const NotiBox = ({
-    errortext = "Still can’t find the email?",
-    marginR = 20,
-    rmarginR=0,
-    text="Resend Email",
-    rtext="Back to Home",
-    lbgcolor = "#fff",
-    bgcolor = "#5333ED",
-    radius = 20,
-    width ="100%",
-    height = 72,
-    border = "solid 5px #5333ED",
-    rborder = "none",
-    cbshadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-    bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
-    color="#5333ED",
-    rcolor = "#fff",
-    fontSize="24px",
-    fontWeight="500",
+
+// ============ Props
+  errortext = "Still can’t find the email?",
+  marginR = 20,
+  rmarginR=0,
+  text="Resend Email",
+  rtext="Back to Home",
+  lbgcolor = "#fff",
+  bgcolor = "#5333ED",
+  radius = 20,
+  width ="100%",
+  height = 72,
+  border = "solid 5px #5333ED",
+  rborder = "none",
+  cbshadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+  bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
+  color="#5333ED",
+  rcolor = "#fff",
+  fontSize="24px",
+  fontWeight="500",
 
 // ============ Button functions
-    onButtonInteract=()=>{},
-    routeTo = "/",
-    crouteTo ="/ContactUs",
+  onButtonInteract=()=>{},
+  routeTo = "/",
+  crouteTo ="/ContactUs",
 }) => {
 
 // ============ Router
-    const router = useRouter();
+  const router = useRouter();
 
 // ============ Layout
-    return (
-      <ErrorCont 
-        onClick={()=>router.push(routeTo)}
-        cbshadow={cbshadow}
-      >
-        <Para 
-          width = "95%"
-          marginB="60"
-          align = "center"
-          fontWeight = "500"
-          fontSize = "24"
-          text="We have sent an email to your email address. 
-          Just click on the link in that email to complete your signup.
-          If you don’t see it, you may need to check your spam forlder."
-        />
-        
+  return (
+    <ErrorCont 
+      onClick={()=>router.push(routeTo)}
+      cbshadow={cbshadow}
+    >
+      <Para 
+        width = "95%"
+        marginB="60"
+        align = "center"
+        fontWeight = "500"
+        fontSize = "24"
+        text="We have sent an email to your email address. 
+        Just click on the link in that email to complete your signup.
+        If you don’t see it, you may need to check your spam forlder."
+      />
+      
 {/* // ============ Buttons */}
-        <MidCont>
-          <LeftCont>
-            <SubHead 
-              text = {errortext}
-              marginB="10"
-              fontSize = "22"
-              fontWeight = "600"
-            />
+      <MidCont>
+        <LeftCont>
+          <SubHead 
+            text = {errortext}
+            marginB="10"
+            fontSize = "22"
+            fontWeight = "600"
+          />
 
-  {/*  // ============ Resend email button */}
-            <BttnCont marginR={marginR}>            
-              <ButtonInput 
-                bg={lbgcolor} 
-                radius={radius} 
-                width={width} 
-                height={height}
-                bshadow={bshadow}
-                border={border}   
-                onClick={()=> {onButtonInteract();}}           
-              >          
-                <ButtonText
-                  color={color}
-                  fontSize={fontSize}
-                  fontWeight={fontWeight}                
-                >
-                  {text}
-                </ButtonText>
-              </ButtonInput>
-            </BttnCont>
-          </LeftCont>          
+{/*  // ============ Resend email button */}
+          <BttnCont marginR={marginR}>            
+            <ButtonInput 
+              bg={lbgcolor} 
+              radius={radius} 
+              width={width} 
+              height={height}
+              bshadow={bshadow}
+              border={border}   
+              onClick={()=> {onButtonInteract();}}           
+            >          
+              <ButtonText
+                color={color}
+                fontSize={fontSize}
+                fontWeight={fontWeight}                
+              >
+                {text}
+              </ButtonText>
+            </ButtonInput>
+          </BttnCont>
+        </LeftCont>          
 
 {/* // ============ Back to Home button */}
-          <RightCont> 
-            <BttnCont marginR={rmarginR}>
-              <ButtonInput 
-                bg={bgcolor} 
-                radius={radius} 
-                width={width} 
-                height={height}
-                bshadow={bshadow}
-                border={rborder}
-                onClick={()=>router.push(routeTo)}
-              >          
-                <ButtonText
-                  color={rcolor}
-                  fontSize={fontSize}
-                  fontWeight={fontWeight}
-                >
-                  {rtext}
-                </ButtonText>
-              </ButtonInput>
-            </BttnCont> 
-          </RightCont>          
-        </MidCont>
+        <RightCont> 
+          <BttnCont marginR={rmarginR}>
+            <ButtonInput 
+              bg={bgcolor} 
+              radius={radius} 
+              width={width} 
+              height={height}
+              bshadow={bshadow}
+              border={rborder}
+              onClick={()=>router.push(routeTo)}
+            >          
+              <ButtonText
+                color={rcolor}
+                fontSize={fontSize}
+                fontWeight={fontWeight}
+              >
+                {rtext}
+              </ButtonText>
+            </ButtonInput>
+          </BttnCont> 
+        </RightCont>          
+      </MidCont>
 
 {/* // ============ Link */}
-        <BttmCont>
-          <SubHead 
-            text = {" Need help?"}
-            fontSize = "20"
-            fontWeight = "600"
-            cmarginR = "15px"
-          />
-          <Link 
-            component="button"
-            onClick={()=>router.push(crouteTo)} 
-            underline="always"
-            fontFamily = "'Montserrat', sans-serif"
-            fontSize = "20px"
-            fontWeight = "600"
-            color="#000"
-          >
-            {'Contact Us.'}
-          </Link>
-        </BttmCont>     
+      <BttmCont>
+        <SubHead 
+          text = {" Need help?"}
+          fontSize = "20"
+          fontWeight = "600"
+          cmarginR = "15px"
+        />
+        <Link 
+          component="button"
+          onClick={()=>router.push(crouteTo)} 
+          underline="always"
+          fontFamily = "'Montserrat', sans-serif"
+          fontSize = "20px"
+          fontWeight = "600"
+          color="#000"
+        >
+          {'Contact Us.'}
+        </Link>
+      </BttmCont>     
 
-      </ErrorCont>
-    );
+    </ErrorCont>
+  );
 }
 
 export default NotiBox;

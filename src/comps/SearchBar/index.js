@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ CSS
+// ============ CSS ============== //
 const FormCont = styled.div`
   height: ${props => props.fheight}px;   
   width: ${props => props.fwidth};
@@ -55,8 +55,9 @@ const Icon = styled.img`
   height: 100%;    
 `
 // ============ Function ============== //
-// ============ Props
 const SearchBar = ({
+
+// ============ Props
     fwidth = "80%",
     fheight = 60,
     fmarginB = 40,

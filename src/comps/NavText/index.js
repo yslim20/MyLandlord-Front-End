@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import { useRouter } from 'next/router'
 
+// ============ CSS ============== //
 const Nav = styled.div`    
   height: ${props=>props.height}px;
   margin-right: ${props=>props.mright}px;
@@ -42,9 +43,10 @@ const Content = styled.p`
     width: 100%;
   }
 `
-
+// ============ Function ============== //
 const NavText = ({
 
+// ============ Props
     height = 114,
     marginright = "",
     text= "Home",
@@ -55,8 +57,10 @@ const NavText = ({
     pHeight = 40,
 
 }) => {
+// ============ Router
   const router = useRouter()
 
+// ============ Layout
   return (
     <Nav 
       mright={marginright} 

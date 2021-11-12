@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ CSS
+// ============ CSS ============== //
 const HeaderCont = styled.div`
 	display:flex;
 	justify-content:${props=>props.justifyContent};

@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ Imported Components ============== //
 import Button from '../comps/Button';
-// import ImgBox from '../comps/ImgBox';
 import Header from '../comps/Header';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
-import IconButton from '../comps/IconButton';
-import List from '../comps/List';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
-
-import MuiTable from '../comps/MuiTable';
 import EnhancedTable from '../comps/EnhancedTable'
 import PaginationRow from '../comps/PaginationRow';
 import Footer from '../comps/Footer';
@@ -21,7 +17,8 @@ const Cont = styled.div`
 	display:flex;
 	flex-direction: column;
 	margin: 0;
-	padding: 0;
+	padding: 0 4% 0 4%;
+  box-sizing: border-box;
 `
 const MidCont = styled.div`
 	display:flex;
@@ -30,7 +27,6 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:flex-start;
 	margin-bottom: ${props=>props.cmarginB}; 
-  padding: 0 68px 0 68px;
 `
 //the filter bar with 2 icon 
 const TopBar = styled.div`
@@ -42,12 +38,15 @@ const TopBar = styled.div`
 `
 
 // ============ Function ============== //
-// ============ Layout
 const Landlord = ({
+
+// ============ Properties
   cmarginB = "100px",
   cmarginBttm = "0px"
 
 })=>{
+
+// ============ Layout
 	return(
 		<Cont>
 {/* // ============ Top Navigation */}
@@ -90,6 +89,7 @@ const Landlord = ({
           
       </MidCont>
 
+{/* // ============ Bottom Navigation */}
       <Footer />
     </Cont> 
   )

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ Imported Comps ============== //
 import Header from '../comps/Header';
 import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
@@ -17,11 +18,11 @@ import Footer from '../comps/Footer';
 const Cont = styled.div`
     display:flex;
     flex-direction: column;
-    margin-left:3%;
+    padding: 0 4% 0 4%;
+    box-sizing: border-box;
 `;
 
 const BttmCont = styled.form`
-    margin-top: -10%;
     display: flex;
     flex-wrap: row;
     flex-direction: row;
@@ -40,31 +41,55 @@ const ContRight = styled.div`
     flex-direction: column;
     flex: 1;
     padding-top: 30px;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    box-sizing: border-box;
 `
 
 // ============ Function ============== //
+// ============ Layout
 export default function LogIn() {
     return(
         <Cont>
+
+{/* // ============ Top Navigation */}
             <TopNav />
+<<<<<<< HEAD
             <Header />
             <BttmCont  onSubmit={()=>login(event)}    >
+=======
+
+{/* // ============ Content start*/}
+            <Header />
+            <BttmCont>
+{/* // ============ Form*/}
+>>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
                 <ContLeft>
                     <Input title="Email" type ="email"/>
                     <Input title="Password" type="password"/>
-                    {/* <LongInForm />
-                    <LongInForm title="Password" /> */}
                     <Button text="Log In" />
                     <Divider />
                     <Button routeTo="/SignUp" text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff"/>
                 </ContLeft>
+
+{/* // ============ Image*/}
                 <ContRight>
+<<<<<<< HEAD
                     <ImgBox src="./images/LogInImg.svg"  height="735px"/>
                 </ContRight>
 
+=======
+                    <ImgBox
+                        src="./images/LogInImg.svg"
+                        height="735px"
+                        cwidth="90%"
+                        cheight="auto"
+                    />
+                </ContRight>
+>>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
             </BttmCont>
+
+{/* // ============ Bottom Navigation */}
             <Footer />
         </Cont>
     )

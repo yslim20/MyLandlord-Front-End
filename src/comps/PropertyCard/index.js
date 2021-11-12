@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const BoxCont = styled.div`
     display:flex;
     justify-content:ceter;
@@ -75,7 +75,7 @@ const DateText = styled.p`
 
 // ============ Function ============== //
 const PropertyCard = ({
-    // ============ Props
+// ============ Props
     src= "./images/property1.png",
     width= "196px",
     height="130px",
@@ -90,6 +90,8 @@ const PropertyCard = ({
     marginTop= "35%"
 
 }) => {
+    
+// ============ Layout
     return (
         <BoxCont>
             <Box>

@@ -28,7 +28,7 @@ export default function ColorRadioButtons() {
     inputProps: { 'aria-label': item },
   });
 
-  // ============ css ============== //
+// ============ CSS ============== //
   const LabelText = styled.div`
     font-size: 24px
   `;
@@ -36,7 +36,7 @@ export default function ColorRadioButtons() {
     margin-right:50px;
   `;
 
-
+// ============ Layout
   return (
     <div>
       <RadioGroup row aria-label="login" name="row-radio-buttons-group">
@@ -68,9 +68,6 @@ export default function ColorRadioButtons() {
         }}
       />} label={<Typography fontWeight="500" fontSize="24px" >Landlord</Typography>}/>
       </RadioGroup>
-
-      
-
     </div>
   );
 }

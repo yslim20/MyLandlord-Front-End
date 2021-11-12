@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import React from 'react';
 import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const HeaderCont = styled.div`
 	width: ${props=>props.cwidth};
 	display:flex;
-	flex: 1;
+	flex: 0.3;
 	justify-content:${props=>props.justifyContent};
 	align-items:${props=>props.alignItems};
 	min-width:320px;
@@ -23,8 +23,9 @@ const Text = styled.p`
 
 // ============ Function ============== //
 const Header = ({
-	// ============ Props
-	// cwidth="100%",
+	
+// ============ Props
+	cwidth="100%",
 	text="Log In",
 	fontSize="50px",
 	justifyContent="flex-start",
@@ -32,8 +33,10 @@ const Header = ({
 	marginLeft="1%",
 	marginBottom="70px"
 }) => {
+	
+// ============ Layout
 	return(
-		<HeaderCont  justifyContent={justifyContent} alignItems={alignItems} >
+		<HeaderCont cwidth ={cwidth} justifyContent={justifyContent} alignItems={alignItems} >
 			<Text fontSize={fontSize}
 					marginLeft={marginLeft}
 					marginBottom={marginBottom}>

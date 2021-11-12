@@ -93,8 +93,8 @@ const BttnCont = styled.div`
 `
 
 // ============ Function ============== //
-// ============ Components - others
 const SignUpForm = ({
+// ============ Prpos - others
   minWidth = "",  
   fwidth = "100%",
   fheight = "100%",
@@ -103,7 +103,7 @@ const SignUpForm = ({
   iheight = 57,
   placeholder = "Type here...",
 
-// =========== Components - Input titles
+// =========== Prpos - Input titles
   typeText ="text", 
   typeEmail = "email",
   typePW ="password",
@@ -121,6 +121,7 @@ const SignUpForm = ({
 		<Cont
       minWidth={minWidth}
     >
+{/* // ============ Form starts */}
       <FormBox 
         fwidth={fwidth} 
         fheight={fheight}
@@ -141,7 +142,7 @@ const SignUpForm = ({
               iheight={iheight}
               placeholder={placeholder}
               imarginB={imarginB}              
-            />
+            /> {/* first name */}
           </ColCont>
 
           <ColCont>
@@ -157,7 +158,7 @@ const SignUpForm = ({
               iheight={iheight}
               placeholder={placeholder}
               imarginB={imarginB}              
-            />
+            />{/* last name */}
           </ColCont>    
           
         </TopCont>
@@ -175,7 +176,7 @@ const SignUpForm = ({
             iheight={iheight}
             placeholder={placeholder}
             imarginB={imarginB}              
-          />
+          />{/* email */}
 
           <LabelFor 
             for={titleUN} 
@@ -189,7 +190,7 @@ const SignUpForm = ({
             iheight={iheight}
             placeholder={placeholder}
             imarginB={imarginB}
-          />
+          />{/* user name */}
 
           <LabelFor 
             for={titlePW} 
@@ -203,7 +204,7 @@ const SignUpForm = ({
             iheight={iheight}
             placeholder={placeholder}
             imarginB={imarginB}
-          />
+          />{/* password */}
 
           <LabelFor 
             for={typePW} 
@@ -216,9 +217,10 @@ const SignUpForm = ({
             iwidth={iwidth} 
             iheight={iheight}
             placeholder={placeholder}
-          />
-        </MidCont>          
+          />{/* confirm password */}
+        </MidCont> 
 
+{/* // ============ Checkbox */}
         <BttmCont>
           <Checkbox />
           <Checkbox 
@@ -226,13 +228,15 @@ const SignUpForm = ({
             required = "required"
           />
 
+{/* // ============ Verification box */}
           <VeriButton 
             cMTop = "50"
             cMBttm = "0"
           /> 
         </BttmCont>  
-      </FormBox>      
+      </FormBox> 
 
+{/* // ============ Button */}
       <BttnCont>
         <Button 
           type ="cancel"

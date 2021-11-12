@@ -3,11 +3,10 @@ import React from 'react';
 import { SyncTwoTone } from '@mui/icons-material';
 import { style } from '@mui/system';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
     display: flex;
     flex-direction: column;
-
 `;
 
 const InfoCont = styled.div`
@@ -21,7 +20,6 @@ const Icon = styled.img`
     display:block;
     object-fit: cover;
     margin-right: 20px;
-
 `;
 
 const Info = styled.p`
@@ -32,14 +30,15 @@ const Info = styled.p`
 `;
 
 
-
 // ============ Function ============== //
 const LandlordInfo = ({
-    // ============ Props
+// ============ Props
     text = "5 reviews",
     src="/icons/icon_reviews.png"
 
 }) => {
+
+// ============ Layout
     return(
         <Cont>
             <InfoCont>
