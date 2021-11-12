@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
-import Avatar from '../../Avatar';
+import Avatar from '../Avatar';
 import ListHr from '../ListHr';
-import ListText from '../../ListText'
+import ListText from '../ListText'
 
 //https://cheatcode.co/tutorials/how-to-build-a-select-all-list-component-in-react-with-next-js
 
