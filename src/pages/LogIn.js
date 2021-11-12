@@ -54,16 +54,10 @@ export default function LogIn() {
 
 {/* // ============ Top Navigation */}
             <TopNav />
-<<<<<<< HEAD
-            <Header />
-            <BttmCont  onSubmit={()=>login(event)}    >
-=======
-
 {/* // ============ Content start*/}
             <Header />
             <BttmCont>
 {/* // ============ Form*/}
->>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
                 <ContLeft>
                     <Input title="Email" type ="email"/>
                     <Input title="Password" type="password"/>
@@ -74,11 +68,6 @@ export default function LogIn() {
 
 {/* // ============ Image*/}
                 <ContRight>
-<<<<<<< HEAD
-                    <ImgBox src="./images/LogInImg.svg"  height="735px"/>
-                </ContRight>
-
-=======
                     <ImgBox
                         src="./images/LogInImg.svg"
                         height="735px"
@@ -86,7 +75,6 @@ export default function LogIn() {
                         cheight="auto"
                     />
                 </ContRight>
->>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
             </BttmCont>
 
 {/* // ============ Bottom Navigation */}

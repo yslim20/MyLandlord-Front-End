@@ -48,13 +48,8 @@ const MidCont = styled.form`
 const ContLeft = styled.div`
   display: flex;
   flex-wrap: wrap;
-<<<<<<< HEAD
-  flex: 1;
-  flex-direction: column;
-=======
   flex: 1.5;
   flex-direction: column;
->>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
   justify-content: center;
 `
 
@@ -97,27 +92,17 @@ export default function SignUp() {
         <RadioButton />
       </RadioCont>
 
-<<<<<<< HEAD
-      <BttmCont onClick={()=>signup(event)}>
-        <ContLeft>
-          <FullName />
-=======
 {/* // ============ Signup form */}
       <MidCont> {/*  Form box starts */}
         <ContLeft>
           <FullName />
->>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
           <Input />
           <Input title="Email" type="email"/>
           <Input title="Password" type="password"/>
           <Input title="Confirm the Password" type="password"/>
-<<<<<<< HEAD
-          <CheckCont>
-=======
-
 {/* // ============ Check box */}
           <CheckCont>
->>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
+
             <Checkbox />
             <Checkbox
               value = "I agree to the terms and agreement"
@@ -125,13 +110,9 @@ export default function SignUp() {
             />
           </CheckCont>
 
-<<<<<<< HEAD
-          <VeriButton />
-=======
+
 {/* // ============ Verification button */}
           <VeriButton />
->>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
-
 {/* // ============ Buttons */}
           <BttnCont>
             <Button
@@ -153,12 +134,6 @@ export default function SignUp() {
 
 {/* // ============ Image */}
         <ContRight>
-<<<<<<< HEAD
-          <ImgBox src="./images/SignUpImg.svg" />
-        </ContRight>
-      </BttmCont>
-      <Footer />
-=======
           <ImgBox
             src="./images/img_signup.png"
             cwidth = "90%"
@@ -170,7 +145,6 @@ export default function SignUp() {
 
 {/* // ============ Footer Navigation */}
       <Footer />
->>>>>>> 8ef4b89eb037dddf009ec7cfd3bc87afafc8b662
     </Cont>
   )
 }
