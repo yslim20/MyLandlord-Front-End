@@ -28,14 +28,6 @@ const MidCont = styled.div`
 	align-items:flex-start;
 	margin-bottom: ${props=>props.cmarginB}; 
 `
-//the filter bar with 2 icon 
-const TopBar = styled.div`
-  display:flex;
-  flex:1;
-  flex-direction:row;
-  justify-content:center;
-	align-items:flex-start;
-`
 
 // ============ Function ============== //
 const Landlord = ({
