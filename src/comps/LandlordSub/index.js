@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import React from 'react';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const SubCont = styled.div`
     display:flex;
     justify-content: left;
     align-items: left;
-    margin-left:3%;
     margin-top: 0px;
 `;
 
@@ -21,15 +20,15 @@ const Sub = styled.p`
 
 // ============ Function ============== //
 const LandlordSub = ({
-    // ============ Props
+// ============ Props
     text="Joined in Augest 2011"
 }) => {
+
+// ============ Layout    
     return (
         <SubCont>
             <Sub>{text}</Sub>
         </SubCont>
-
-
     );
 }
 

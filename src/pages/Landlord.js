@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 import React from 'react';
 
+// ============ Imported Components ============== //
 import Button from '../comps/Button';
-// import ImgBox from '../comps/ImgBox';
 import Header from '../comps/Header';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
-import IconButton from '../comps/IconButton';
-import List from '../comps/List';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
-
-import MuiTable from '../comps/MuiTable';
+import EnhancedTable from '../comps/EnhancedTable'
+import PaginationRow from '../comps/PaginationRow';
 import Footer from '../comps/Footer';
 
 // ============ CSS ============== //
@@ -19,7 +17,8 @@ const Cont = styled.div`
 	display:flex;
 	flex-direction: column;
 	margin: 0;
-	padding: 0;
+	padding: 0 4% 0 4%;
+  box-sizing: border-box;
 `
 const MidCont = styled.div`
 	display:flex;
@@ -27,9 +26,7 @@ const MidCont = styled.div`
 	flex-direction: column;
 	justify-content:center;
 	align-items:flex-start;
-	margin-bottom: 100px;
-  padding: 0 68px 0 68px;
-
+	margin-bottom: ${props=>props.cmarginB}; 
 `
 //the filter bar with 2 icon 
 const TopBar = styled.div`
@@ -42,14 +39,22 @@ const TopBar = styled.div`
 
 // ============ Function ============== //
 // ============ Layout
-export default function Landlord() {
+const Landlord = ({
+
+// ============ Properties
+  cmarginB = "100px",
+  cmarginBttm = "0px"
+
+})=>{
+  
+// ============ Layout
 	return(
 		<Cont>
 {/* // ============ Top Navigation */}
 			<TopNav/>
 
 {/* // ============ MAP */}
-      <MidCont>
+      <MidCont cmarginB={cmarginB}>
         <Header text="Map" marginLeft="0"/>
         <SubHead 
           marginB = "40"
@@ -67,7 +72,7 @@ export default function Landlord() {
       </MidCont>
 
 {/* // ============ LIST OF LANDLORD */} 
-      <MidCont>
+      <MidCont cmarginB = {cmarginBttm}>
         <Header text="List of Landlord" marginLeft="0"/>
         <SubHead 
           marginB = "40"
@@ -78,11 +83,17 @@ export default function Landlord() {
           placeholder="Please type your landlord name or address.."
         />
 
-        <MuiTable/>
+        <EnhancedTable/>        
+
+        {/* <PaginationTest /> */}
         <PaginationRow />
           
       </MidCont>
+
+{/* // ============ Bottom Navigation */}
+      <Footer />
     </Cont> 
   )
 }
 
+export default Landlord;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import {useRouter} from 'next/router';
 
-// ============ css ============== //
+// ============ CSS ============== //
 const ButtonCont = styled.div`
     margin-top: ${props=>props.mtop}px;
     margin-right: ${props=>props.mright}px;
@@ -12,7 +12,7 @@ const ButtonCont = styled.div`
 `;
 
 const ButtonInput = styled.button`
-    type: submit;
+    type: ${props=>props.type};
     display:flex;
     background-color:${props=>props.bg};
     border: ${props=>props.border};
@@ -43,7 +43,9 @@ const ButtonText = styled.p`
 // ============ Function ============== //
 
 const Button = ({
-    // ============ Props
+
+// ============ Props
+    type = "submit",
     text="Log In",
     margintop = 100,
     minWidth="340",
@@ -53,25 +55,35 @@ const Button = ({
     width = 360,
     height = 72,
     border = "5px solid #5333ED;",
-    routeTo = "/LogIn",
+    // routeTo = "/LogIn",
     bshadow = "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px",
     color="#000",
     fontSize="24px",
     fontWeight="500",
-    justify="center"
+    justify="center",
+
+// ============ onClick prop
+    clickHandler = () => {},
+    href="/posts" 
 
 }) => {
-    const router = useRouter();
+    // const router = useRouter();
 
+// ============ Layout
     return (
         <ButtonCont 
             mtop={margintop} 
-            mright={marginright} 
+            mright={marginright}
             justify={justify}
-            
-            onClick={()=>router.push(routeTo)}            
+
+// ============ onClick function          
+            onClick={()=>{ clickHandler()} }  
+            href={href}
+            // onClick={()=>router.push(routeTo)}            
+
         >
             <ButtonInput 
+                type={type}
                 bg={bgcolor} 
                 radius={radius} 
                 width={width} 

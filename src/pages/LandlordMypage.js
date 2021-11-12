@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
+import router from 'next/router';
 
+// ============ Imported Comps ============== //
 import ProfileSub from '../comps/ProfileSub';
 import ShowAll from '../comps/ShowAll';
 import PropertyCard from '../comps/PropertyCard';
@@ -11,21 +13,21 @@ import LandlordSub from '../comps/LandlordSub';
 import LandlordAvatar from '../comps/RectangleAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
-import TopNav from '../comps/TopNav'
-import router from 'next/router';
+import TopNav from '../comps/TopNav';
 
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
     display: flex;
     flex-direction: column;
+    padding: 0 4% 0 4%;
+    box-sizing: border-box;
 `;
 
 const HeadCont = styled.div`
     display:flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 3%;
 `;
 
 const ButtCont = styled.div`
@@ -40,7 +42,6 @@ const ProfCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 3%;
     margin-bottom: 70px;
 `;
 
@@ -71,7 +72,6 @@ const ReviewCont = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 3%;
 `;
 
 const IconCont = styled.a`
@@ -87,7 +87,7 @@ const IconCont = styled.a`
 
     :hover{
         transform: scale(0.95);
-    transition-duration: 0.5s;    
+        transition-duration: 0.5s;    
 `
 
 const Icon = styled.img`
@@ -102,10 +102,15 @@ const Icon = styled.img`
 
 
 // ============ Function ============== //
-export default function LandlordProfile() {
+// ============ Layout
+export default function LandlordMypage() {
     return(
         <Cont>
+
+{/* // ============ Top Navigation */}
             <TopNav />
+            
+{/* // ============ Content start*/}
             <HeadCont>
                 <Header marginBottom="45px" marginLeft="4%" text="Jasper White"/>
                 <IconCont onClick={()=>router.push('/LandlordEdit')}> 

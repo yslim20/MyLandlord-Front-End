@@ -12,11 +12,13 @@ import Header from '../comps/Header';
 import Footer from '../comps/Footer';
 
 
-// ============ css ============== //
+// ============ CSS ============== //
 const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;  
+  flex-direction: column; 
+  padding: 0 4% 0 4%;
+  box-sizing: border-box; 
 `
 
 const MidCont = styled.div`
@@ -27,8 +29,6 @@ const MidCont = styled.div`
 	flex-wrap: wrap;
 	justify-content:center;
 	align-items:center;
-  padding: 0 68px 0 68px;
-  box-sizing: border-box;
 `
 
 const ContLeft = styled.div`
@@ -43,19 +43,20 @@ const ContRight = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 350px;
+  padding-top: 280px;
   align-items: flex-end;
   justify-content: center;
 `
 
 // ============ Function ============== //
+// ============ Layout
 export default function SignUp_test() {
   return (
     <Cont>
 {/* // ============ Top Navigation */}
 			<TopNav/>
 
-{/* // ============ Body Starts */}     
+{/* // ============ Content Starts */}     
       <MidCont>
         <ContLeft>   
           <Header text="Sign Up"/>     

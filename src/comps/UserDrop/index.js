@@ -15,10 +15,13 @@ import MenuList from '@mui/material/MenuList';
 import Avatar from '@mui/material/Avatar';
 
 // ============ Button Titles
-const options = ['Log In', 'Sign Up', 'My Page'];
+const options = ['My Page', 'Log Out'];
 
-const LoginDrop=({  
+const UserDrop=({  
 
+// ============ User avatar image 
+  src="./images/img_user_tenant.png"
+  
 })=>{
 
 // ============ UseState
@@ -51,12 +54,20 @@ const LoginDrop=({
   const buttonClick = (event, index) => {
     event.preventDefault()
 
-    if (index === 2){
-      router.push("/MyPage")
-    } else if (index === 1) {
-      router.push("/SignUp")
+// ============ Router to homepage
+    if (index === 1) {
+      router.push("/")
     } else if (index === 0) {
-      router.push("/LogIn")      
+
+// ============ Router to landlord profile
+      if(userName == "Landlord"){
+        router.push("/LandlordProfile") 
+      }
+
+// ============ Router to user profile
+      else if(userName == "Tenant"){
+        router.push("/UserProfile") 
+      }   
     }
   }
     
@@ -95,7 +106,7 @@ const LoginDrop=({
         >
           <Avatar
             alt="Remy Sharp"
-            src="./icons/icon_user.png"
+            src= {src}
             sx={{ width: 42, height: 42 }}
           />
         </Button>
@@ -166,4 +177,4 @@ const LoginDrop=({
   );
 }
 
-export default LoginDrop;
+export default UserDrop;

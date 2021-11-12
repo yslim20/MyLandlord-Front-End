@@ -3,12 +3,8 @@ import React from 'react';
 
 // ============ Imported Comps ============== //
 import TopNav from '../comps/TopNav';
-import Input from '../comps/Input';
-import ImgBox from '../comps/ImgBox';
-import Button from '../comps/Button'
-import Subhead from '../comps/Subhead';
+import Header from '../comps/Header';
 import Footer from '../comps/Footer';
-
 import InputGroup from '../comps/InputGroup';
 
 // ============ CSS ============== //
@@ -16,14 +12,14 @@ const Cont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  padding: 0 4% 0 4%;
+  box-sizing: border-box;
 `
 
 const InputCont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-	padding: 0px 68px;
-  margin-top: 80px;
 `
 
 // ============ Function ============== //
@@ -36,8 +32,11 @@ export default function ContactUs() {
 
 {/* // ============ Content Start */}
       <InputCont> 
+        <Header text = "Contact Us"/>
 				<InputGroup />
-			</InputCont>			
+			</InputCont>
+
+{/* // ============ Bottom Navigation */}
       <Footer />
     </Cont>
 	)

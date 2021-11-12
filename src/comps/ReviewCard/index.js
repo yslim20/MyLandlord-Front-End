@@ -73,11 +73,14 @@ const DateText = styled.p`
     font-family: Heebo;
 `;
 const SmileCont = styled.div`
-    margin-top: 90%;
+    // margin-top: 90%;
 `;
 
 // TextAvatar
 const TextAvatarCont = styled.div`
+    display: flex;
+    justify-contents: center;
+    item-align: center;
     margin-top: 4.5%;
     margin-left: 3%
 `;
@@ -88,8 +91,12 @@ const Circle = styled.div`
     border-radius: 50%;
     margin-left: 4%;
     margin-top: ${props => props.marginTop};
-    border: 4px solid #5333ED;
+    border: ${props => props.cborder};    
     display: relative;
+    background-image: ${props => props.bgImage};  
+    background-repeat: no-repeat;  
+    background-position: center;
+    box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 `;
 
@@ -111,10 +118,13 @@ const ReviewCard = ({
     review="I lived this home for about 1 year last year, and it ways horrible. The room is dirty, the maintenance was not what I expected.",
     boldDate="19 Jan 2017 19:01",
     right="80px",
-    marginTop="4.5%",
+    marginTop="",
     text="AB",
     width="140px",
-    height="140px"
+    height="140px",
+    bgImage="",
+    cborder = "4px solid #5333ED"
+
 }) => {
     
 
@@ -124,7 +134,7 @@ const ReviewCard = ({
                 <Cont>
                     <LeftSide>
                         <TextAvatarCont>
-                            <Circle width={width} height={height}>
+                            <Circle width={width} height={height} marginTop={marginTop} bgImage={bgImage} cborder={cborder}>
                                 <CircleId>{text}</CircleId>
                             </Circle>
                         </TextAvatarCont>
