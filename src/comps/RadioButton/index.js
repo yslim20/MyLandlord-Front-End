@@ -41,7 +41,7 @@ export default function ColorRadioButtons() {
     <div>
       <RadioGroup row aria-label="login" name="row-radio-buttons-group">
         <RadioCont>
-            <FormControlLabel value="Tenant" control={<Radio
+            <FormControlLabel value={0} control={<Radio
             {...controlProps('e')}
             sx={{
               color: deepPurple["A400"],
@@ -55,7 +55,7 @@ export default function ColorRadioButtons() {
           />} label={<Typography fontWeight="500" fontSize="24px" >Tenant</Typography>}>
           </FormControlLabel>
         </RadioCont>
-        <FormControlLabel value="Landlord" control={<Radio
+        <FormControlLabel value={1} control={<Radio
         {...controlProps('d')}
         sx={{
           color: deepPurple["A400"],
