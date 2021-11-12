@@ -10,7 +10,7 @@ import ReviewCard from '../comps/ReviewCard';
 import Footer from '../comps/Footer';
 import Header from '../comps/Header';
 import LandlordSub from '../comps/LandlordSub';
-import LandlordAvatar from '../comps/RectangleAvatar';
+import RetangleAvatar from '../comps/RectangleAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
 import ChatIcon from '../comps/ChatIcon';
@@ -95,7 +95,7 @@ export default function LandlordProfile() {
             </ButtCont>
             <LandlordSub/>
             <InfoCont>
-                <LandlordAvatar />
+                <RetangleAvatar />
                 <InfoText>
                     <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10" marginL="3%"/>
                     <LandlordInfo />

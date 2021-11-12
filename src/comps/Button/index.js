@@ -24,8 +24,9 @@ const ButtonInput = styled.button`
     font-size: ${props=>props.size}px;
     align-items:center;
     justify-content:center;
-    box-shadow: ${props=>props.bshadow};
-
+    box-shadow: ${props=>props.bshadow}; 
+    cursor: pointer;
+    
     :hover{
         transform: scale(0.85);
         transition-duration: 0.5s;
@@ -38,7 +39,6 @@ const ButtonText = styled.p`
     font-size: ${props=>props.fontSize};
     text-align:center;
     font-weight: ${props=>props.fontWeight};
-
 `;
 
 // ============ Function ============== //

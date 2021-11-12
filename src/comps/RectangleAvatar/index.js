@@ -18,7 +18,7 @@ const Avatar = styled.img`
 `;
 
 // ============ Function ============== //
-const LandlordAvatar = ({
+const RetangleAvatar = ({
 // ============ Props
     width="463px",
     height="486px",
@@ -34,4 +34,4 @@ const LandlordAvatar = ({
     );
 }
 
-export default LandlordAvatar;
+export default RetangleAvatar;
