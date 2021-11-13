@@ -96,7 +96,7 @@ export default function SignUp() {
       <MidCont> {/*  Form box starts */}
         <ContLeft>
           <FullName />
-          <Input />
+          {/* <Input/> repeated input field*/}
           <Input title="Email" type="email"/>
           <Input title="Password" type="password"/>
           <Input title="Confirm the Password" type="password"/>
