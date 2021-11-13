@@ -1,7 +1,7 @@
 // import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 // import axios from 'axios'
 
 // ============ Imported Comps ============== //
@@ -13,11 +13,12 @@ import VeriButton from '../comps/VeriButton';
 import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Header from '../comps/Header';
-import TopNav from '../comps/TopNav'
+import Navi from '../comps/Navi';
 import Footer from '../comps/Footer';
 
 import signup from "../scripts/auth/signup";
 import RoutButton from '../comps/RoutButton';
+
 
 // ============ css ============== //
 const Cont = styled.div`
@@ -85,7 +86,7 @@ export default function SignUp() {
   return (
     <Cont>
 {/* // ============ Top Navigation */}
-      <TopNav />
+      <Navi />
 
 {/* // ============ Content Starts */}
       <Header text="Sign Up"/>
@@ -97,7 +98,7 @@ export default function SignUp() {
       <MidCont> {/*  Form box starts */}
         <ContLeft>
           <FullName />
-          <Input />
+          {/* <Input/> repeated input field*/}
           <Input title="Email" type="email"/>
           <Input title="Password" type="password"/>
           <Input title="Confirm the Password" type="password"/>

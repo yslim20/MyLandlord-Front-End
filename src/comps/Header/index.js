@@ -26,6 +26,7 @@ const Header = ({
 	
 // ============ Props
 	cwidth="100%",
+	cMinWidth = "400px",
 	text="Log In",
 	fontSize="50px",
 	justifyContent="flex-start",
@@ -36,7 +37,12 @@ const Header = ({
 	
 // ============ Layout
 	return(
-		<HeaderCont cwidth ={cwidth} justifyContent={justifyContent} alignItems={alignItems} >
+		<HeaderCont 
+			cwidth={cwidth} 
+			cMinWidth={cMinWidth}
+			justifyContent={justifyContent} 
+			alignItems={alignItems} 
+		>
 			<Text fontSize={fontSize}
 					marginLeft={marginLeft}
 					marginBottom={marginBottom}>

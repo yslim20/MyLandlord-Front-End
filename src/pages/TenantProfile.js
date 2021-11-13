@@ -12,7 +12,7 @@ import RetangleAvatar from '../comps/RectangleAvatar';
 import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
 import ReviewCardImg from '../comps/ReviewCardImg';
-import TopNav from '../comps/TopNav'
+import Navi from '../comps/Navi';
 import TenantInfo from '../comps/TenantInfo';
 
 
@@ -28,6 +28,8 @@ const HeadCont = styled.div`
     display:flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
+    width: 100%;
 `;
 
 const IconCont = styled.a`
@@ -90,7 +92,7 @@ export default function TenantProfile() {
         <Cont>
 
 {/* // ============ Top Navigation */}
-            <TopNav children = {<UserDrop/>} />
+            <Navi children = {<UserDrop/>} />
 
 {/* // ============ Landlord information */}
             <HeadCont>
