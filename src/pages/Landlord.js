@@ -22,10 +22,12 @@ const Cont = styled.div`
 
 const HeadCont = styled.div`
   display:flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: ${props=>props.flexDir}; 
+  align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
+  padding-left: 1%;
+  box-sizing: border-box;
 `;
 
 const MidCont = styled.div`
@@ -42,7 +44,8 @@ const Landlord = ({
 
 // ============ Properties
   cmarginB = "100px",
-  cmarginBttm = "0px"
+  cmarginBttm = "0px",
+  flexDir = "column",
 
 })=>{
 
@@ -54,8 +57,12 @@ const Landlord = ({
 
 {/* // ============ MAP */}
       <MidCont cmarginB={cmarginB}>
-        <HeadCont>
-          <Header text="Map" marginLeft="4%" />
+        <HeadCont flexDir={flexDir}>
+          <Header text="Landlord"  marginBottom = "40px"/>
+          <Header 
+            text="Map"  
+            marginBottom = "20px"
+          />
         </HeadCont>
         <SubHead 
           marginB = "40"
@@ -74,8 +81,8 @@ const Landlord = ({
 
 {/* // ============ LIST OF LANDLORD */} 
       <MidCont cmarginB = {cmarginBttm}>
-        <HeadCont>
-          <Header text="List of Landlord" marginLeft="4%" />
+        <HeadCont flexDir={flexDir}>
+          <Header text="List of Landlord" cMinWidth = "600px"/>
         </HeadCont>
         <SubHead 
           marginB = "40"
