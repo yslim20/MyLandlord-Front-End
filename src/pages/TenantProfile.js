@@ -94,7 +94,7 @@ export default function TenantProfile() {
 
 {/* // ============ Landlord information */}
             <HeadCont>
-                <Header marginBottom="45px" marginLeft="4%" text="Nancy J. Rojas"/>
+                <Header marginBottom="45px" marginLeft="3%" text="Nancy J. Rojas"/>
                 <IconCont onClick={()=>router.push('/TenantEdit')}> 
                     <Icon src="/icons/icon_edit.png"/>
                 </IconCont>
