@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import React from 'react';
 
 // ============ Imported Components ============== //
-import Button from '../comps/Button';
 import Header from '../comps/Header';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
@@ -27,14 +26,6 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:flex-start;
 	margin-bottom: ${props=>props.cmarginB}; 
-`
-//the filter bar with 2 icon 
-const TopBar = styled.div`
-  display:flex;
-  flex:1;
-  flex-direction:row;
-  justify-content:center;
-	align-items:flex-start;
 `
 
 // ============ Function ============== //

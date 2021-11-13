@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import router from 'next/router';
+// import router from 'next/router';
 
 // ============ Imported Comps ============== //
 import TopNav from '../comps/TopNav';

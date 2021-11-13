@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import React from 'react';
 
 // ============ Imported Comps ============== //
-import Button from '../comps/Button';
 import SubHead from '../comps/SubHead';
 import TopNav from '../comps/TopNav';
 import VerLogo from '../comps/VerLogo';
@@ -10,12 +9,6 @@ import Mediabox from '../comps/Mediabox'
 import HeroImage from '../comps/HeroImage'
 import Features from '../comps/Features'
 import Footer from '../comps/Footer';
-
-// ============ testing
-import ChatIcon from '../comps/ChatIcon';
-import LoginErrorBox from '../comps/LoginErrorBox';
-import NotiBox from '../comps/NotiBox';
-import CircleAvatar from '../comps/CircleAvatar'
 
 // ============ CSS ============== //
 const Cont = styled.div`

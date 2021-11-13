@@ -30,13 +30,13 @@ const HeadCont = styled.div`
     align-items: center;
 `;
 
-const ButtCont = styled.div`
-    position: absolute;
-    left: 70%;
-    top: 35%;
-    margin-right: 3%;
-    z-index:1;
-`;
+// const ButtCont = styled.div`
+//     position: absolute;
+//     left: 70%;
+//     top: 35%;
+//     margin-right: 3%;
+//     z-index:1;
+// `;
 
 const ProfCont = styled.div`
     display: flex;
@@ -99,7 +99,6 @@ const Icon = styled.img`
     height: 84px;
     border-radius: 50%;  
 `
-
 
 // ============ Function ============== //
 // ============ Layout
