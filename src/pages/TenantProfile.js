@@ -107,6 +107,7 @@ export default function TenantProfile() {
             <InfoCont>
                 <RetangleAvatar 
                     src="/images/img_tenant.png"
+                    marginTop = "2"
                 />
                 <InfoText>
                     <SubHead 
