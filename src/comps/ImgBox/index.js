@@ -7,7 +7,7 @@ const Cont = styled.div`
   height: ${props => props.cheight};
   position: relative;  
   display: flex;
-  align-items: center;
+  justify-contents: center;
   margin-left: ${props => props.marginL}
 
   // margin-left: ${props => props.cmarginL};
