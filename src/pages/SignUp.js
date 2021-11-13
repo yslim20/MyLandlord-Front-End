@@ -1,7 +1,7 @@
 // import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 // import axios from 'axios'
 
 // ============ Imported Comps ============== //
@@ -13,10 +13,10 @@ import VeriButton from '../comps/VeriButton';
 import ImgBox from '../comps/ImgBox';
 import Button from '../comps/Button'
 import Header from '../comps/Header';
-import TopNav from '../comps/TopNav'
+import Navi from '../comps/Navi';
 import Footer from '../comps/Footer';
 
-import signup from "../scripts/auth/signup";
+// import signup from "../scripts/auth/signup";
 
 // ============ css ============== //
 const Cont = styled.div`
@@ -84,7 +84,7 @@ export default function SignUp() {
   return (
     <Cont>
 {/* // ============ Top Navigation */}
-      <TopNav />
+      <Navi />
 
 {/* // ============ Content Starts */}
       <Header text="Sign Up"/>

@@ -15,8 +15,7 @@ import LandlordInfo from '../comps/LandlordInfo';
 import SubHead from '../comps/SubHead';
 import ChatIcon from '../comps/ChatIcon';
 import RoutButton from '../comps/RoutButton';
-import TopNav from '../comps/TopNav'
-
+import Navi from '../comps/Navi';
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -83,7 +82,7 @@ export default function LandlordProfile() {
         <Cont>
 
 {/* // ============ Top Navigation */}
-            <TopNav children = {<UserDrop/>} />
+            <Navi children = {<UserDrop/>} />
 
 {/* // ============ Landlord information */}
             <HeadCont>

@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import React from 'react';
 
 // ============ Imported Components ============== //
-import Button from '../comps/Button';
 import Header from '../comps/Header';
 import SubHead from '../comps/SubHead';
-import TopNav from '../comps/TopNav';
+import Navi from '../comps/Navi';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
 import EnhancedTable from '../comps/EnhancedTable'
@@ -20,6 +19,17 @@ const Cont = styled.div`
 	padding: 0 4% 0 4%;
   box-sizing: border-box;
 `
+
+const HeadCont = styled.div`
+  display:flex;
+  flex-direction: ${props=>props.flexDir}; 
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 1%;
+  box-sizing: border-box;
+`;
+
 const MidCont = styled.div`
 	display:flex;
 	flex: 1;
@@ -34,7 +44,8 @@ const Landlord = ({
 
 // ============ Properties
   cmarginB = "100px",
-  cmarginBttm = "0px"
+  cmarginBttm = "0px",
+  flexDir = "column",
 
 })=>{
 
@@ -42,11 +53,17 @@ const Landlord = ({
 	return(
 		<Cont>
 {/* // ============ Top Navigation */}
-			<TopNav/>
+			<Navi/>
 
 {/* // ============ MAP */}
       <MidCont cmarginB={cmarginB}>
-        <Header text="Map" marginLeft="0"/>
+        <HeadCont flexDir={flexDir}>
+          <Header text="Landlord"  marginBottom = "40px"/>
+          <Header 
+            text="Map"  
+            marginBottom = "20px"
+          />
+        </HeadCont>
         <SubHead 
           marginB = "40"
           justifyContent="left"
@@ -64,7 +81,9 @@ const Landlord = ({
 
 {/* // ============ LIST OF LANDLORD */} 
       <MidCont cmarginB = {cmarginBttm}>
-        <Header text="List of Landlord" marginLeft="0"/>
+        <HeadCont flexDir={flexDir}>
+          <Header text="List of Landlord" cMinWidth = "600px"/>
+        </HeadCont>
         <SubHead 
           marginB = "40"
           justifyContent="left"            
