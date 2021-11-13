@@ -5,7 +5,7 @@ import React from 'react';
 // import axios from 'axios'
 
 // ============ Imported Comps ============== //
-import TopNav from '../comps/TopNav';
+import Navi from '../comps/Navi';
 import SignUpForm from '../comps/SignUpForm';
 import ImgBox from '../comps/ImgBox';
 import Header from '../comps/Header';
@@ -54,7 +54,7 @@ export default function SignUp_test() {
   return (
     <Cont>
 {/* // ============ Top Navigation */}
-			<TopNav/>
+			<Navi/>
 
 {/* // ============ Content Starts */}     
       <MidCont>

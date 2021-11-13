@@ -3,7 +3,7 @@ import React from 'react';
 // import router from 'next/router';
 
 // ============ Imported Comps ============== //
-import TopNav from '../comps/TopNav';
+import Navi from '../comps/Navi';
 import UserDrop from '../comps/UserDrop';
 import ProfileSub from '../comps/ProfileSub';
 import ReviewCardImg from '../comps/ReviewCardImg';
@@ -70,11 +70,11 @@ export default function TenantEdit() {
 		<Cont>
 
 {/* // ============ Top Navigation */}
-			<TopNav children = {<UserDrop/>} />
+			<Navi children = {<UserDrop/>} />
 
 {/* =================== Header */}
       <HeadCont>
-          <Header marginBottom="45px" text="Nancy J. Rojas"/>
+          <Header marginBottom="45px" marginLeft="4%" text="Nancy J. Rojas"/>
       </HeadCont>
 
 {/* =================== Information */}      

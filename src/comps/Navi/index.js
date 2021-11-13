@@ -5,6 +5,10 @@ import {useRouter} from 'next/router';
 // ============ Imported Components ============== //
 import VerLogo from '../VerLogo';
 import LoginDrop from '../LoginDrop';
+import NavHome from '../NavHome';
+import NavLandlord from '../NavLandlord'
+import NavChat from '../NavChat';
+import NavContact from '../NavContact';
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -24,51 +28,6 @@ const NavCont = styled.div`
   width:100%;
   display:flex;
   flex-direction:row;
-`
-
-const Nav = styled.div`    
-  height: ${props=>props.height}px;
-  margin-right: ${props=>props.mright}px;
-  box-sizing: border-box;
-  display: flex;
-  align-items:center;
-  justify-content:center;
-  cursor: pointer; 
-`;
-
-const Content = styled.p`
-  font-family: 'Heebo', sans-serif;
-  font-size: ${props=>props.pSize}px;
-  height: ${props=>props.pHeight}%;
-  font-weight: ${props=>props.pWeight};
-  position: relative;
-
-  :before{
-    content : "";
-    position: absolute;
-    background-color: #5333ED;
-    height: 2px;
-    width : 0;
-    bottom: 0px; left: 50%;
-    transition: 0.5s; 
-    transform: translateX(-50%);
-  }
-  
-  :hover {
-    color:#5333ED; 
-  }
-
-  :hover:before {    
-    width: 100%;
-  }
-
-  :active {
-    color: #5333ED;
-  }
-
-  :active:before {    
-    width: 100%;    
-  }
 `
 
 const LeftBar =styled.div`
@@ -94,16 +53,9 @@ const Navi =({
   cmarginB=50,
   children = <LoginDrop />,
 
-// ============ Navitext Props
-  height = 114,
-  marginright = "",
-  pSize = 24,
-  pWeight = 400,
-  pHeight = 40,
-
 })=>{
   
-  const router = useRouter();
+  const router = useRouter();  
 
 // ============ Layout
   return (
@@ -116,65 +68,11 @@ const Navi =({
       <NavCont>
         <LeftBar>
 
-          <Nav 
-            mright={marginright} 
-            onClick={() => router.push("/")}
-            height={height}      
-          >
-            
-            <Content               
-              pSize={pSize}
-              pWeight={pWeight}
-              pHeight={pHeight}
-            >
-              Home
-            </Content>
-          </Nav>
+          <NavHome />  
+          <NavLandlord />
+          <NavChat />
+          <NavContact />
 
-          <Nav 
-            mright={marginright} 
-            onClick={() => router.push("/Landlord")}
-            height={height}      
-          >
-            
-            <Content 
-              pSize={pSize}
-              pWeight={pWeight}
-              pHeight={pHeight}
-            >
-              Landlord
-            </Content>
-          </Nav>
-
-          <Nav 
-            mright={marginright} 
-            onClick={() => router.push("/Chat")}
-            height={height}      
-          >
-            
-            <Content 
-              pSize={pSize}
-              pWeight={pWeight}
-              pHeight={pHeight}
-            >
-              Chat
-            </Content>
-          </Nav>
-
-          <Nav 
-            mright={marginright} 
-            onClick={() => router.push("/ContactUs")}
-            height={height}      
-          >
-            
-            <Content 
-              pSize={pSize}
-              pWeight={pWeight}
-              pHeight={pHeight}
-            >
-              Contact Us
-            </Content>
-          </Nav>
         </LeftBar>
 
         <RightBar>

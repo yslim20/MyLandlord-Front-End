@@ -3,12 +3,12 @@ import React from 'react';
 
 // ============ Imported Comps ============== //
 import SubHead from '../comps/SubHead';
-import TopNav from '../comps/TopNav';
 import VerLogo from '../comps/VerLogo';
 import Mediabox from '../comps/Mediabox'
 import HeroImage from '../comps/HeroImage'
 import Features from '../comps/Features'
 import Footer from '../comps/Footer';
+import Navi from '../comps/Navi';
 
 // ============ CSS ============== //
 const Cont = styled.div`
@@ -91,7 +91,7 @@ export default function Home() {
 		<Cont>
 {/* // ============ Top Navigation */}
 		<NavCont> 
-			<TopNav/>
+			<Navi />
 		</NavCont>			
 
 {/* // ============ Body Starts */}

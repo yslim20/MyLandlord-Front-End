@@ -7,10 +7,8 @@ import Button from '../comps/Button';
 import ImgBox from '../comps/ImgBox';
 import Divider from '../comps/Divider';
 import Input from '../comps/Input';
-
-
 import login from '../scripts/auth/login'
-import TopNav from '../comps/TopNav'
+import Navi from '../comps/Navi';
 import Footer from '../comps/Footer';
 
 
@@ -53,7 +51,7 @@ export default function LogIn() {
         <Cont>
 
 {/* // ============ Top Navigation */}
-            <TopNav />
+            <Navi />
 {/* // ============ Content start*/}
             <Header />
             <BttmCont onSubmit={()=>login()} >

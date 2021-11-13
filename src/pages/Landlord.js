@@ -4,7 +4,7 @@ import React from 'react';
 // ============ Imported Components ============== //
 import Header from '../comps/Header';
 import SubHead from '../comps/SubHead';
-import TopNav from '../comps/TopNav';
+import Navi from '../comps/Navi';
 import SearchBar from '../comps/SearchBar';
 import ImgBox from '../comps/ImgBox';
 import EnhancedTable from '../comps/EnhancedTable'
@@ -50,7 +50,7 @@ const Landlord = ({
 	return(
 		<Cont>
 {/* // ============ Top Navigation */}
-			<TopNav/>
+			<Navi/>
 
 {/* // ============ MAP */}
       <MidCont cmarginB={cmarginB}>
