@@ -94,7 +94,7 @@ export default function LandlordProfile() {
             </ButtCont>
             <LandlordSub/>
             <InfoCont>
-                <RetangleAvatar />
+                <RetangleAvatar marginTop="2"/>
                 <InfoText>
                     <SubHead text="Burnaby, BC." fontSize="24" justifyContent="left" marginB="10" marginL="3%"/>
                     <LandlordInfo />

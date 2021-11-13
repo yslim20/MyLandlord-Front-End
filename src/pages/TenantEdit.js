@@ -82,7 +82,7 @@ export default function TenantEdit() {
           <InfoCont>
               <CircleAvatar mtop="-100" src="/images/img_tenant.png" href =""/>
               <InfoForm>
-                <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="32"/>
+                <SubHead text="Personal Information" fontSize="36" justifyContent="left" marginB="52"/>
                 <FullName />
                 <Input title="Password" type="password" iheight="54"/>
                 <Input title="Email" iheight="54"/>
@@ -93,7 +93,7 @@ export default function TenantEdit() {
       </UserInfo>
 
 {/* =================== Reviews */}    
-      <ProfCont>
+      {/* <ProfCont>
           <ProfileSub text="Reviews"/>
           <CenterBox>
             <ReviewCardImg 
@@ -131,7 +131,7 @@ export default function TenantEdit() {
               routeTo=""
             />
           </CenterBox>
-      </ProfCont>
+      </ProfCont> */}
 
 {/* // ============ Bottom Navigation */}
       <Footer />

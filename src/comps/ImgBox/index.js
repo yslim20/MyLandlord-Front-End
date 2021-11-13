@@ -40,8 +40,8 @@ const ImgBox = ({
 // image
   src = "https://placekitten.com/500/500",
   alt = "image box",
-  width = "100%",
-  height = "100%",
+  width = "85%",
+  height = "80%",
   objectFit = "cover",  
 
 // text if needed
