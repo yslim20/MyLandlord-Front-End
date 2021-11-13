@@ -82,7 +82,7 @@ const Landlord = ({
 {/* // ============ LIST OF LANDLORD */} 
       <MidCont cmarginB = {cmarginBttm}>
         <HeadCont flexDir={flexDir}>
-          <Header text="List of Landlord" cMinWidth = "600px"/>
+          <Header text="List of Landlord" cMinWidth = "600px" marginBottom = "40px"/>
         </HeadCont>
         <SubHead 
           marginB = "40"
