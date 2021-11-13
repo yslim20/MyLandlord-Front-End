@@ -132,6 +132,7 @@ export default function Home() {
 				<SubHead 
 					text = "Discover Features"
 					marginB = "20"
+					marginL = "2%"
 				/>
 
 				<FeatCont>
