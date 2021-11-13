@@ -17,6 +17,7 @@ import TopNav from '../comps/TopNav'
 import Footer from '../comps/Footer';
 
 import signup from "../scripts/auth/signup";
+import RoutButton from '../comps/RoutButton';
 
 // ============ css ============== //
 const Cont = styled.div`
@@ -115,10 +116,15 @@ export default function SignUp() {
           <VeriButton />
 {/* // ============ Buttons */}
           <BttnCont>
-            <Button
+            {/* <Button
               text = "Cancel"
               margintop = "0px"
               width = "95%"
+            /> */}
+            <RoutButton 
+              text="Cancel"
+              margintop = "0px"
+              routeTo = "/"
             />
             <Button
               text = "Submit"

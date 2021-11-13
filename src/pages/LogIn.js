@@ -12,6 +12,7 @@ import Input from '../comps/Input';
 import login from '../scripts/auth/login'
 import TopNav from '../comps/TopNav'
 import Footer from '../comps/Footer';
+import RoutButton from '../comps/RoutButton';
 
 
 // ============ css ============== //
@@ -63,7 +64,8 @@ export default function LogIn() {
                     <Input title="Password" type="password"/>
                     <Button text="Log In" />
                     <Divider />
-                    <Button routeTo="/SignUp" text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff"/>
+                    {/* <Button routeTo="/SignUp" text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff"/> */}
+                    <RoutButton routeTo="/SignUp" text="Sign Up" margintop="45" bgcolor="#5333ED" color="#ffffff" />
                 </ContLeft>
 
 {/* // ============ Image*/}
