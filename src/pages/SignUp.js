@@ -15,7 +15,6 @@ import Button from '../comps/Button'
 import Header from '../comps/Header';
 import Navi from '../comps/Navi';
 import Footer from '../comps/Footer';
-
 import signup from "../scripts/auth/signup";
 import RoutButton from '../comps/RoutButton';
 
@@ -33,7 +32,7 @@ const RadioCont = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-bottom:30px;
+  margin-bottom:50px;
   padding-left:5px;
 `
 // ============ Form box
@@ -59,7 +58,6 @@ const ContRight = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 30px;
   align-items: flex-end;
   justify-content: center;
 `
@@ -70,9 +68,16 @@ const CheckCont = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   padding-left: 15px;
   box-sizing: border-box;
+`
+
+const VeriCont = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 
 const BttnCont = styled.div`
@@ -114,7 +119,10 @@ export default function SignUp() {
 
 
 {/* // ============ Verification button */}
-          <VeriButton />
+          <VeriCont>
+            <VeriButton cwidth = "80%" cheight = "85"/>
+          </VeriCont>
+          
 {/* // ============ Buttons */}
           <BttnCont>
             {/* <Button
@@ -144,8 +152,9 @@ export default function SignUp() {
           <ImgBox
             src="./images/img_signup.png"
             cwidth = "90%"
-            // cheight = "1000px"
-            // objectFit = "contain"
+            cheight = "800px"
+            height = "auto"
+            objectFit = "contain"
           />
         </ContRight>
       </MidCont> {/*  Form box ends */}
