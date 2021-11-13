@@ -19,6 +19,7 @@ const Cont = styled.div`
 	margin: 0;
 	padding: 0 4% 0 4%;
   box-sizing: border-box;
+  
 `
 const MidCont = styled.div`
 	display:flex;
@@ -27,7 +28,10 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:flex-start;
 	margin-bottom: ${props=>props.cmarginB}; 
+  margin-left: 3%;
 `
+
+
 //the filter bar with 2 icon 
 const TopBar = styled.div`
   display:flex;
@@ -41,7 +45,7 @@ const TopBar = styled.div`
 const Landlord = ({
 
 // ============ Properties
-  cmarginB = "100px",
+  cmarginB = "50px",
   cmarginBttm = "0px"
 
 })=>{
@@ -60,7 +64,7 @@ const Landlord = ({
           justifyContent="left"
           text="Which area do you want to search?"
         />
-        <SearchBar/>
+        <SearchBar marginL="10"/>
 
 {/* it is a image with img tag */}
         <ImgBox 
