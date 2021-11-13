@@ -28,6 +28,8 @@ const HeadCont = styled.div`
     display:flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
+    width: 100%;
 `;
 
 const IconCont = styled.a`

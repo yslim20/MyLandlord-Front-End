@@ -9,7 +9,7 @@ const HeaderCont = styled.div`
 	flex: 0.3;
 	justify-content:${props=>props.justifyContent};
 	align-items:${props=>props.alignItems};
-	min-width:320px;
+	min-width:400px;
 `;
 
 const Text = styled.p`

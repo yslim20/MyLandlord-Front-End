@@ -19,6 +19,15 @@ const Cont = styled.div`
 	padding: 0 4% 0 4%;
   box-sizing: border-box;
 `
+
+const HeadCont = styled.div`
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+`;
+
 const MidCont = styled.div`
 	display:flex;
 	flex: 1;
@@ -45,7 +54,9 @@ const Landlord = ({
 
 {/* // ============ MAP */}
       <MidCont cmarginB={cmarginB}>
-        <Header text="Map" marginLeft="0"/>
+        <HeadCont>
+          <Header text="Map" marginLeft="4%" />
+        </HeadCont>
         <SubHead 
           marginB = "40"
           justifyContent="left"
@@ -63,7 +74,9 @@ const Landlord = ({
 
 {/* // ============ LIST OF LANDLORD */} 
       <MidCont cmarginB = {cmarginBttm}>
-        <Header text="List of Landlord" marginLeft="0"/>
+        <HeadCont>
+          <Header text="List of Landlord" marginLeft="4%" />
+        </HeadCont>
         <SubHead 
           marginB = "40"
           justifyContent="left"            
