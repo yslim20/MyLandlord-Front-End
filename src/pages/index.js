@@ -106,13 +106,20 @@ export default function Home() {
 						cursor="default"                        
 					/>
 					<SubHead 
-						text="Welcome to MyLandlord!"
+						text="Welcome! We are a landlord review platform"
 						fontSize="24"
 						fontWeight="500"
 						lineHeight="29"
+						marginB="25"
 					/>
 					<SubHead 
-						text="Review your landlord now!" 	
+						text="You can write a review for your landlord right now" 	
+						fontSize="22"
+						lineHeight="39"						
+					/>
+					<SubHead 
+						text="Or check out the review of landlords in BC" 	
+						fontSize="22"
 						lineHeight="39"						
 					/>
 				</LeftBox>
