@@ -38,7 +38,6 @@ const MidCont = styled.div`
 	justify-content:center;
 	align-items:flex-start;
 	margin-bottom: ${props=>props.cmarginB}; 
-  margin-left: 3%;
 `
 
 // ============ Function ============== //
@@ -61,24 +60,22 @@ const Landlord = ({
 {/* // ============ MAP */}
       <MidCont cmarginB={cmarginB}>
         <HeadCont flexDir={flexDir}>
-          <Header text="Landlord"  marginBottom = "40px"/>
-          <Header 
-            text="Map"  
-            marginBottom = "20px"
-          />
+          <Header text="Landlord" marginBottom = "40px"/>
         </HeadCont>
         <SubHead 
           marginB = "40"
           justifyContent="left"
           text="Which area do you want to search?"
+          marginL="2%"
         />
-        <SearchBar marginL="10"/>
+        <SearchBar marginL="2"/>
 
 {/* it is a image with img tag */}
         <ImgBox 
           cwidth="100%" 
           cheight="auto"
           src="./images/img_map.png"
+          marginL="%"
         />
       </MidCont>
 
@@ -91,9 +88,11 @@ const Landlord = ({
           marginB = "40"
           justifyContent="left"            
           text="Who do you want to search?"
+          marginL="2%"
         />
         <SearchBar
           placeholder="Please type your landlord name or address.."
+          marginL="2"
         />
 
         <EnhancedTable/>        
