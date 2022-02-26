@@ -1,4 +1,4 @@
-# About MyLandlord
+# MyLandlord
 
 MyLandlord is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.
 
