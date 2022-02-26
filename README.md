@@ -10,7 +10,7 @@ Front-End Developer, UX/UI Designer
 • Created prototypes and mockups, managed brand quality consistency and designed high-quality graphic images.<br>
 • Collaborated with back-end developers, full-stack students, on improving usability.<br>
 • Created user-friendly web pages by using markup languages, such as React, Next.js.<br>
-•  Collaborated closely with other major students, full stack developers..<br>
+•  Collaborated closely with other major students, full stack developers.<br>
 
 
 ## Homepage
