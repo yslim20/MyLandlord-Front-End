@@ -2,9 +2,50 @@
 
 MyLandlord is a website that is targeted towards residents looking to find an ideal Landlord to rent from in the lower mainland. MyLandlord provides a safe platform for tenants and landlords to communicate and allows tenants to leave honest reviews during their time with the landlord to help other prospective renters.
 
+
+## Role
+
+Front-End Developer, UX/UI Designer
+
+• Created prototypes and mockups, managed brand quality consistency and designed high-quality graphic images.<br>
+• Collaborated with back-end developers, full-stack students, on improving usability.<br>
+• Created user-friendly web pages by using markup languages, such as React, Next.js.
+•  Collaborated closely with other major students, full stack developers..<br>
+
+
+## Homepage
+[@Homepage](https://mylandlord-front-end.vercel.app)
+
+
+## Authors
+
+[@Youn Soo Lim](https://www.linkedin.com/in/younsoo-lim)
+[@Hyerin Cheon](https://www.linkedin.com/in/hyerin-cheon/)
+[@Joyce Chan](https://www.linkedin.com/in/joyce-chan2021/)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## MUI Installtion
+
+```bash
+npm install @mui/styles
+
+npm install @mui/x-data-grid@next
+npm install @mui/material
+npm install @material-ui/x-grid-data-generator
+
+```
+
+## AOS Installtion
+
+```bash
+npm install aos --save
+```
 
 ## Available Scripts
 

@@ -121,10 +121,11 @@ const InputGroup = ({
 {/* // ============ Image */}
           <LeftCont> 
             <ImgBox 
-              src="./images/img_contactus.png" 						
+              src="./images/ani_ContactUs.gif" 						
               cheight ="100%"
               cwidth = "90%"
               cmargin = "0 60px 0 0"
+              objectFit = "contain"
             />
           </LeftCont>
 
